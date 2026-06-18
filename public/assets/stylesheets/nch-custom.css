@@ -32,11 +32,24 @@
    dark/transparent navbar. Keep the label white there and mark it with a
    brand-red underline; on the white scrolled navbar the red text already reads
    well, so it just gets the matching underline. */
-.navbar-b .navbar-nav .nav-link { position: relative; }
+.navbar-b .navbar-nav .nav-link {
+    position: relative;
+}
 
 .navbar-b.navbar-trans .navbar-nav .nav-link.active,
-.navbar-b.navbar-trans .navbar-nav .nav-link:hover { color: #fff; }
-.navbar-b .navbar-nav .nav-link.active { font-weight: 600; }
+.navbar-b.navbar-trans .navbar-nav .nav-link:hover {
+    color: #fff;
+}
+
+.navbar-b .navbar-nav .nav-link.active {
+    font-weight: 600;
+}
+
+@media (max-width: 991px) {
+    .navbar-b.navbar-trans .navbar-nav .nav-link.active {
+        color: #1b1b1b;
+    }
+}
 
 .navbar-b .navbar-nav .nav-link.active::after,
 .navbar-b .navbar-nav .nav-link:hover::after {
@@ -49,16 +62,25 @@
     background: var(--nch-red);
     border-radius: 2px;
 }
+
 /* Keep the solid red "Call 24/7" button clean (no underline) */
-.navbar-b .book-now .nav-link::after { display: none !important; }
+.navbar-b .book-now .nav-link::after {
+    display: none !important;
+}
 
 /* ---------- Dark CTA band sub-heading ----------
    The "24/7 services" band sits on a dark photo. The template's global h5 is
    brand-red, which is hard to read there, so force the sub-heading to white. */
-.kar-theme-reservation-area h5 { color: #fff; font-weight: 400; }
+.kar-theme-reservation-area h5 {
+    color: #fff;
+    font-weight: 400;
+}
 
 /* ---------- Inner page banner (reuses .single-page) ---------- */
-.single-page { padding: 140px 0 80px; }
+.single-page {
+    padding: 140px 0 80px;
+}
+
 .single-page h1 {
     color: #fff;
     font-family: 'Rajdhani', sans-serif;
@@ -68,10 +90,23 @@
     margin: 0 0 10px;
     letter-spacing: 1px;
 }
-.single-page .breadcrumb { justify-content: center; margin: 0; }
-.single-page .breadcrumb-item a { color: #fff; }
-.single-page .breadcrumb-item.active { color: var(--nch-red); }
-.single-page .breadcrumb-item + .breadcrumb-item::before { color: #bbb; }
+
+.single-page .breadcrumb {
+    justify-content: center;
+    margin: 0;
+}
+
+.single-page .breadcrumb-item a {
+    color: #fff;
+}
+
+.single-page .breadcrumb-item.active {
+    color: var(--nch-red);
+}
+
+.single-page .breadcrumb-item+.breadcrumb-item::before {
+    color: #bbb;
+}
 
 /* ---------- Buttons on light sections ----------
    The template's .button is transparent with white text/border (meant for the
@@ -83,6 +118,7 @@
     border-color: var(--nch-red);
     color: #fff;
 }
+
 .theme-repair-services .button:hover,
 .bg-grey .button:hover {
     background: var(--nch-dark);
@@ -98,10 +134,16 @@
     display: inline-block;
     line-height: 1;
 }
-.kar-theme-single-service-card { margin-bottom: 30px; }
+
+.kar-theme-single-service-card {
+    margin-bottom: 30px;
+}
 
 /* ---------- Generic content blocks ---------- */
-.nch-content-block { padding: 30px 0; }
+.nch-content-block {
+    padding: 30px 0;
+}
+
 .nch-content-block h3 {
     font-family: 'Rajdhani', sans-serif;
     font-weight: 700;
@@ -112,18 +154,36 @@
     position: relative;
     padding-bottom: 12px;
 }
+
 .nch-content-block h3::after {
     content: '';
     position: absolute;
-    left: 0; bottom: 0;
-    width: 60px; height: 3px;
+    left: 0;
+    bottom: 0;
+    width: 60px;
+    height: 3px;
     background: var(--nch-red);
 }
-.nch-content-block p { color: #5f5f5f; line-height: 1.8; margin-bottom: 16px; }
-.nch-lead { font-size: 19px; color: #444; line-height: 1.8; }
+
+.nch-content-block p {
+    color: #5f5f5f;
+    line-height: 1.8;
+    margin-bottom: 16px;
+}
+
+.nch-lead {
+    font-size: 19px;
+    color: #444;
+    line-height: 1.8;
+}
 
 /* ---------- Tick / promise list ---------- */
-.nch-list { list-style: none; padding: 0; margin: 20px 0 0; }
+.nch-list {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0 0;
+}
+
 .nch-list li {
     position: relative;
     padding: 11px 0 11px 40px;
@@ -131,17 +191,31 @@
     color: #444;
     border-bottom: 1px solid #efefef;
 }
-.nch-list li:last-child { border-bottom: 0; }
+
+.nch-list li:last-child {
+    border-bottom: 0;
+}
+
 .nch-list li i {
     position: absolute;
-    left: 0; top: 13px;
+    left: 0;
+    top: 13px;
     color: var(--nch-red);
     font-size: 18px;
 }
 
 /* ---------- Stats / feature band ---------- */
-.nch-stats { background: var(--nch-dark); padding: 55px 0; }
-.nch-stat { text-align: center; color: #fff; padding: 15px 0; }
+.nch-stats {
+    background: var(--nch-dark);
+    padding: 55px 0;
+}
+
+.nch-stat {
+    text-align: center;
+    color: #fff;
+    padding: 15px 0;
+}
+
 .nch-stat .num {
     font-family: 'Rajdhani', sans-serif;
     font-size: 46px;
@@ -149,10 +223,19 @@
     color: var(--nch-red);
     line-height: 1;
 }
-.nch-stat .label { font-size: 16px; color: #ddd; margin-top: 8px; display: block; }
+
+.nch-stat .label {
+    font-size: 16px;
+    color: #ddd;
+    margin-top: 8px;
+    display: block;
+}
 
 /* ---------- Vehicle fleet chips ---------- */
-.nch-fleet { margin-top: 10px; }
+.nch-fleet {
+    margin-top: 10px;
+}
+
 .nch-fleet .fleet-group {
     background: #fff;
     border: 1px solid #ececec;
@@ -160,8 +243,9 @@
     border-radius: 4px;
     padding: 20px 24px;
     margin-bottom: 22px;
-    box-shadow: 0 2px 10px rgba(0,0,0,.04);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, .04);
 }
+
 .nch-fleet .fleet-group h4 {
     font-family: 'Rajdhani', sans-serif;
     font-weight: 700;
@@ -170,7 +254,13 @@
     font-size: 21px;
     margin-bottom: 12px;
 }
-.nch-chips { display: flex; flex-wrap: wrap; gap: 10px; }
+
+.nch-chips {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
 .nch-chips span {
     background: #f5f5f5;
     color: #333;
@@ -181,7 +271,13 @@
 }
 
 /* ---------- Council / authority badges ---------- */
-.nch-councils { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 18px; }
+.nch-councils {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 18px;
+}
+
 .nch-councils span {
     background: var(--nch-dark);
     color: #fff;
@@ -198,21 +294,29 @@
     border-radius: 6px;
     padding: 34px 34px 28px;
     margin-bottom: 30px;
-    box-shadow: 0 3px 14px rgba(0,0,0,.05);
+    box-shadow: 0 3px 14px rgba(0, 0, 0, .05);
     height: 100%;
 }
-.nch-service .nch-service-head { display: flex; align-items: center; margin-bottom: 16px; }
+
+.nch-service .nch-service-head {
+    display: flex;
+    align-items: center;
+    margin-bottom: 16px;
+}
+
 .nch-service .nch-service-head i {
     font-size: 30px;
     color: #fff;
     background: var(--nch-red);
-    width: 60px; height: 60px;
+    width: 60px;
+    height: 60px;
     line-height: 60px;
     text-align: center;
     border-radius: 50%;
     margin-right: 18px;
     flex: 0 0 auto;
 }
+
 .nch-service h3 {
     font-family: 'Rajdhani', sans-serif;
     font-weight: 700;
@@ -221,18 +325,28 @@
     font-size: 23px;
     margin: 0;
 }
-.nch-service p { color: #5f5f5f; line-height: 1.75; margin-bottom: 12px; }
+
+.nch-service p {
+    color: #5f5f5f;
+    line-height: 1.75;
+    margin-bottom: 12px;
+}
 
 /* ---------- FAQ accordion (pure CSS, no JS dependency) ---------- */
-.nch-faq { max-width: 920px; margin: 0 auto; }
+.nch-faq {
+    max-width: 920px;
+    margin: 0 auto;
+}
+
 .nch-faq details {
     background: #fff;
     border: 1px solid #ececec;
     border-radius: 6px;
     margin-bottom: 15px;
-    box-shadow: 0 2px 9px rgba(0,0,0,.04);
+    box-shadow: 0 2px 9px rgba(0, 0, 0, .04);
     overflow: hidden;
 }
+
 .nch-faq summary {
     cursor: pointer;
     padding: 20px 58px 20px 26px;
@@ -244,24 +358,47 @@
     font-family: 'Rajdhani', sans-serif;
     transition: color .25s ease;
 }
-.nch-faq summary::-webkit-details-marker { display: none; }
+
+.nch-faq summary::-webkit-details-marker {
+    display: none;
+}
+
 .nch-faq summary::after {
-    content: '\f067'; /* fa-plus */
+    content: '\f067';
+    /* fa-plus */
     font-family: 'FontAwesome';
     position: absolute;
-    right: 24px; top: 50%;
+    right: 24px;
+    top: 50%;
     transform: translateY(-50%);
     color: var(--nch-red);
     font-size: 14px;
     font-weight: 400;
     transition: transform .25s ease;
 }
-.nch-faq details[open] summary::after { content: '\f068'; } /* fa-minus */
-.nch-faq details[open] summary { color: var(--nch-red); }
-.nch-faq .faq-body { padding: 2px 26px 24px; color: #666; line-height: 1.8; }
+
+.nch-faq details[open] summary::after {
+    content: '\f068';
+}
+
+/* fa-minus */
+.nch-faq details[open] summary {
+    color: var(--nch-red);
+}
+
+.nch-faq .faq-body {
+    padding: 2px 26px 24px;
+    color: #666;
+    line-height: 1.8;
+}
 
 /* ---------- Red CTA band ---------- */
-.nch-cta-band { background: var(--nch-red); padding: 55px 0; text-align: center; }
+.nch-cta-band {
+    background: var(--nch-red);
+    padding: 55px 0;
+    text-align: center;
+}
+
 .nch-cta-band h2 {
     color: #fff;
     font-family: 'Rajdhani', sans-serif;
@@ -270,7 +407,13 @@
     font-size: 36px;
     margin-bottom: 12px;
 }
-.nch-cta-band p { color: #ffe2e4; font-size: 18px; margin-bottom: 24px; }
+
+.nch-cta-band p {
+    color: #ffe2e4;
+    font-size: 18px;
+    margin-bottom: 24px;
+}
+
 .nch-cta-band .nch-phone {
     color: #fff;
     font-size: 30px;
@@ -280,7 +423,11 @@
     margin: 0 12px 16px;
     vertical-align: middle;
 }
-.nch-cta-band .nch-phone i { margin-right: 8px; }
+
+.nch-cta-band .nch-phone i {
+    margin-right: 8px;
+}
+
 .nch-btn-light {
     display: inline-block;
     background: #fff;
@@ -292,10 +439,16 @@
     letter-spacing: 0.5px;
     transition: all .3s ease;
 }
-.nch-btn-light:hover { background: var(--nch-dark); color: #fff; }
+
+.nch-btn-light:hover {
+    background: var(--nch-dark);
+    color: #fff;
+}
 
 /* ---------- Hero caption tweaks ---------- */
-.slider .caption h1 { text-transform: uppercase; }
+.slider .caption h1 {
+    text-transform: uppercase;
+}
 
 /* ---------- Notice strip (replaces CarShine offer) ---------- */
 .nch-notice {
@@ -306,8 +459,9 @@
     margin-top: -55px;
     position: relative;
     z-index: 5;
-    box-shadow: 0 10px 30px rgba(0,0,0,.18);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, .18);
 }
+
 .nch-notice h2 {
     color: #fff;
     font-family: 'Rajdhani', sans-serif;
@@ -316,12 +470,32 @@
     font-size: 28px;
     margin: 0 0 6px;
 }
-.nch-notice h2 span { color: var(--nch-red); }
-.nch-notice p { color: #cfcfcf; margin: 0; font-size: 16px; }
+
+.nch-notice h2 span {
+    color: var(--nch-red);
+}
+
+.nch-notice p {
+    color: #cfcfcf;
+    margin: 0;
+    font-size: 16px;
+}
 
 @media (max-width: 767px) {
-    .single-page h1 { font-size: 34px; }
-    .nch-service .nch-service-head { flex-direction: column; text-align: center; }
-    .nch-service .nch-service-head i { margin: 0 0 14px; }
-    .nch-notice { margin-top: 30px; }
+    .single-page h1 {
+        font-size: 34px;
+    }
+
+    .nch-service .nch-service-head {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .nch-service .nch-service-head i {
+        margin: 0 0 14px;
+    }
+
+    .nch-notice {
+        margin-top: 30px;
+    }
 }

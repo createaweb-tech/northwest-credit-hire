@@ -24,7 +24,7 @@
     <!-- Site Main Style Sheet Css -->
     <link href="{{asset("assets/stylesheets/style.css")}}" rel="stylesheet">
     <!-- Northwest Credit Hire custom styles -->
-    <link href="{{asset("assets/stylesheets/nch-custom.css")}}" rel="stylesheet">
+    <link href="{{asset("assets/stylesheets/nch-custom.css")}}?v=1.0" rel="stylesheet">
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com/">
     <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
