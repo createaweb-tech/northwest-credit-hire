@@ -15,22 +15,15 @@
     <link rel="icon" type="image/png" href="{{asset("assets/images/favicon.png")}}">
     <!-- Site All Style Sheet Css -->
     <link href="{{asset("assets/stylesheets/bootstrap.min.css")}}" rel="stylesheet">
-    <link href="{{asset("assets/stylesheets/swiper.min.css")}}" rel="stylesheet">
     <link href="{{asset("assets/stylesheets/font-awesome.min.css")}}" rel="stylesheet">
-    <link href="{{asset("assets/stylesheets/owl.carousel.min.css")}}" rel="stylesheet">
-    <link href="{{asset("assets/stylesheets/owl.theme.default.min.css")}}" rel="stylesheet">
-    <link href="{{asset("assets/stylesheets/animate.min.css")}}" rel="stylesheet">
-    <link href="{{asset("assets/stylesheets/magnific-popup.css")}}" rel="stylesheet">
     <!-- Site Main Style Sheet Css -->
     <link href="{{asset("assets/stylesheets/style.css")}}" rel="stylesheet">
     <!-- Northwest Credit Hire custom styles -->
-    <link href="{{asset("assets/stylesheets/nch-custom.css")}}?v=1.0" rel="stylesheet">
+    <link href="{{asset("assets/stylesheets/nch-custom.css")}}?v=4.0" rel="stylesheet">
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com/">
     <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400;600;700;900&amp;display=swap"
-        rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;500;600;700&amp;display=swap"
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap"
         rel="stylesheet">
 
     @yield("style")
@@ -40,7 +33,7 @@
 <body>
 
     <!-- Start Page Preloader Area -->
-    <div class="preloader" id="kar-theme-preloader">
+    {{-- <div class="preloader" id="kar-theme-preloader">
         <div class="preloader-wapper">
             <div>
                 <div class="spinner-loader">
@@ -48,144 +41,90 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> --}}
     <!-- End Page Preloader Area -->
 
-    <!-- Start Header Navbar Area -->
-    <header id="zr-theme-menu" class="zr-theme-menu-header-navber-area">
-        <div class="nav-top-bar">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-6 col-md-6">
-                        <ul class="top-social">
-                            <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                            <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                            <li><a href="#"><i class="fa fa-instagram"></i></a></li>
-                            <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-                        </ul>
-                    </div>
-                    <div class="col-lg-6 col-md-6">
-                        <div class="call-to-action">
-                            <p><i class="fa fa-map"></i> Greater Manchester, UK</p>
-                            <p><i class="fa fa-phone"></i> 24/7: 0800 000 0000</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <nav class="navbar navbar-b navbar-trans navbar-expand-lg" id="mainNav">
-            <div class="container">
-                <a class="navbar-brand js-scroll" href="{{route("home")}}">
-                    <img class="white-logo nch-logo-img" src="{{asset("assets/images/logo-dark.png")}}"
-                        alt="Northwest Credit Hire">
-                    <img class="black-logo nch-logo-img" src="{{asset("assets/images/logo-light.png")}}"
-                        alt="Northwest Credit Hire">
+    <!-- Start Floating Navbar -->
+    <header class="nch-header" id="nch-header">
+        <div class="container">
+            <nav class="nch-nav">
+                <a class="nch-brand" href="{{route("home")}}">
+                    <img src="{{asset("assets/images/logo-light.png")}}" alt="Northwest Credit Hire">
                 </a>
-                <button class="navbar-toggler collapsed" type="button" data-toggle="collapse"
-                    data-target="#navbarDefault" aria-controls="navbarDefault" aria-expanded="false"
-                    aria-label="Toggle navigation"> <span></span> <span></span> <span></span>
-                </button>
-                <div class="navbar-collapse collapse justify-content-end" id="navbarDefault">
-                    <ul class="navbar-nav">
-                        <li class="nav-item"><a class="nav-link js-scroll {{ Route::is('home') ? 'active' : '' }}"
-                                href="{{route("home")}}">Home</a></li>
-                        <li class="nav-item"><a class="nav-link js-scroll {{ Route::is('services') ? 'active' : '' }}"
-                                href="{{route("services")}}">Services</a>
-                        </li>
-                        <li class="nav-item"><a class="nav-link js-scroll {{ Route::is('about') ? 'active' : '' }}"
-                                href="{{route("about")}}">About</a></li>
-                        <li class="nav-item"><a class="nav-link js-scroll {{ Route::is('faqs') ? 'active' : '' }}"
-                                href="{{route("faqs")}}">FAQ</a></li>
-                        <li class="nav-item"><a class="nav-link js-scroll {{ Route::is('contact') ? 'active' : '' }}"
-                                href="{{route("contact")}}">Contact</a></li>
-                        <li class="nav-item book-now"><a class="nav-link js-scroll" href="tel:08000000000"><i
-                                    class="fa fa-phone"></i> Call 24/7</a></li>
-                    </ul>
+                <div class="nch-nav-links" id="nch-menu">
+                    <a class="{{ Route::is('home') ? 'active' : '' }}" href="{{route("home")}}">Home</a>
+                    <a class="{{ Route::is('services') ? 'active' : '' }}" href="{{route("services")}}">Services</a>
+                    <a class="{{ Route::is('about') ? 'active' : '' }}" href="{{route("about")}}">About</a>
+                    <a class="{{ Route::is('faqs') ? 'active' : '' }}" href="{{route("faqs")}}">FAQ</a>
+                    <a class="{{ Route::is('contact') ? 'active' : '' }}" href="{{route("contact")}}">Contact</a>
                 </div>
-            </div>
-        </nav>
+                <div class="nch-nav-right">
+                    <a class="nch-nav-phone" href="tel:08000000000"><i class="fa fa-phone"></i> 0800 000 0000</a>
+                    <a class="btn btn-red btn-sm" href="{{route("contact")}}">Start a claim</a>
+                    <button class="nch-burger" id="nch-burger" type="button" aria-label="Toggle menu">
+                        <i class="fa fa-bars"></i>
+                    </button>
+                </div>
+            </nav>
+        </div>
     </header>
-    <!-- End Header Navbar Area -->
+    <!-- End Floating Navbar -->
 
     @yield("content")
 
     <!-- Footer -->
     <footer id="footer" class="footer-section">
         <div class="container">
-            <div class="footer-content">
-                <div class="row">
-                    <div class="col-xl-4 col-lg-4 mb-50">
-                        <div class="footer-widget">
-                            <div class="footer-logo">
-                                <a href="{{route("home")}}" class="logo d-flex align-items-center">
-                                    <img class="nch-logo-img" src="assets/images/logo-dark.png"
-                                        alt="Northwest Credit Hire">
-                                </a>
-                            </div>
-                            <div class="footer-text">
-                                <p>Credit hire and accident management specialists. We take complete ownership of your
-                                    non-fault claim &mdash; all under one roof, at no cost to you.</p>
-                            </div>
-                            <div class="footer-social-icon">
-                                <a href="#"><i class="fa fa-facebook facebook-bg"></i></a>
-                                <a href="#"><i class="fa fa-twitter twitter-bg"></i></a>
-                                <a href="#"><i class="fa fa-instagram google-bg"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xl-4 col-lg-4 col-md-6 mb-50">
-                        <div class="footer-widget">
-                            <div class="footer-widget-heading">
-                                <h3>Quick Links</h3>
-                            </div>
-                            <ul>
-                                <li><a href="{{route("home")}}"><i class="fa fa-angle-double-right"
-                                            aria-hidden="true"></i>Home</a></li>
-                                <li><a href="{{route("services")}}"><i class="fa fa-angle-double-right"
-                                            aria-hidden="true"></i>Our Services</a></li>
-                                <li><a href="{{route("about")}}"><i class="fa fa-angle-double-right"
-                                            aria-hidden="true"></i>About Us</a></li>
-                                <li><a href="{{route("faqs")}}"><i class="fa fa-angle-double-right"
-                                            aria-hidden="true"></i>FAQ</a></li>
-                                <li><a href="{{route("contact")}}"><i class="fa fa-angle-double-right"
-                                            aria-hidden="true"></i>Contact Us</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="col-xl-4 col-lg-4 col-md-6 mb-50">
-                        <div class="footer-widget">
-                            <div class="footer-widget-heading">
-                                <h3>Contact:</h3>
-                            </div>
-                            <div class="contact-info">
-                                <h6>Address:</h6>
-                                <p><i class="fa fa-map"></i> Greater Manchester, United Kingdom</p>
-                            </div>
-                            <div class="contact-info">
-                                <h6>Phone (24/7):</h6>
-                                <p><i class="fa fa-phone"></i> 0800 000 0000</p>
-                            </div>
-                            <div class="contact-info">
-                                <h6>Email:</h6>
-                                <p><i class="fa fa-envelope"></i> info@northwestcredithire.co.uk</p>
-                            </div>
-                        </div>
+            <div class="nch-foot-top">
+                <div class="nch-foot-brand">
+                    <a href="{{route("home")}}"><img src="{{asset("assets/images/logo-dark.png")}}"
+                            alt="Northwest Credit Hire"></a>
+                    <p>Credit hire and accident management specialists. We take complete ownership of your non-fault
+                        claim &mdash; all under one roof, at no cost to you.</p>
+                    <div class="nch-foot-social">
+                        <a href="#" aria-label="Facebook"><i class="fa fa-facebook"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fa fa-twitter"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fa fa-instagram"></i></a>
+                        <a href="#" aria-label="LinkedIn"><i class="fa fa-linkedin"></i></a>
                     </div>
                 </div>
+                <div class="nch-foot-col">
+                    <h4>Navigate</h4>
+                    <ul>
+                        <li><a href="{{route("home")}}">Home</a></li>
+                        <li><a href="{{route("services")}}">Our Services</a></li>
+                        <li><a href="{{route("about")}}">About Us</a></li>
+                        <li><a href="{{route("faqs")}}">FAQ</a></li>
+                        <li><a href="{{route("contact")}}">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="nch-foot-col">
+                    <h4>Get In Touch</h4>
+                    <ul class="nch-foot-contact">
+                        <li><i class="fa fa-map-marker"></i> <span>Greater Manchester, United Kingdom</span></li>
+                        <li><i class="fa fa-phone"></i> <a href="tel:08000000000">0800 000 0000 &mdash; 24/7</a></li>
+                        <li><i class="fa fa-envelope-o"></i> <a
+                                href="mailto:info@northwestcredithire.co.uk">info@northwestcredithire.co.uk</a></li>
+                    </ul>
+                    {{-- <form class="nch-foot-news" onsubmit="return false;">
+                        <input type="email" placeholder="Your email for updates" aria-label="Email">
+                        <button type="submit" aria-label="Subscribe"><i class="fa fa-long-arrow-right"></i></button>
+                    </form> --}}
+                </div>
             </div>
+            {{-- <div class="nch-foot-mono" aria-hidden="true">NW</div> --}}
         </div>
         <div class="copyright-area">
             <div class="container">
-                <div class="row">
-                    <div class="col-xl-6 col-lg-6 text-left text-lg-left">
+                <div class="row align-items-center">
+                    <div class="col-lg-6 text-center text-lg-left">
                         <div class="copyright-text">
                             <p>Northwest Credit Hire &copy; {{date("Y")}}. All rights reserved.</p>
                         </div>
                     </div>
-                    <div class="col-xl-6 col-lg-6 d-none d-lg-block">
+                    <div class="col-lg-6 d-none d-lg-block">
                         <div class="footer-menu text-right">
-                            <p class="text-muted">Made with <i class="fa fa-heart text-danger"></i> by <a
-                                    class="font-bold"
+                            <p>Built by <a
                                     href="https://www.createaweb.co.uk?utm_source=NorthwestCreditHire&utm_medium=website&utm_campaign=footer"
                                     target="_blank">Create A Web</a></p>
                         </div>
@@ -205,12 +144,40 @@
     <!-- Site All Jquery Js -->
     <script src="{{asset("assets/javascript/jquery-3.5.1.min.js")}}"></script>
     <script src="{{asset("assets/javascript/bootstrap.min.js")}}"></script>
-    <script src="{{asset("assets/javascript/plugins.js")}}"></script>
-    <script src="{{asset("assets/javascript/swiper.min.js")}}"></script>
-    <script src="{{asset("assets/javascript/wow.min.js")}}"></script>
     <script src="{{asset("assets/javascript/validator.min.js")}}"></script>
     <script src="{{asset("assets/javascript/contact.js")}}"></script>
-    <script src="{{asset("assets/javascript/main.js")}}"></script>
+
+    <!-- NCH UI: floating nav scroll state, mobile menu, back-to-top, preloader -->
+    <script>
+        (function () {
+            var header = document.getElementById('nch-header');
+            var onScroll = function () {
+                if (window.scrollY > 24) { header.classList.add('is-scrolled'); }
+                else { header.classList.remove('is-scrolled'); }
+                var btt = document.querySelector('.back-to-top');
+                if (btt) { window.scrollY > 320 ? btt.classList.add('active') : btt.classList.remove('active'); }
+            };
+            window.addEventListener('scroll', onScroll, { passive: true });
+            onScroll();
+
+            var burger = document.getElementById('nch-burger');
+            var menu = document.getElementById('nch-menu');
+            if (burger && menu) {
+                burger.addEventListener('click', function () { menu.classList.toggle('open'); });
+                menu.querySelectorAll('a').forEach(function (a) {
+                    a.addEventListener('click', function () { menu.classList.remove('open'); });
+                });
+            }
+
+            var btt = document.querySelector('.back-to-top');
+            if (btt) { btt.addEventListener('click', function () { window.scrollTo({ top: 0, behavior: 'smooth' }); }); }
+
+            window.addEventListener('load', function () {
+                var pre = document.querySelector('.preloader');
+                if (pre) { setTimeout(function () { pre.style.opacity = '0'; setTimeout(function () { pre.style.display = 'none'; }, 500); }, 350); }
+            });
+        })();
+    </script>
 
     @yield("script")
 </body>

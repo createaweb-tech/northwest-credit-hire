@@ -1,362 +1,2009 @@
 /* =====================================================================
-   Northwest Credit Hire — custom rebrand styles
-   Layered on top of the CarShine template (style.css).
-   Brand accent: #B61314
+   Northwest Credit Hire — "Modern Premium" redesign (v3)
+   ---------------------------------------------------------------------
+   Soft, rounded, image-rich premium UI inspired by modern auto sites.
+   Brand red #B61314 accent on warm cream neutrals. Font: Manrope.
+   This stylesheet is loaded LAST and fully overrides the CarShine
+   template (style.css) for the front-end pages.
    ===================================================================== */
 
 :root {
-    --nch-red: #B61314;
-    --nch-dark: #1b1b1b;
+    --red: #b61314;
+    --red-dark: #8d0f10;
+    --red-soft: #fbeceb;
+    --ink: #1c1a18;
+    --ink-2: #131210;
+    --charcoal: #262320;
+    /* --cream: #f5f1ea; */
+    --cream: #e8e7e71b;
+    --cream-2: #efe9df;
+    --card: #ffffff;
+    --text: #211f1d;
+    --muted: #6d6862;
+    --muted-2: #9a948c;
+    --line: #e7e1d6;
+    --line-2: #ded7ca;
+    --line-dark: rgba(255, 255, 255, .12);
+
+    --font: 'Manrope', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+
+    --r-xl: 18px;
+    --r-lg: 14px;
+    --r-md: 10px;
+    --r-sm: 8px;
+    --pill: 999px;
+
+    --shadow-xs: 0 1px 2px rgba(28, 26, 24, .05);
+    --shadow-sm: 0 8px 24px -14px rgba(28, 26, 24, .28);
+    --shadow-card: 0 18px 44px -26px rgba(28, 26, 24, .34);
+    --shadow-lg: 0 30px 70px -34px rgba(28, 26, 24, .42);
+
+    --container: 1240px;
 }
 
-/* ---------- Logo images (transparent PNGs) ----------
-   Two artwork variants swap with the navbar state via the template's
-   .white-logo / .black-logo mechanism: the light "dark-bg" logo shows over the
-   dark hero, and the dark "light-bg" logo shows on the white scrolled navbar.
-   No `display` is set here so the template's show/hide rules stay in control. */
-.navbar-brand .nch-logo-img {
-    height: 46px;
-    width: auto;
+/* ---------------------------------------------------------------------
+   Base
+   --------------------------------------------------------------------- */
+* {
+    box-sizing: border-box;
 }
 
-/* Footer logo (light artwork on the dark footer) */
-.footer-logo .nch-logo-img {
-    display: block;
-    height: 58px;
-    width: auto;
-    max-width: 230px;
+/* No box-shadows anywhere — depth comes from borders, colour blocks & whitespace */
+*,
+*::before,
+*::after {
+    box-shadow: none !important;
 }
 
-/* ---------- Active / hover nav item (clear on the dark hero navbar) ----------
-   The template colours the active link brand-red, which is low-contrast on the
-   dark/transparent navbar. Keep the label white there and mark it with a
-   brand-red underline; on the white scrolled navbar the red text already reads
-   well, so it just gets the matching underline. */
-.navbar-b .navbar-nav .nav-link {
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--font);
+    background: var(--cream);
+    color: var(--text);
+    font-size: 16.5px;
+    line-height: 1.7;
+    font-weight: 400;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+    overflow-x: hidden;
+}
+
+::selection {
+    background: var(--red);
+    color: #fff;
+}
+
+a {
+    color: var(--red);
+    text-decoration: none;
+    transition: color .25s ease;
+}
+
+a:hover {
+    color: var(--red-dark);
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font);
+    color: var(--ink);
+    font-weight: 800;
+    line-height: 1.12;
+    letter-spacing: -.02em;
+    margin: 0;
+}
+
+p {
+    margin: 0 0 1rem;
+}
+
+.nch-wrap {
+    max-width: var(--container);
+    margin: 0 auto;
+    padding: 0 28px;
+}
+
+.container {
+    max-width: var(--container);
+    padding-left: 28px;
+    padding-right: 28px;
+}
+
+section {
     position: relative;
 }
 
-.navbar-b.navbar-trans .navbar-nav .nav-link.active,
-.navbar-b.navbar-trans .navbar-nav .nav-link:hover {
-    color: #fff;
+.nch-section {
+    padding: 96px 0;
 }
 
-.navbar-b .navbar-nav .nav-link.active {
-    font-weight: 600;
+.nch-section--tight {
+    padding: 70px 0;
 }
 
-@media (max-width: 991px) {
-    .navbar-b.navbar-trans .navbar-nav .nav-link.active {
-        color: #1b1b1b;
+@media (max-width: 768px) {
+    .nch-section {
+        padding: 60px 0;
     }
 }
 
-.navbar-b .navbar-nav .nav-link.active::after,
-.navbar-b .navbar-nav .nav-link:hover::after {
-    content: '';
-    position: absolute;
-    left: 15px;
-    right: 0;
-    bottom: 4px;
-    height: 3px;
-    background: var(--nch-red);
-    border-radius: 2px;
+.bg-cream {
+    background: var(--cream);
 }
 
-/* Keep the solid red "Call 24/7" button clean (no underline) */
-.navbar-b .book-now .nav-link::after {
-    display: none !important;
+.bg-cream-2 {
+    background: var(--cream-2);
 }
 
-/* ---------- Dark CTA band sub-heading ----------
-   The "24/7 services" band sits on a dark photo. The template's global h5 is
-   brand-red, which is hard to read there, so force the sub-heading to white. */
-.kar-theme-reservation-area h5 {
+.bg-white {
+    background: #fff;
+}
+
+/* ---------------------------------------------------------------------
+   Reusable bits — eyebrow, section heads, buttons, chips, badges
+   --------------------------------------------------------------------- */
+.nch-eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 9px;
+    background: var(--red-soft);
+    color: var(--red);
+    font-weight: 700;
+    font-size: 13px;
+    letter-spacing: .04em;
+    text-transform: uppercase;
+    padding: 7px 15px 7px 13px;
+    border-radius: var(--pill);
+    margin-bottom: 20px;
+}
+
+.nch-eyebrow i {
+    font-size: 13px;
+}
+
+.nch-eyebrow--ghost {
+    background: rgba(255, 255, 255, .08);
     color: #fff;
-    font-weight: 400;
 }
 
-/* ---------- Inner page banner (reuses .single-page) ---------- */
+.nch-eyebrow--ghost i {
+    color: var(--red);
+}
+
+.nch-sec-head {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 30px;
+    margin-bottom: 46px;
+}
+
+.nch-sec-head .nch-sec-head-l {
+    max-width: 640px;
+}
+
+.nch-sec-head h2,
+.nch-h2 {
+    font-size: clamp(28px, 3.6vw, 42px);
+    font-weight: 800;
+    letter-spacing: -.025em;
+    line-height: 1.08;
+    color: var(--ink);
+}
+
+.nch-sec-head p {
+    color: var(--muted);
+    margin: 14px 0 0;
+    font-size: 17px;
+}
+
+.nch-sec-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 9px;
+    font-weight: 700;
+    font-size: 15px;
+    color: var(--ink);
+    white-space: nowrap;
+    padding-bottom: 6px;
+}
+
+.nch-sec-link i {
+    transition: transform .25s ease;
+    color: var(--red);
+}
+
+.nch-sec-link:hover {
+    color: var(--red);
+}
+
+.nch-sec-link:hover i {
+    transform: translateX(4px);
+}
+
+@media (max-width: 640px) {
+    .nch-sec-head {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 16px;
+        margin-bottom: 32px;
+    }
+}
+
+/* Buttons */
+.btn,
+.nch-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    font-family: var(--font);
+    font-weight: 700;
+    font-size: 15.5px;
+    line-height: 1;
+    letter-spacing: -.01em;
+    padding: 16px 26px;
+    border-radius: var(--pill);
+    border: 1.5px solid transparent;
+    cursor: pointer;
+    transition: transform .22s ease, background .22s ease, color .22s ease, border-color .22s ease, box-shadow .22s ease;
+    white-space: nowrap;
+}
+
+.btn i,
+.nch-btn i {
+    transition: transform .25s ease;
+    font-size: 15px;
+}
+
+.btn:hover i,
+.nch-btn:hover i {
+    transform: translateX(4px);
+}
+
+.btn-red {
+    background: var(--red);
+    color: #fff;
+    box-shadow: 0 14px 30px -14px rgba(182, 19, 20, .6);
+}
+
+.btn-red:hover {
+    background: var(--red-dark);
+    color: #fff;
+    transform: translateY(-2px);
+}
+
+.btn-dark {
+    background: var(--ink);
+    color: #fff;
+}
+
+.btn-dark:hover {
+    background: #000;
+    color: #fff;
+    transform: translateY(-2px);
+}
+
+.btn-outline {
+    background: transparent;
+    color: var(--ink);
+    border-color: var(--line-2);
+}
+
+.btn-outline:hover {
+    background: var(--ink);
+    color: #fff;
+    border-color: var(--ink);
+}
+
+.btn-light {
+    background: #fff;
+    color: var(--ink);
+}
+
+.btn-light:hover {
+    background: var(--cream-2);
+    color: var(--ink);
+    transform: translateY(-2px);
+}
+
+.btn-ghost-light {
+    background: rgba(255, 255, 255, .07);
+    color: #fff;
+    border-color: rgba(255, 255, 255, .26);
+    backdrop-filter: blur(4px);
+}
+
+.btn-ghost-light:hover {
+    background: #fff;
+    color: var(--ink);
+    border-color: #fff;
+}
+
+.btn-sm {
+    padding: 11px 18px;
+    font-size: 14px;
+}
+
+.btn-block {
+    width: 100%;
+}
+
+/* chips & badges */
+.nch-chip {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    padding: 8px 14px;
+    border-radius: var(--pill);
+    background: #fff;
+    border: 1px solid var(--line);
+    font-size: 13.5px;
+    font-weight: 600;
+    color: var(--text);
+}
+
+.nch-chip i {
+    color: var(--red);
+}
+
+.nch-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 6px 12px;
+    border-radius: var(--pill);
+    font-size: 11.5px;
+    font-weight: 800;
+    letter-spacing: .06em;
+    text-transform: uppercase;
+}
+
+.nch-badge--red {
+    background: var(--red);
+    color: #fff;
+}
+
+.nch-badge--dark {
+    background: rgba(20, 18, 16, .82);
+    color: #fff;
+    backdrop-filter: blur(4px);
+}
+
+/* ---------------------------------------------------------------------
+   Floating pill navbar
+   --------------------------------------------------------------------- */
+.nch-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    padding: 18px 0;
+    transition: padding .3s ease;
+}
+
+.nch-header.is-scrolled {
+    padding: 10px 0;
+}
+
+.nch-nav {
+    display: flex;
+    align-items: center;
+    gap: 22px;
+    background: rgba(255, 255, 255, .92);
+    backdrop-filter: blur(14px);
+    border: 1px solid rgba(20, 18, 16, .10);
+    border-radius: var(--pill);
+    padding: 11px 11px 11px 26px;
+    transition: background .3s ease, border-color .3s ease;
+}
+
+.nch-header.is-scrolled .nch-nav {
+    background: #fff;
+    border-color: rgba(20, 18, 16, .14);
+}
+
+.nch-brand {
+    display: inline-flex;
+    align-items: center;
+    flex-shrink: 0;
+}
+
+.nch-brand img {
+    height: 38px;
+    width: auto;
+    display: block;
+}
+
+.nch-nav-links {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    margin: 0 auto;
+}
+
+.nch-nav-links a {
+    font-weight: 600;
+    font-size: 15px;
+    color: #36322d;
+    padding: 9px 15px;
+    border-radius: var(--pill);
+    transition: background .2s ease, color .2s ease;
+}
+
+.nch-nav-links a:hover {
+    background: var(--cream);
+    color: var(--ink);
+}
+
+.nch-nav-links a.active {
+    background: var(--ink);
+    color: #fff;
+}
+
+.nch-nav-right {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex-shrink: 0;
+}
+
+.nch-nav-phone {
+    display: inline-flex;
+    align-items: center;
+    gap: 9px;
+    font-weight: 700;
+    font-size: 15px;
+    color: var(--ink);
+    padding-right: 4px;
+}
+
+.nch-nav-phone i {
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    background: var(--red-soft);
+    color: var(--red);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+}
+
+.nch-nav-phone:hover {
+    color: var(--red);
+}
+
+.nch-burger {
+    display: none;
+    width: 46px;
+    height: 46px;
+    border-radius: 50%;
+    border: 0;
+    background: var(--ink);
+    color: #fff;
+    font-size: 18px;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+@media (max-width: 992px) {
+    .nch-nav-links,
+    .nch-nav-phone {
+        display: none;
+    }
+
+    .nch-burger {
+        display: inline-flex;
+    }
+
+    .nch-nav {
+        padding: 10px 10px 10px 20px;
+    }
+
+    /* mobile dropdown */
+    .nch-nav-links.open {
+        display: flex;
+        position: absolute;
+        top: calc(100% + 10px);
+        left: 0;
+        right: 0;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 4px;
+        background: #fff;
+        border-radius: var(--r-lg);
+        padding: 14px;
+        margin: 0;
+        box-shadow: var(--shadow-lg);
+        border: 1px solid var(--line);
+    }
+
+    .nch-nav-links.open a {
+        padding: 13px 16px;
+        font-size: 16px;
+    }
+}
+
+/* ---------------------------------------------------------------------
+   Hero (dark, image-rich)
+   --------------------------------------------------------------------- */
+.nch-hero {
+    position: relative;
+    background: var(--ink-2);
+    color: #fff;
+    overflow: hidden;
+    padding: 172px 0 118px;
+}
+
+.nch-hero__bg {
+    position: absolute;
+    inset: 0;
+    background-image: url(../images/slider-1.jpg);
+    background-size: cover;
+    background-position: 72% center;
+    z-index: 0;
+}
+
+.nch-hero__overlay {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    background:
+        linear-gradient(90deg, rgba(15, 13, 12, .96) 0%, rgba(15, 13, 12, .86) 34%, rgba(15, 13, 12, .45) 64%, rgba(15, 13, 12, .25) 100%),
+        linear-gradient(0deg, rgba(15, 13, 12, .9) 0%, rgba(15, 13, 12, 0) 40%);
+}
+
+.nch-hero__mono {
+    position: absolute;
+    right: -40px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 380px;
+    font-weight: 800;
+    color: rgba(255, 255, 255, .03);
+    z-index: 1;
+    line-height: 1;
+    letter-spacing: -.05em;
+    pointer-events: none;
+    user-select: none;
+}
+
+.nch-hero .nch-wrap,
+.nch-hero .container {
+    position: relative;
+    z-index: 2;
+}
+
+.nch-hero__inner {
+    max-width: 760px;
+}
+
+.nch-hero h1 {
+    color: #fff;
+    font-size: clamp(38px, 5.4vw, 66px);
+    font-weight: 800;
+    line-height: 1.04;
+    letter-spacing: -.03em;
+    margin: 0 0 22px;
+}
+
+.nch-hero h1 .accent {
+    color: #ff1414;
+    /* background: linear-gradient(180deg, #ff5a5b, var(--red)); */
+    /* -webkit-background-clip: text; */
+    /* background-clip: text; */
+    /* -webkit-text-fill-color: transparent; */
+}
+
+.nch-hero__lead {
+    color: rgba(255, 255, 255, .8);
+    font-size: 19px;
+    line-height: 1.65;
+    max-width: 540px;
+    margin: 0 0 34px;
+}
+
+.nch-hero__actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
+    margin-bottom: 46px;
+}
+
+.nch-hero__stats {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 38px;
+    padding-top: 30px;
+    border-top: 1px solid rgba(255, 255, 255, .14);
+}
+
+.nch-hero__stat {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.nch-hero__stat .ic {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, .08);
+    border: 1px solid rgba(255, 255, 255, .16);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--red);
+    font-size: 17px;
+    flex-shrink: 0;
+}
+
+.nch-hero__stat .n {
+    font-size: 22px;
+    font-weight: 800;
+    color: #fff;
+    line-height: 1;
+}
+
+.nch-hero__stat .l {
+    font-size: 13.5px;
+    color: rgba(255, 255, 255, .62);
+    line-height: 1.3;
+}
+
+/* curved transition into cream body */
+.nch-hero__curve {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -1px;
+    height: 64px;
+    background: var(--cream);
+    border-radius: 50% 50% 0 0 / 100% 100% 0 0;
+    z-index: 2;
+    transform: scaleX(1.6);
+}
+
+@media (max-width: 768px) {
+    .nch-hero {
+        padding: 128px 0 72px;
+    }
+
+    .nch-hero__bg {
+        background-position: 68% center;
+    }
+
+    .nch-hero__overlay {
+        background: linear-gradient(0deg, rgba(15, 13, 12, .96) 6%, rgba(15, 13, 12, .7) 50%, rgba(15, 13, 12, .82) 100%);
+    }
+
+    .nch-hero__stats {
+        gap: 20px 28px;
+    }
+
+    .nch-hero__mono {
+        font-size: 220px;
+    }
+}
+
+/* ---------------------------------------------------------------------
+   Feature cards ("Why choose us")
+   --------------------------------------------------------------------- */
+.nch-feature-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 22px;
+}
+
+.nch-feature {
+    background: #fff;
+    border: 1px solid var(--line);
+    border-radius: var(--r-lg);
+    padding: 30px 26px;
+    box-shadow: var(--shadow-xs);
+    transition: transform .28s ease, box-shadow .28s ease, border-color .28s ease;
+}
+
+.nch-feature:hover {
+    transform: translateY(-4px);
+    border-color: var(--line-2);
+}
+
+.nch-feature__ic {
+    width: 56px;
+    height: 56px;
+    border-radius: 16px;
+    background: var(--ink);
+    color: #fff;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 22px;
+    margin-bottom: 22px;
+    transition: background .28s ease;
+}
+
+.nch-feature:hover .nch-feature__ic {
+    background: var(--red);
+}
+
+.nch-feature h3 {
+    font-size: 19px;
+    font-weight: 800;
+    margin-bottom: 10px;
+}
+
+.nch-feature p {
+    color: var(--muted);
+    font-size: 15px;
+    line-height: 1.65;
+    margin: 0;
+}
+
+@media (max-width: 992px) {
+    .nch-feature-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 520px) {
+    .nch-feature-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* ---------------------------------------------------------------------
+   Service / catalog cards (image)
+   --------------------------------------------------------------------- */
+.nch-card-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 26px;
+}
+
+.nch-pcard {
+    background: #fff;
+    border: 1px solid var(--line);
+    border-radius: var(--r-lg);
+    overflow: hidden;
+    box-shadow: var(--shadow-xs);
+    transition: transform .28s ease, box-shadow .28s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+.nch-pcard:hover {
+    transform: translateY(-6px);
+    box-shadow: var(--shadow-card);
+}
+
+.nch-pcard__media {
+    position: relative;
+    aspect-ratio: 16 / 11;
+    overflow: hidden;
+    margin: 10px 10px 0;
+    border-radius: var(--r-md);
+}
+
+.nch-pcard__media img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform .5s ease;
+}
+
+.nch-pcard:hover .nch-pcard__media img {
+    transform: scale(1.05);
+}
+
+.nch-pcard__media .nch-badge {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+}
+
+.nch-pcard__body {
+    padding: 20px 22px 24px;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.nch-pcard__body h3 {
+    font-size: 20px;
+    font-weight: 800;
+    margin-bottom: 9px;
+}
+
+.nch-pcard__body p {
+    color: var(--muted);
+    font-size: 15px;
+    line-height: 1.6;
+    margin: 0 0 18px;
+}
+
+.nch-pcard__meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px 16px;
+    margin-bottom: 18px;
+    padding-bottom: 0;
+}
+
+.nch-pcard__meta span {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 13px;
+    color: var(--muted);
+    font-weight: 600;
+}
+
+.nch-pcard__meta span i {
+    color: var(--red);
+}
+
+.nch-pcard__foot {
+    margin-top: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-top: 1px solid var(--line);
+    padding-top: 16px;
+}
+
+.nch-pcard__price {
+    font-weight: 800;
+    color: var(--ink);
+    font-size: 16px;
+}
+
+.nch-pcard__link {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    font-weight: 700;
+    font-size: 14.5px;
+    color: var(--red);
+}
+
+.nch-pcard__link i {
+    transition: transform .25s ease;
+}
+
+.nch-pcard:hover .nch-pcard__link i {
+    transform: translateX(4px);
+}
+
+@media (max-width: 992px) {
+    .nch-card-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .nch-card-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* ---------------------------------------------------------------------
+   Offer / promo banner (dark, image)
+   --------------------------------------------------------------------- */
+.nch-offer {
+    position: relative;
+    border-radius: var(--r-xl);
+    overflow: hidden;
+    background: var(--ink);
+    color: #fff;
+    padding: 56px 60px;
+    min-height: 320px;
+    display: flex;
+    align-items: center;
+}
+
+.nch-offer__bg {
+    position: absolute;
+    inset: 0;
+    background-image: url(../images/section-bg.jpg);
+    background-size: cover;
+    background-position: center;
+    z-index: 0;
+}
+
+.nch-offer__overlay {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    background: linear-gradient(90deg, rgba(18, 16, 14, .94) 0%, rgba(18, 16, 14, .8) 42%, rgba(18, 16, 14, .35) 78%, rgba(18, 16, 14, .15) 100%);
+}
+
+.nch-offer__inner {
+    position: relative;
+    z-index: 2;
+    max-width: 560px;
+}
+
+.nch-offer h2 {
+    color: #fff;
+    font-size: clamp(26px, 3.4vw, 40px);
+    font-weight: 800;
+    letter-spacing: -.025em;
+    line-height: 1.08;
+    margin: 0 0 14px;
+}
+
+.nch-offer h2 span {
+    color: #ff1414;
+}
+
+.nch-offer p {
+    color: rgba(255, 255, 255, .82);
+    font-size: 17px;
+    margin: 0 0 26px;
+}
+
+.nch-offer__actions {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 16px;
+}
+
+.nch-offer__phone {
+    display: inline-flex;
+    align-items: center;
+    gap: 11px;
+    color: #fff;
+    font-weight: 800;
+    font-size: 22px;
+}
+
+.nch-offer__phone i {
+    color: var(--red);
+}
+
+.nch-offer__phone:hover {
+    color: #fff;
+}
+
+@media (max-width: 768px) {
+    .nch-offer {
+        padding: 40px 28px;
+    }
+
+    .nch-offer__overlay {
+        background: linear-gradient(90deg, rgba(18, 16, 14, .92) 0%, rgba(18, 16, 14, .78) 100%);
+    }
+}
+
+/* ---------------------------------------------------------------------
+   How it works — steps
+   --------------------------------------------------------------------- */
+.nch-steps {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 22px;
+}
+
+.nch-step {
+    background: #fff;
+    border: 1px solid var(--line);
+    border-radius: var(--r-lg);
+    padding: 30px 26px;
+    position: relative;
+    transition: transform .28s ease, box-shadow .28s ease;
+}
+
+.nch-step:hover {
+    transform: translateY(-6px);
+    box-shadow: var(--shadow-card);
+}
+
+.nch-step__n {
+    font-size: 15px;
+    font-weight: 800;
+    color: var(--red);
+    letter-spacing: .04em;
+    margin-bottom: 18px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.nch-step__n::after {
+    content: "";
+    flex: 1;
+    height: 1px;
+    background: var(--line);
+}
+
+.nch-step__ic {
+    width: 50px;
+    height: 50px;
+    border-radius: 14px;
+    background: var(--cream);
+    color: var(--ink);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    margin-bottom: 18px;
+}
+
+.nch-step h3 {
+    font-size: 18px;
+    font-weight: 800;
+    margin-bottom: 8px;
+}
+
+.nch-step p {
+    color: var(--muted);
+    font-size: 15px;
+    line-height: 1.6;
+    margin: 0;
+}
+
+@media (max-width: 992px) {
+    .nch-steps {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 520px) {
+    .nch-steps {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* ---------------------------------------------------------------------
+   Testimonials
+   --------------------------------------------------------------------- */
+.nch-tgrid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+}
+
+.nch-testi {
+    background: #fff;
+    border: 1px solid var(--line);
+    border-radius: var(--r-lg);
+    padding: 32px 30px;
+    box-shadow: var(--shadow-xs);
+    display: flex;
+    flex-direction: column;
+}
+
+.nch-testi__stars {
+    color: var(--red);
+    font-size: 14px;
+    margin-bottom: 16px;
+    letter-spacing: 2px;
+}
+
+.nch-testi__quote {
+    color: var(--text);
+    font-size: 16px;
+    line-height: 1.7;
+    margin: 0 0 24px;
+    flex: 1;
+}
+
+.nch-testi__person {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    border-top: 1px solid var(--line);
+    padding-top: 20px;
+}
+
+.nch-testi__person img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+    flex-shrink: 0;
+}
+
+.nch-testi__person .name {
+    font-weight: 800;
+    font-size: 15.5px;
+    color: var(--ink);
+    line-height: 1.2;
+}
+
+.nch-testi__person .role {
+    font-size: 13px;
+    color: var(--muted);
+}
+
+@media (max-width: 992px) {
+    .nch-tgrid {
+        grid-template-columns: 1fr;
+        max-width: 560px;
+        margin: 0 auto;
+    }
+}
+
+/* ---------------------------------------------------------------------
+   Big CTA band
+   --------------------------------------------------------------------- */
+.nch-ctaband {
+    background: var(--red);
+    border-radius: var(--r-xl);
+    padding: 64px 56px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.nch-ctaband::before,
+.nch-ctaband::after {
+    content: "";
+    position: absolute;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, .07);
+}
+
+.nch-ctaband::before {
+    width: 360px;
+    height: 360px;
+    top: -160px;
+    left: -100px;
+}
+
+.nch-ctaband::after {
+    width: 300px;
+    height: 300px;
+    bottom: -180px;
+    right: -80px;
+}
+
+.nch-ctaband__inner {
+    position: relative;
+    z-index: 2;
+    max-width: 680px;
+    margin: 0 auto;
+}
+
+.nch-ctaband h2 {
+    color: #fff;
+    font-size: clamp(28px, 3.8vw, 44px);
+    font-weight: 800;
+    letter-spacing: -.025em;
+    margin: 0 0 14px;
+}
+
+.nch-ctaband p {
+    color: rgba(255, 255, 255, .9);
+    font-size: 18px;
+    margin: 0 0 28px;
+}
+
+.nch-ctaband__actions {
+    display: inline-flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 16px;
+    justify-content: center;
+}
+
+.nch-ctaband__phone {
+    display: inline-flex;
+    align-items: center;
+    gap: 11px;
+    color: #fff;
+    font-weight: 800;
+    font-size: 24px;
+}
+
+.nch-ctaband__phone:hover {
+    color: #fff;
+}
+
+@media (max-width: 768px) {
+    .nch-ctaband {
+        padding: 44px 24px;
+    }
+}
+
+/* ---------------------------------------------------------------------
+   Footer
+   --------------------------------------------------------------------- */
+.footer-section {
+    background: var(--ink-2);
+    background-image: none;
+    color: #fff;
+    margin-top: 0;
+    overflow: hidden;
+    position: relative;
+}
+
+.footer-section::before {
+    display: none;
+}
+
+.nch-foot-top {
+    position: relative;
+    z-index: 2;
+    padding: 70px 0 50px;
+    display: grid;
+    grid-template-columns: 1.4fr 1fr 1.3fr;
+    gap: 50px;
+}
+
+.nch-foot-mono {
+    position: absolute;
+    right: -20px;
+    bottom: -60px;
+    font-size: 260px;
+    font-weight: 800;
+    line-height: 1;
+    color: rgba(255, 255, 255, .03);
+    z-index: 0;
+    pointer-events: none;
+}
+
+.nch-foot-brand img {
+    height: 50px;
+    width: auto;
+    margin-bottom: 20px;
+}
+
+.nch-foot-brand p {
+    color: rgba(255, 255, 255, .62);
+    font-size: 15px;
+    line-height: 1.7;
+    max-width: 360px;
+    margin: 0 0 22px;
+}
+
+.nch-foot-social {
+    display: flex;
+    gap: 10px;
+}
+
+.nch-foot-social a {
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    border: 1px solid rgba(255, 255, 255, .16);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-size: 15px;
+    transition: background .25s ease, border-color .25s ease, transform .25s ease;
+}
+
+.nch-foot-social a:hover {
+    background: var(--red);
+    border-color: var(--red);
+    color: #fff;
+    transform: translateY(-3px);
+}
+
+.nch-foot-col h4 {
+    color: #fff;
+    font-size: 15px;
+    font-weight: 800;
+    letter-spacing: .02em;
+    margin: 6px 0 22px;
+}
+
+.nch-foot-col ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nch-foot-col ul li {
+    margin-bottom: 13px;
+}
+
+.nch-foot-col ul li a {
+    color: rgba(255, 255, 255, .66);
+    font-size: 15px;
+    transition: color .2s ease, padding .2s ease;
+}
+
+.nch-foot-col ul li a:hover {
+    color: #fff;
+    padding-left: 5px;
+}
+
+.nch-foot-contact li {
+    display: flex;
+    gap: 13px;
+    margin-bottom: 16px;
+    color: rgba(255, 255, 255, .72);
+    font-size: 15px;
+}
+
+.nch-foot-contact li i {
+    color: var(--red);
+    margin-top: 4px;
+    width: 18px;
+    text-align: center;
+}
+
+.nch-foot-contact li a {
+    color: rgba(255, 255, 255, .72);
+    overflow-wrap: anywhere;
+}
+
+.nch-foot-contact li a:hover {
+    color: #fff;
+}
+
+.nch-foot-news {
+    display: flex;
+    gap: 10px;
+    margin-top: 18px;
+    max-width: 340px;
+}
+
+.nch-foot-news input {
+    flex: 1;
+    background: rgba(255, 255, 255, .07);
+    border: 1px solid rgba(255, 255, 255, .16);
+    border-radius: var(--pill);
+    padding: 13px 20px;
+    color: #fff;
+    font-size: 14.5px;
+    font-family: var(--font);
+    outline: none;
+}
+
+.nch-foot-news input::placeholder {
+    color: rgba(255, 255, 255, .5);
+}
+
+.nch-foot-news input:focus {
+    border-color: var(--red);
+}
+
+.nch-foot-news button {
+    border: 0;
+    background: var(--red);
+    color: #fff;
+    border-radius: 50%;
+    width: 46px;
+    height: 46px;
+    flex-shrink: 0;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background .25s ease;
+}
+
+.nch-foot-news button:hover {
+    background: var(--red-dark);
+}
+
+.copyright-area {
+    position: relative;
+    z-index: 2;
+    background: transparent;
+    border-top: 1px solid rgba(255, 255, 255, .1);
+    padding: 22px 0;
+}
+
+.copyright-text p,
+.footer-menu p {
+    margin: 0;
+    font-size: 14px;
+    color: rgba(255, 255, 255, .55);
+}
+
+.footer-menu p a {
+    color: #fff;
+    font-weight: 700;
+}
+
+.footer-menu p a:hover {
+    color: var(--red);
+}
+
+@media (max-width: 860px) {
+    .nch-foot-top {
+        grid-template-columns: 1fr 1fr;
+        gap: 36px;
+    }
+
+    .nch-foot-brand {
+        grid-column: 1 / -1;
+    }
+}
+
+@media (max-width: 560px) {
+    .nch-foot-top {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* ---------------------------------------------------------------------
+   Inner page banner
+   --------------------------------------------------------------------- */
 .single-page {
-    padding: 140px 0 80px;
+    background: var(--ink-2);
+    background-image: none;
+    color: #fff;
+    text-align: left;
+    padding: 152px 0 76px;
+    position: relative;
+    overflow: hidden;
+    border-bottom: 0;
+}
+
+.single-page::before {
+    display: none;
+}
+
+.nch-banner__bg {
+    position: absolute;
+    inset: 0;
+    background-image: url(../images/single-page.jpg);
+    background-size: cover;
+    background-position: center;
+    opacity: .28;
+    z-index: 0;
+}
+
+.nch-banner__overlay {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    background: linear-gradient(90deg, rgba(15, 13, 12, .95) 0%, rgba(15, 13, 12, .8) 50%, rgba(15, 13, 12, .6) 100%);
+}
+
+.single-page .container {
+    position: relative;
+    z-index: 2;
 }
 
 .single-page h1 {
     color: #fff;
-    font-family: 'Rajdhani', sans-serif;
-    font-weight: 700;
-    text-transform: uppercase;
-    font-size: 48px;
-    margin: 0 0 10px;
-    letter-spacing: 1px;
+    font-size: clamp(34px, 5vw, 56px);
+    font-weight: 800;
+    letter-spacing: -.03em;
+    line-height: 1.05;
+    margin: 0 0 16px;
 }
 
 .single-page .breadcrumb {
-    justify-content: center;
+    background: transparent;
+    padding: 0;
     margin: 0;
+    font-size: 14.5px;
+    font-weight: 600;
 }
 
 .single-page .breadcrumb-item a {
+    color: rgba(255, 255, 255, .66);
+}
+
+.single-page .breadcrumb-item a:hover {
     color: #fff;
 }
 
 .single-page .breadcrumb-item.active {
-    color: var(--nch-red);
+    color: var(--red);
 }
 
-.single-page .breadcrumb-item+.breadcrumb-item::before {
-    color: #bbb;
+.single-page .breadcrumb-item + .breadcrumb-item::before {
+    color: rgba(255, 255, 255, .4);
+    content: "/";
 }
 
-/* ---------- Buttons on light sections ----------
-   The template's .button is transparent with white text/border (meant for the
-   dark hero), so it's invisible on white sections and only shows red on hover.
-   Give it a solid red fill at rest with a dark hover on light backgrounds. */
-.theme-repair-services .button,
-.bg-grey .button {
-    background: var(--nch-red);
-    border-color: var(--nch-red);
-    color: #fff;
-}
-
-.theme-repair-services .button:hover,
-.bg-grey .button:hover {
-    background: var(--nch-dark);
-    border-color: var(--nch-dark);
-    color: #fff;
-}
-
-/* ---------- Service cards: icon font instead of svg image ---------- */
-.kar-theme-single-service-card i.service-icon {
-    font-size: 46px;
-    color: var(--nch-red);
-    margin-bottom: 20px;
-    display: inline-block;
-    line-height: 1;
-}
-
-.kar-theme-single-service-card {
-    margin-bottom: 30px;
-}
-
-/* ---------- Generic content blocks ---------- */
-.nch-content-block {
-    padding: 30px 0;
-}
-
-.nch-content-block h3 {
-    font-family: 'Rajdhani', sans-serif;
-    font-weight: 700;
-    text-transform: uppercase;
-    color: var(--nch-dark);
-    font-size: 30px;
-    margin-bottom: 18px;
-    position: relative;
-    padding-bottom: 12px;
-}
-
-.nch-content-block h3::after {
-    content: '';
+.nch-banner__curve {
     position: absolute;
     left: 0;
-    bottom: 0;
-    width: 60px;
-    height: 3px;
-    background: var(--nch-red);
+    right: 0;
+    bottom: -1px;
+    height: 46px;
+    background: var(--cream);
+    border-radius: 50% 50% 0 0 / 100% 100% 0 0;
+    z-index: 2;
+    transform: scaleX(1.6);
 }
 
-.nch-content-block p {
-    color: #5f5f5f;
+@media (max-width: 768px) {
+    .single-page {
+        padding: 124px 0 64px;
+    }
+}
+
+/* ---------------------------------------------------------------------
+   Generic content blocks / lists / splits
+   --------------------------------------------------------------------- */
+.nch-prose h2 {
+    font-size: clamp(26px, 3.4vw, 38px);
+    margin-bottom: 18px;
+}
+
+.nch-prose h3 {
+    font-size: 22px;
+    margin: 28px 0 12px;
+}
+
+.nch-prose p {
+    color: var(--muted);
+    font-size: 16.5px;
     line-height: 1.8;
     margin-bottom: 16px;
 }
 
+.nch-prose p strong {
+    color: var(--ink);
+}
+
 .nch-lead {
-    font-size: 19px;
-    color: #444;
-    line-height: 1.8;
+    font-size: 20px;
+    line-height: 1.6;
+    color: var(--text);
+    font-weight: 500;
 }
 
-/* ---------- Tick / promise list ---------- */
-.nch-list {
-    list-style: none;
-    padding: 0;
-    margin: 20px 0 0;
+.nch-lead strong {
+    color: var(--red);
 }
 
-.nch-list li {
+.nch-split {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+}
+
+.nch-split--media-r {
+    grid-template-columns: 1.05fr .95fr;
+}
+
+.nch-split__media {
+    border-radius: var(--r-xl);
+    overflow: hidden;
     position: relative;
-    padding: 11px 0 11px 40px;
-    font-size: 16.5px;
-    color: #444;
-    border-bottom: 1px solid #efefef;
 }
 
-.nch-list li:last-child {
-    border-bottom: 0;
-}
-
-.nch-list li i {
-    position: absolute;
-    left: 0;
-    top: 13px;
-    color: var(--nch-red);
-    font-size: 18px;
-}
-
-/* ---------- Stats / feature band ---------- */
-.nch-stats {
-    background: var(--nch-dark);
-    padding: 55px 0;
-}
-
-.nch-stat {
-    text-align: center;
-    color: #fff;
-    padding: 15px 0;
-}
-
-.nch-stat .num {
-    font-family: 'Rajdhani', sans-serif;
-    font-size: 46px;
-    font-weight: 700;
-    color: var(--nch-red);
-    line-height: 1;
-}
-
-.nch-stat .label {
-    font-size: 16px;
-    color: #ddd;
-    margin-top: 8px;
+.nch-split__media img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
     display: block;
 }
 
-/* ---------- Vehicle fleet chips ---------- */
-.nch-fleet {
-    margin-top: 10px;
+@media (max-width: 860px) {
+    .nch-split,
+    .nch-split--media-r {
+        grid-template-columns: 1fr;
+        gap: 34px;
+    }
 }
 
-.nch-fleet .fleet-group {
+/* check list — simple disc bullets */
+.nch-checks {
+    list-style: disc;
+    list-style-position: outside;
+    margin: 16px 0 0;
+    padding: 0 0 0 20px;
+}
+
+.nch-checks li {
+    display: list-item;
+    padding: 5px 0;
+    font-size: 15.5px;
+    font-weight: 500;
+    color: var(--text);
+    line-height: 1.5;
+}
+
+.nch-checks li::marker {
+    color: var(--red);
+    font-size: 1.05em;
+}
+
+/* hide the inline check icons from the markup — discs replace them */
+.nch-checks li i {
+    display: none;
+}
+
+/* stat strip card */
+.nch-statcard {
     background: #fff;
-    border: 1px solid #ececec;
-    border-left: 4px solid var(--nch-red);
-    border-radius: 4px;
-    padding: 20px 24px;
-    margin-bottom: 22px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, .04);
+    border: 1px solid var(--line);
+    border-radius: var(--r-xl);
+    box-shadow: var(--shadow-xs);
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    overflow: hidden;
 }
 
-.nch-fleet .fleet-group h4 {
-    font-family: 'Rajdhani', sans-serif;
-    font-weight: 700;
-    text-transform: uppercase;
-    color: var(--nch-dark);
-    font-size: 21px;
-    margin-bottom: 12px;
+.nch-statcard > div {
+    padding: 34px 28px;
+    border-right: 1px solid var(--line);
+    text-align: center;
 }
 
-.nch-chips {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
+.nch-statcard > div:last-child {
+    border-right: 0;
 }
 
-.nch-chips span {
-    background: #f5f5f5;
-    color: #333;
-    padding: 7px 15px;
-    border-radius: 30px;
-    font-size: 14.5px;
+.nch-statcard .n {
+    font-size: 40px;
+    font-weight: 800;
+    color: var(--ink);
+    line-height: 1;
+    letter-spacing: -.03em;
+}
+
+.nch-statcard .n span {
+    color: var(--red);
+}
+
+.nch-statcard .l {
+    color: var(--muted);
+    font-size: 14px;
+    margin-top: 10px;
     font-weight: 600;
 }
 
-/* ---------- Council / authority badges ---------- */
+@media (max-width: 768px) {
+    .nch-statcard {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .nch-statcard > div:nth-child(2) {
+        border-right: 0;
+    }
+
+    .nch-statcard > div:nth-child(1),
+    .nch-statcard > div:nth-child(2) {
+        border-bottom: 1px solid var(--line);
+    }
+}
+
+/* ---------------------------------------------------------------------
+   Detailed service cards (services page)
+   --------------------------------------------------------------------- */
+/* sticky intro panel beside a numbered editorial list */
+.nch-svc-layout {
+    display: grid;
+    grid-template-columns: 0.82fr 1.18fr;
+    gap: 64px;
+    align-items: start;
+}
+
+.nch-svc-aside {
+    position: sticky;
+    top: 108px;
+}
+
+.nch-svc-aside h2 {
+    font-size: clamp(28px, 3.3vw, 38px);
+    font-weight: 800;
+    letter-spacing: -.025em;
+    line-height: 1.1;
+    margin: 0 0 16px;
+}
+
+.nch-svc-aside p {
+    color: var(--muted);
+    font-size: 16.5px;
+    line-height: 1.75;
+    margin: 0 0 24px;
+}
+
+.nch-svc-aside p strong {
+    color: var(--red);
+}
+
+.nch-svc-note {
+    display: flex;
+    gap: 13px;
+    align-items: flex-start;
+    background: var(--red-soft);
+    border-radius: var(--r-md);
+    padding: 16px 18px;
+    margin-bottom: 26px;
+}
+
+.nch-svc-note i {
+    color: var(--red);
+    font-size: 16px;
+    margin-top: 2px;
+}
+
+.nch-svc-note span {
+    font-size: 14.5px;
+    color: var(--ink);
+    font-weight: 600;
+    line-height: 1.5;
+}
+
+.nch-svc {
+    display: grid;
+    grid-template-columns: 56px 1fr;
+    gap: 24px;
+    padding: 30px 0;
+    border-top: 1px solid var(--line);
+    transition: padding-left .3s ease;
+}
+
+.nch-svc:last-child {
+    border-bottom: 1px solid var(--line);
+}
+
+.nch-svc:hover {
+    padding-left: 12px;
+}
+
+.nch-svc__n {
+    font-size: 30px;
+    font-weight: 800;
+    color: var(--line-2);
+    line-height: 1;
+    letter-spacing: -.02em;
+    font-variant-numeric: tabular-nums;
+    transition: color .25s ease;
+}
+
+.nch-svc:hover .nch-svc__n {
+    color: var(--red);
+}
+
+.nch-svc__head {
+    display: flex;
+    align-items: center;
+    gap: 11px;
+    margin-bottom: 11px;
+}
+
+.nch-svc__head i {
+    color: var(--red);
+    font-size: 16px;
+}
+
+.nch-svc__head h3 {
+    font-size: 20px;
+    font-weight: 800;
+    line-height: 1.2;
+    letter-spacing: -.01em;
+}
+
+.nch-svc__body p {
+    color: var(--muted);
+    font-size: 15.5px;
+    line-height: 1.72;
+    margin: 0 0 10px;
+}
+
+.nch-svc__body p:last-child {
+    margin-bottom: 0;
+}
+
+.nch-svc__body p strong {
+    color: var(--ink);
+}
+
+.nch-svc__body .nch-checks {
+    margin: 14px 0 0;
+}
+
+.nch-svc__body .nch-checks li {
+    font-size: 14.5px;
+}
+
+.nch-svc__body .nch-councils {
+    margin-top: 14px;
+}
+
+@media (max-width: 900px) {
+    .nch-svc-layout {
+        grid-template-columns: 1fr;
+        gap: 34px;
+    }
+
+    .nch-svc-aside {
+        position: static;
+    }
+}
+
+@media (max-width: 560px) {
+    .nch-svc {
+        grid-template-columns: 40px 1fr;
+        gap: 15px;
+        padding: 24px 0;
+    }
+
+    .nch-svc:hover {
+        padding-left: 0;
+    }
+
+    .nch-svc__n {
+        font-size: 22px;
+    }
+
+    .nch-svc__head h3 {
+        font-size: 18px;
+    }
+}
+
+/* fleet — one detailed section per vehicle category */
+.nch-fleet-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 58px;
+    align-items: center;
+}
+
+.nch-fleet-row + .nch-fleet-row {
+    margin-top: 54px;
+    padding-top: 54px;
+    border-top: 1px solid var(--line);
+}
+
+.nch-fleet-row__media {
+    position: relative;
+    border-radius: var(--r-xl);
+    overflow: hidden;
+    aspect-ratio: 16 / 11;
+}
+
+.nch-fleet-row__media img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform .7s ease;
+}
+
+.nch-fleet-row__media:hover img {
+    transform: scale(1.04);
+}
+
+.nch-fleet-row__count {
+    position: absolute;
+    top: 16px;
+    left: 16px;
+    background: rgba(20, 18, 16, .82);
+    backdrop-filter: blur(4px);
+    color: #fff;
+    font-size: 12.5px;
+    font-weight: 700;
+    padding: 7px 14px;
+    border-radius: var(--pill);
+}
+
+.nch-fleet-row--flip .nch-fleet-row__media {
+    order: 2;
+}
+
+.nch-fleet-row h3 {
+    font-size: clamp(24px, 3vw, 32px);
+    font-weight: 800;
+    letter-spacing: -.02em;
+    margin: 0 0 14px;
+}
+
+.nch-fleet-row__desc {
+    color: var(--muted);
+    font-size: 16.5px;
+    line-height: 1.7;
+    margin: 0 0 4px;
+}
+
+.nch-fleet-row .nch-checks {
+    margin: 18px 0 0;
+}
+
+.nch-fleet-row .nch-tags {
+    margin-top: 22px;
+}
+
+@media (max-width: 860px) {
+    .nch-fleet-row {
+        grid-template-columns: 1fr;
+        gap: 24px;
+    }
+
+    .nch-fleet-row--flip .nch-fleet-row__media {
+        order: 0;
+    }
+
+    .nch-fleet-row + .nch-fleet-row {
+        margin-top: 38px;
+        padding-top: 38px;
+    }
+}
+
+.nch-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.nch-tags span {
+    background: var(--cream);
+    border: 1px solid var(--line);
+    color: var(--text);
+    padding: 7px 13px;
+    border-radius: var(--pill);
+    font-size: 13.5px;
+    font-weight: 600;
+}
+
+@media (max-width: 860px) {
+    .nch-fleet-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* councils */
 .nch-councils {
     display: flex;
     flex-wrap: wrap;
-    gap: 12px;
+    gap: 9px;
     margin-top: 18px;
 }
 
 .nch-councils span {
-    background: var(--nch-dark);
-    color: #fff;
-    padding: 8px 18px;
-    border-radius: 4px;
-    font-size: 14.5px;
+    background: var(--cream);
+    border: 1px solid var(--line);
+    color: var(--text);
+    padding: 8px 15px;
+    border-radius: var(--pill);
+    font-size: 14px;
     font-weight: 600;
+    transition: background .2s ease, color .2s ease, border-color .2s ease;
 }
 
-/* ---------- Detailed service blocks (services page) ---------- */
-.nch-service {
-    background: #fff;
-    border: 1px solid #eee;
-    border-radius: 6px;
-    padding: 34px 34px 28px;
-    margin-bottom: 30px;
-    box-shadow: 0 3px 14px rgba(0, 0, 0, .05);
-    height: 100%;
-}
-
-.nch-service .nch-service-head {
-    display: flex;
-    align-items: center;
-    margin-bottom: 16px;
-}
-
-.nch-service .nch-service-head i {
-    font-size: 30px;
+.nch-councils span:hover {
+    background: var(--red);
+    border-color: var(--red);
     color: #fff;
-    background: var(--nch-red);
-    width: 60px;
-    height: 60px;
-    line-height: 60px;
-    text-align: center;
-    border-radius: 50%;
-    margin-right: 18px;
-    flex: 0 0 auto;
 }
 
-.nch-service h3 {
-    font-family: 'Rajdhani', sans-serif;
-    font-weight: 700;
-    text-transform: uppercase;
-    color: var(--nch-dark);
-    font-size: 23px;
-    margin: 0;
-}
-
-.nch-service p {
-    color: #5f5f5f;
-    line-height: 1.75;
-    margin-bottom: 12px;
-}
-
-/* ---------- FAQ accordion (pure CSS, no JS dependency) ---------- */
+/* ---------------------------------------------------------------------
+   FAQ accordion
+   --------------------------------------------------------------------- */
 .nch-faq {
-    max-width: 920px;
-    margin: 0 auto;
+    display: grid;
+    gap: 14px;
 }
 
 .nch-faq details {
     background: #fff;
-    border: 1px solid #ececec;
-    border-radius: 6px;
-    margin-bottom: 15px;
-    box-shadow: 0 2px 9px rgba(0, 0, 0, .04);
+    border: 1px solid var(--line);
+    border-radius: var(--r-md);
     overflow: hidden;
+    transition: border-color .25s ease, box-shadow .25s ease;
+}
+
+.nch-faq details[open] {
+    border-color: var(--line-2);
+    box-shadow: var(--shadow-xs);
 }
 
 .nch-faq summary {
     cursor: pointer;
-    padding: 20px 58px 20px 26px;
-    font-size: 19px;
-    font-weight: 600;
-    color: var(--nch-dark);
-    position: relative;
     list-style: none;
-    font-family: 'Rajdhani', sans-serif;
-    transition: color .25s ease;
+    padding: 22px 56px 22px 26px;
+    font-size: 17.5px;
+    font-weight: 700;
+    color: var(--ink);
+    position: relative;
 }
 
 .nch-faq summary::-webkit-details-marker {
@@ -364,138 +2011,585 @@
 }
 
 .nch-faq summary::after {
-    content: '\f067';
-    /* fa-plus */
+    content: "\f067";
     font-family: 'FontAwesome';
     position: absolute;
-    right: 24px;
+    right: 22px;
     top: 50%;
     transform: translateY(-50%);
-    color: var(--nch-red);
-    font-size: 14px;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background: var(--cream);
+    color: var(--red);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
     font-weight: 400;
-    transition: transform .25s ease;
+    transition: transform .25s ease, background .25s ease, color .25s ease;
 }
 
 .nch-faq details[open] summary::after {
-    content: '\f068';
-}
-
-/* fa-minus */
-.nch-faq details[open] summary {
-    color: var(--nch-red);
+    content: "\f068";
+    background: var(--red);
+    color: #fff;
 }
 
 .nch-faq .faq-body {
-    padding: 2px 26px 24px;
-    color: #666;
-    line-height: 1.8;
-}
-
-/* ---------- Red CTA band ---------- */
-.nch-cta-band {
-    background: var(--nch-red);
-    padding: 55px 0;
-    text-align: center;
-}
-
-.nch-cta-band h2 {
-    color: #fff;
-    font-family: 'Rajdhani', sans-serif;
-    font-weight: 700;
-    text-transform: uppercase;
-    font-size: 36px;
-    margin-bottom: 12px;
-}
-
-.nch-cta-band p {
-    color: #ffe2e4;
-    font-size: 18px;
-    margin-bottom: 24px;
-}
-
-.nch-cta-band .nch-phone {
-    color: #fff;
-    font-size: 30px;
-    font-weight: 700;
-    font-family: 'Rajdhani', sans-serif;
-    display: inline-block;
-    margin: 0 12px 16px;
-    vertical-align: middle;
-}
-
-.nch-cta-band .nch-phone i {
-    margin-right: 8px;
-}
-
-.nch-btn-light {
-    display: inline-block;
-    background: #fff;
-    color: var(--nch-red);
-    padding: 13px 34px;
-    border-radius: 3px;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
-    transition: all .3s ease;
-}
-
-.nch-btn-light:hover {
-    background: var(--nch-dark);
-    color: #fff;
-}
-
-/* ---------- Hero caption tweaks ---------- */
-.slider .caption h1 {
-    text-transform: uppercase;
-}
-
-/* ---------- Notice strip (replaces CarShine offer) ---------- */
-.nch-notice {
-    background: var(--nch-dark);
-    border-radius: 6px;
-    padding: 34px 40px;
-    text-align: center;
-    margin-top: -55px;
-    position: relative;
-    z-index: 5;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, .18);
-}
-
-.nch-notice h2 {
-    color: #fff;
-    font-family: 'Rajdhani', sans-serif;
-    font-weight: 700;
-    text-transform: uppercase;
-    font-size: 28px;
-    margin: 0 0 6px;
-}
-
-.nch-notice h2 span {
-    color: var(--nch-red);
-}
-
-.nch-notice p {
-    color: #cfcfcf;
-    margin: 0;
+    padding: 0 26px 24px;
+    color: var(--muted);
     font-size: 16px;
+    line-height: 1.75;
 }
 
+/* ---------------------------------------------------------------------
+   Contact form + map
+   --------------------------------------------------------------------- */
+.contact-area {
+    background: var(--cream);
+}
+
+.form-container-box {
+    background: #fff;
+    border: 1px solid var(--line);
+    border-radius: var(--r-xl);
+    padding: 40px 38px;
+    box-shadow: var(--shadow-xs);
+}
+
+.contact-area .form input,
+.contact-area .form textarea,
+.contact-area .form select {
+    width: 100%;
+    padding: 15px 18px;
+    border: 1px solid var(--line);
+    border-radius: var(--r-sm);
+    min-height: 54px;
+    background: var(--cream);
+    font-weight: 500;
+    font-size: 15.5px;
+    font-family: var(--font);
+    color: var(--text);
+    transition: border-color .2s ease, background .2s ease;
+}
+
+.contact-area .form input::placeholder,
+.contact-area .form textarea::placeholder {
+    color: var(--muted-2);
+    font-weight: 500;
+}
+
+.contact-area .form input:focus,
+.contact-area .form textarea:focus {
+    border-color: var(--red);
+    background: #fff;
+    outline: none;
+}
+
+.contact-area .form textarea {
+    min-height: 150px;
+    max-height: none;
+    max-width: 100%;
+}
+
+.form-group {
+    margin-bottom: 18px;
+}
+
+.contact-widget {
+    background: var(--ink);
+    border-radius: var(--r-xl);
+    padding: 26px 26px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+}
+
+.contact-widget .contact-info {
+    padding: 15px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, .1);
+    display: flex;
+    gap: 13px;
+    align-items: flex-start;
+}
+
+.contact-widget .contact-info:first-child {
+    padding-top: 0;
+}
+
+.contact-widget .contact-info:last-child {
+    border-bottom: 0;
+    padding-bottom: 0;
+}
+
+.contact-widget .contact-info .ci-ic {
+    width: 38px;
+    height: 38px;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, .07);
+    color: var(--red);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    flex-shrink: 0;
+}
+
+.contact-widget .contact-info h6 {
+    color: rgba(255, 255, 255, .5);
+    font-weight: 700;
+    font-size: 11px;
+    letter-spacing: .05em;
+    text-transform: uppercase;
+    margin: 1px 0 3px;
+}
+
+.contact-widget .contact-info p {
+    margin: 0;
+    color: #fff;
+    font-size: 14.5px;
+    font-weight: 600;
+    line-height: 1.45;
+    overflow-wrap: break-word;
+}
+
+.contact-widget .contact-info > div {
+    min-width: 0;
+}
+
+.contact-widget .contact-info p a {
+    color: #fff;
+}
+
+.contact-widget .contact-info p a:hover {
+    color: #ff7a7b;
+}
+
+#map {
+    line-height: 0;
+}
+
+#map iframe {
+    filter: grayscale(1) contrast(1.04);
+    transition: filter .4s ease;
+}
+
+#map iframe:hover {
+    filter: grayscale(0);
+}
+
+/* ---------------------------------------------------------------------
+   Back-to-top + preloader
+   --------------------------------------------------------------------- */
+.back-to-top {
+    background: var(--red);
+    border-radius: 50%;
+}
+
+.back-to-top:hover {
+    background: var(--red-dark);
+}
+
+.preloader {
+    background: var(--cream);
+}
+
+/* ---------------------------------------------------------------------
+   Utility
+   --------------------------------------------------------------------- */
+.text-center {
+    text-align: center;
+}
+
+.mt-0 { margin-top: 0; }
+.mt-24 { margin-top: 24px; }
+.mt-32 { margin-top: 32px; }
+.mb-0 { margin-bottom: 0; }
+
+/* =====================================================================
+   RESPONSIVE REFINEMENTS — tighten type, sizes & spacing on small screens
+   (appended last so these win at equal specificity)
+   ===================================================================== */
+
+/* mobile dropdown anchors to the pill, not the full-width header */
+.nch-nav {
+    position: relative;
+}
+
+/* ---- Tablet & below (nav has collapsed to a burger at 992px) ---- */
+@media (max-width: 991px) {
+    /* push the call-to-action cluster to the right so the pill isn't left-clustered */
+    .nch-nav-right {
+        margin-left: auto;
+    }
+
+    .nch-hero {
+        padding: 140px 0 76px;
+    }
+
+    .nch-hero h1 {
+        font-size: clamp(32px, 5.6vw, 46px);
+        margin-bottom: 18px;
+    }
+
+    .nch-hero__lead {
+        font-size: 17px;
+        margin-bottom: 28px;
+    }
+
+    .nch-hero__stats {
+        gap: 22px 30px;
+        padding-top: 24px;
+    }
+
+    .nch-hero__mono {
+        font-size: 300px;
+    }
+
+    .nch-sec-head {
+        margin-bottom: 36px;
+    }
+}
+
+/* ---- Phones (≤767) ---- */
 @media (max-width: 767px) {
-    .single-page h1 {
-        font-size: 34px;
+    .container,
+    .nch-wrap {
+        padding-left: 18px;
+        padding-right: 18px;
     }
 
-    .nch-service .nch-service-head {
+    .nch-section {
+        padding: 50px 0;
+    }
+
+    .nch-section--tight {
+        padding: 38px 0;
+    }
+
+    /* hero */
+    .nch-hero {
+        padding: 116px 0 52px;
+    }
+
+    .nch-hero h1 {
+        font-size: clamp(27px, 7.6vw, 36px);
+        line-height: 1.1;
+        margin-bottom: 15px;
+    }
+
+    .nch-hero__lead {
+        font-size: 15.5px;
+        line-height: 1.6;
+        margin-bottom: 22px;
+    }
+
+    .nch-hero__actions {
         flex-direction: column;
-        text-align: center;
+        align-items: stretch;
+        gap: 10px;
+        margin-bottom: 30px;
     }
 
-    .nch-service .nch-service-head i {
-        margin: 0 0 14px;
+    .nch-hero__actions .btn {
+        width: 100%;
     }
 
-    .nch-notice {
-        margin-top: 30px;
+    .nch-hero__stats {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 18px 16px;
+        padding-top: 20px;
+    }
+
+    .nch-hero__stat {
+        gap: 11px;
+        min-width: 0;
+    }
+
+    .nch-hero__stat .ic {
+        width: 38px;
+        height: 38px;
+        font-size: 15px;
+    }
+
+    .nch-hero__stat .n {
+        font-size: 18px;
+    }
+
+    .nch-hero__stat .l {
+        font-size: 12px;
+    }
+
+    .nch-hero__mono {
+        font-size: 190px;
+        right: -28px;
+    }
+
+    /* eyebrows / heads / type */
+    .nch-eyebrow {
+        font-size: 12px;
+        padding: 6px 12px 6px 11px;
+        margin-bottom: 15px;
+    }
+
+    .nch-sec-head {
+        margin-bottom: 28px;
+    }
+
+    .nch-sec-head p {
+        font-size: 15.5px;
+    }
+
+    .nch-lead {
+        font-size: 17px;
+    }
+
+    .nch-prose p {
+        font-size: 15.5px;
+    }
+
+    /* buttons */
+    .btn,
+    .nch-btn {
+        padding: 14px 22px;
+        font-size: 15px;
+    }
+
+    /* cards */
+    .nch-feature,
+    .nch-step {
+        padding: 24px 22px;
+    }
+
+    .nch-feature__ic,
+    .nch-srv__ic {
+        width: 50px;
+        height: 50px;
+        font-size: 19px;
+        margin-bottom: 16px;
+    }
+
+    .nch-pcard__media {
+        margin: 8px 8px 0;
+    }
+
+    .nch-pcard__body {
+        padding: 18px 18px 20px;
+    }
+
+    .nch-srv__body {
+        padding: 22px 22px 24px;
+    }
+
+    .nch-srv__head {
+        gap: 14px;
+        margin-bottom: 16px;
+    }
+
+    .nch-srv__head h3 {
+        font-size: 19px;
+    }
+
+    .nch-testi {
+        padding: 26px 22px;
+    }
+
+    .nch-fleet-card__body {
+        padding: 20px 20px 22px;
+    }
+
+    .nch-fleet-card__media {
+        height: 158px;
+    }
+
+    /* offer / cta bands */
+    .nch-offer {
+        padding: 32px 22px;
+        min-height: 0;
+        border-radius: var(--r-lg);
+    }
+
+    .nch-offer h2 {
+        font-size: 25px;
+    }
+
+    .nch-offer p {
+        font-size: 15.5px;
+        margin-bottom: 22px;
+    }
+
+    .nch-offer__actions {
+        gap: 12px;
+    }
+
+    .nch-offer__phone {
+        font-size: 18px;
+    }
+
+    .nch-ctaband {
+        padding: 38px 22px;
+        border-radius: var(--r-lg);
+    }
+
+    .nch-ctaband h2 {
+        font-size: 25px;
+    }
+
+    .nch-ctaband p {
+        font-size: 16px;
+        margin-bottom: 22px;
+    }
+
+    .nch-ctaband__phone {
+        font-size: 20px;
+    }
+
+    .nch-ctaband__actions {
+        gap: 12px;
+    }
+
+    /* stat card */
+    .nch-statcard > div {
+        padding: 22px 14px;
+    }
+
+    .nch-statcard .n {
+        font-size: 28px;
+    }
+
+    .nch-statcard .l {
+        font-size: 12.5px;
+        margin-top: 6px;
+    }
+
+    /* inner page banner */
+    .single-page {
+        padding: 112px 0 44px;
+    }
+
+    /* forms */
+    .form-container-box {
+        padding: 24px 18px;
+    }
+
+    .contact-widget {
+        padding: 26px 22px;
+    }
+
+    .contact-area .form input,
+    .contact-area .form textarea,
+    .contact-area .form select {
+        min-height: 50px;
+        padding: 13px 15px;
+        font-size: 15px;
+    }
+
+    /* faq */
+    .nch-faq summary {
+        font-size: 16px;
+        padding: 18px 50px 18px 20px;
+    }
+
+    .nch-faq .faq-body {
+        padding: 0 20px 20px;
+        font-size: 15px;
+    }
+
+    /* footer */
+    .nch-foot-top {
+        padding: 50px 0 36px;
+        gap: 32px;
+    }
+
+    .nch-foot-mono {
+        font-size: 150px;
     }
 }
+
+/* ---- Small phones (≤479) ---- */
+@media (max-width: 479px) {
+    .container,
+    .nch-wrap {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    .nch-section {
+        padding: 42px 0;
+    }
+
+    .nch-section--tight {
+        padding: 32px 0;
+    }
+
+    /* compact nav */
+    .nch-header {
+        padding: 11px 0;
+    }
+
+    .nch-nav {
+        gap: 8px;
+        padding: 8px 8px 8px 15px;
+    }
+
+    .nch-brand img {
+        height: 29px;
+    }
+
+    .nch-nav-right {
+        gap: 8px;
+    }
+
+    .nch-burger {
+        width: 42px;
+        height: 42px;
+        font-size: 16px;
+    }
+
+    .btn-sm {
+        padding: 10px 14px;
+        font-size: 13px;
+    }
+
+    /* hero */
+    .nch-hero {
+        padding: 100px 0 46px;
+    }
+
+    .nch-hero h1 {
+        font-size: 27px;
+    }
+
+    .nch-hero__stats {
+        gap: 13px 16px;
+    }
+
+    /* heads */
+    .nch-sec-head h2,
+    .nch-h2,
+    .nch-prose h2 {
+        font-size: 25px;
+    }
+
+    .nch-offer h2,
+    .nch-ctaband h2 {
+        font-size: 22px;
+    }
+
+    .single-page h1 {
+        font-size: 28px;
+    }
+
+    /* tighter grid gaps */
+    .nch-card-grid,
+    .nch-feature-grid,
+    .nch-steps,
+    .nch-tgrid,
+    .nch-fleet-grid {
+        gap: 16px;
+    }
+}
+

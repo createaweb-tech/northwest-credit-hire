@@ -2,33 +2,35 @@
 
 @section("content")
 
-    <!-- Start Page Banner -->
+    <!-- Banner -->
     <div class="single-page">
-        <div class="container">
+        <div class="nch-banner__bg"></div>
+        <div class="nch-banner__overlay"></div>
+        <div class="container text-center">
+            {{-- <span class="nch-eyebrow nch-eyebrow--ghost"><i class="fa fa-paper-plane-o"></i> Get in touch</span> --}}
             <h1>Contact Us</h1>
-            <nav aria-label="breadcrumb single-page">
+            {{-- <nav aria-label="breadcrumb">
                 <ol class="breadcrumb">
                     <li class="breadcrumb-item"><a href="{{route("home")}}">Home</a></li>
                     <li class="breadcrumb-item active" aria-current="page">Contact</li>
                 </ol>
-            </nav>
+            </nav> --}}
         </div>
     </div>
-    <!-- End Page Banner -->
 
-    <!-- Contact Section Start -->
-    <section id="contact" class="bg-grey contact-area section-padding">
+    <!-- Contact -->
+    <section id="contact" class="contact-area nch-section">
         <div class="container">
-            <div class="row">
-                <div class="col-lg-12 col-md-12">
-                    <div class="section-title">
-                        <h2>Get In Touch</h2>
-                        <h5>We're available 24 hours a day, 7 days a week, 365 days a year</h5>
-                    </div>
+            <div class="nch-sec-head">
+                <div class="nch-sec-head-l">
+                    {{-- <span class="nch-eyebrow"><i class="fa fa-comments-o"></i> Start your claim</span> --}}
+                    <h2>Talk to a real person, right now</h2>
+                    <p>We're available 24 hours a day, 7 days a week, 365 days a year. Send a message or call &mdash;
+                        whatever's easiest. No automated queue, no script.</p>
                 </div>
             </div>
-            <div class="row">
-                <div class="col-lg-8 col-md-12 wow fadeInUp" data-wow-delay="0.2s">
+            <div class="row align-items-stretch">
+                <div class="col-lg-8 col-md-12 mb-4">
                     <div class="form-container-box">
                         <form class="contact-form form" id="ajax-contact" method="post"
                             action="assets/phpscripts/contact.php">
@@ -63,14 +65,14 @@
                                     </div>
                                     <div class="col-12">
                                         <div class="form-group">
-                                            <textarea class="form-control" id="message" name="message" rows="8"
+                                            <textarea class="form-control" id="message" name="message" rows="6"
                                                 placeholder="Tell us briefly what happened*" required="required"
                                                 data-error="Please, leave us a message."></textarea>
                                             <div class="help-block with-errors"></div>
                                         </div>
                                     </div>
                                     <div class="col-md-12">
-                                        <button type="submit" class="button" data-text="Send Message">Send Message</button>
+                                        <button type="submit" class="btn btn-red" data-text="Send Message">Send message <i class="fa fa-long-arrow-right"></i></button>
                                     </div>
                                     <div class="messages">
                                         <div class="alert alert alert-success alert-dismissable alert-dismissable hidden"
@@ -83,40 +85,47 @@
                         </form>
                     </div>
                 </div>
-                <div class="col-xl-4 col-lg-4 col-md-6 mb-50">
+                <div class="col-lg-4 col-md-12 mb-4">
                     <div class="contact-widget">
                         <div class="contact-info">
-                            <h6>Phone (24/7):</h6>
-                            <p><i class="fa fa-phone"></i> <a href="tel:08000000000">0800 000 0000</a></p>
+                            <span class="ci-ic"><i class="fa fa-phone"></i></span>
+                            <div>
+                                <h6>Phone &mdash; 24/7</h6>
+                                <p><a href="tel:08000000000">0800 000 0000</a></p>
+                            </div>
                         </div>
                         <div class="contact-info">
-                            <h6>Email:</h6>
-                            <p><i class="fa fa-envelope"></i> <a
-                                    href="mailto:info@northwestcredithire.co.uk">info@northwestcredithire.co.uk</a></p>
+                            <span class="ci-ic"><i class="fa fa-envelope-o"></i></span>
+                            <div>
+                                <h6>Email</h6>
+                                <p><a href="mailto:info@northwestcredithire.co.uk">info@northwestcredithire.co.uk</a></p>
+                            </div>
                         </div>
                         <div class="contact-info">
-                            <h6>Address:</h6>
-                            <p><i class="fa fa-map"></i> Greater Manchester, United Kingdom</p>
-                            <p><a href="https://www.google.com/maps/search/Greater+Manchester" target="_blank">Get
-                                    Directions</a></p>
+                            <span class="ci-ic"><i class="fa fa-map-marker"></i></span>
+                            <div>
+                                <h6>Address</h6>
+                                <p>Greater Manchester, United Kingdom</p>
+                            </div>
                         </div>
                         <div class="contact-info">
-                            <h6>Hours:</h6>
-                            <p><i class="fa fa-clock-o"></i> Open 24/7, 365 days a year</p>
+                            <span class="ci-ic"><i class="fa fa-clock-o"></i></span>
+                            <div>
+                                <h6>Opening Hours</h6>
+                                <p>Open 24/7, 365 days a year</p>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
-    <!-- Contact Section End -->
 
-    <!-- Map Section Start -->
+    <!-- Map -->
     <div id="map">
         <iframe src="https://www.google.com/maps?q=Greater+Manchester,+UK&amp;output=embed" frameborder="0"
-            style="border:0; width: 100%; height: 390px; margin-bottom: -10px;" allowfullscreen loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade"></iframe>
+            style="border:0; width: 100%; height: 440px; margin-bottom: -10px;" allowfullscreen loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade" title="Northwest Credit Hire location"></iframe>
     </div>
-    <!-- Map Section End -->
 
 @endsection
