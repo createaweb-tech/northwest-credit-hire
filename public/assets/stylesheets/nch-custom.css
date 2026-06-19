@@ -764,6 +764,23 @@ section {
     }
 }
 
+/* 3-up variant (e.g. About "why choose us") — collapses responsively */
+.nch-feature-grid--3 {
+    grid-template-columns: repeat(3, 1fr);
+}
+
+@media (max-width: 992px) {
+    .nch-feature-grid--3 {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 560px) {
+    .nch-feature-grid--3 {
+        grid-template-columns: 1fr;
+    }
+}
+
 /* ---------------------------------------------------------------------
    Service / catalog cards (image)
    --------------------------------------------------------------------- */

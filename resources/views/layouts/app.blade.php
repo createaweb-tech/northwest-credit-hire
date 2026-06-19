@@ -19,7 +19,7 @@
     <!-- Site Main Style Sheet Css -->
     <link href="{{asset("assets/stylesheets/style.css")}}" rel="stylesheet">
     <!-- Northwest Credit Hire custom styles -->
-    <link href="{{asset("assets/stylesheets/nch-custom.css")}}?v=4.0" rel="stylesheet">
+    <link href="{{asset("assets/stylesheets/nch-custom.css")}}?v=4.2" rel="stylesheet">
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com/">
     <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
@@ -163,9 +163,19 @@
             var burger = document.getElementById('nch-burger');
             var menu = document.getElementById('nch-menu');
             if (burger && menu) {
-                burger.addEventListener('click', function () { menu.classList.toggle('open'); });
+                burger.addEventListener('click', function (e) { e.stopPropagation(); menu.classList.toggle('open'); });
                 menu.querySelectorAll('a').forEach(function (a) {
                     a.addEventListener('click', function () { menu.classList.remove('open'); });
+                });
+                // close the mobile menu when clicking outside it
+                document.addEventListener('click', function (e) {
+                    if (menu.classList.contains('open') && !menu.contains(e.target) && !burger.contains(e.target)) {
+                        menu.classList.remove('open');
+                    }
+                });
+                // close on Escape
+                document.addEventListener('keydown', function (e) {
+                    if (e.key === 'Escape') { menu.classList.remove('open'); }
                 });
             }
 

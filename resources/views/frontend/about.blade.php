@@ -99,7 +99,7 @@
                         on the fact that most people don't know any better. <strong style="color:var(--ink);">We do.</strong></p>
                 </div>
             </div>
-            <div class="nch-feature-grid" style="grid-template-columns:repeat(3,1fr);">
+            <div class="nch-feature-grid nch-feature-grid--3">
                 <div class="nch-feature">
                     <span class="nch-feature__ic"><i class="fa fa-balance-scale"></i></span>
                     <h3>We level the playing field</h3>
