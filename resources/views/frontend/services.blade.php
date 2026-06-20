@@ -144,7 +144,7 @@
             <!-- Hybrid Taxis -->
             <div class="nch-fleet-row">
                 <div class="nch-fleet-row__media">
-                    <img src="{{asset("assets/images/photos/gallery-7.jpg")}}" alt="Hybrid taxi vehicle">
+                    <img src="{{asset("assets/images/cars/toyota-corolla.jpg")}}" alt="Toyota Corolla hybrid taxi">
                     <span class="nch-fleet-row__count">5 models</span>
                 </div>
                 <div class="nch-fleet-row__content">
@@ -166,7 +166,7 @@
             <!-- Prestige Taxis -->
             <div class="nch-fleet-row nch-fleet-row--flip">
                 <div class="nch-fleet-row__media">
-                    <img src="{{asset("assets/images/photos/gallery-2.jpg")}}" alt="Prestige executive vehicle">
+                    <img src="{{asset("assets/images/cars/bmw-5-series.jpg")}}" alt="BMW 5 Series executive saloon">
                     <span class="nch-fleet-row__count">5 models</span>
                 </div>
                 <div class="nch-fleet-row__content">
@@ -206,11 +206,30 @@
                     </div>
                 </div>
             </div>
+
+            <!-- More from our fleet -->
+            <div class="nch-fleet-more">
+                <p class="nch-fleet-more__label">More from our fleet</p>
+                <div class="nch-fleet-gallery">
+                    <figure class="nch-fleet-gallery__item">
+                        <img src="{{asset("assets/images/cars/lexus-es-300h.jpg")}}" alt="Lexus ES 300h replacement vehicle">
+                        <figcaption>Lexus ES 300h</figcaption>
+                    </figure>
+                    <figure class="nch-fleet-gallery__item">
+                        <img src="{{asset("assets/images/cars/mercedes-e-class.jpg")}}" alt="Mercedes E-Class replacement vehicle">
+                        <figcaption>Mercedes E-Class</figcaption>
+                    </figure>
+                    <figure class="nch-fleet-gallery__item">
+                        <img src="{{asset("assets/images/cars/cupra-formentor.jpg")}}" alt="Cupra Formentor replacement vehicle">
+                        <figcaption>Cupra Formentor</figcaption>
+                    </figure>
+                </div>
+            </div>
         </div>
     </section>
 
     <!-- CTA band -->
-    <section class="nch-section--tight bg-cream">
+    {{-- <section class="nch-section--tight bg-cream">
         <div class="container">
             <div class="nch-ctaband">
                 <div class="nch-ctaband__inner">
@@ -223,5 +242,5 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section> --}}
 @endsection

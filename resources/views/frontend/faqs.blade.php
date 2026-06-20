@@ -20,16 +20,15 @@
     <!-- FAQ -->
     <section class="nch-section bg-cream">
         <div class="container">
-            <div class="nch-split  nch-split--media-r" style="align-items:start;gap:54px;">
-                <div class="nch-prose">
+            <div class="nch-faq-wrap">
+                <div class="nch-prose nch-faq-intro">
                     {{-- <span class="nch-eyebrow"><i class="fa fa-lightbulb-o"></i> Good to know</span> --}}
                     <h2>Questions, answered</h2>
                     <p>Got questions about credit hire, accident claims, or what you're entitled to? We've answered the most
                         common ones here. Can't find what you're looking for? We're available 24/7.</p>
                     <a href="tel:08000000000" class="btn btn-red mt-24"><i class="fa fa-phone"></i> Call us 24/7</a>
                 </div>
-                <div>
-                    <div class="nch-faq">
+                <div class="nch-faq">
                         <details open>
                             <summary>What is credit hire?</summary>
                             <div class="faq-body">Credit hire provides you with a replacement vehicle after a non-fault
@@ -80,7 +79,6 @@
                             <div class="faq-body">Yes. We provide like-for-like van and commercial vehicle replacements for
                                 tradespeople, delivery drivers and business operators.</div>
                         </details>
-                    </div>
                 </div>
             </div>
         </div>

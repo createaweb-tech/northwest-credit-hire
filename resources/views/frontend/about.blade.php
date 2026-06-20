@@ -36,7 +36,7 @@
                         management. All under one roof, at no cost to you if the other party was at fault.</p>
                 </div>
                 <div class="nch-split__media">
-                    <img src="{{asset("assets/images/photos/gallery-2.jpg")}}" alt="Premium replacement vehicle">
+                    <img src="{{asset("assets/images/cars/mercedes-e-class.jpg")}}" alt="Mercedes E-Class replacement vehicle from our fleet">
                 </div>
             </div>
         </div>
@@ -124,7 +124,7 @@
     </section>
 
     <!-- CTA band -->
-    <section class="nch-section--tight bg-cream" style="padding-top:0;">
+    {{-- <section class="nch-section--tight bg-cream" style="padding-top:0;">
         <div class="container">
             <div class="nch-ctaband">
                 <div class="nch-ctaband__inner">
@@ -137,5 +137,5 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section> --}}
 @endsection

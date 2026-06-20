@@ -4,36 +4,48 @@
 
     <!-- Hero -->
     <section class="nch-hero">
-        <div class="nch-hero__bg"></div>
-        <div class="nch-hero__overlay"></div>
-        {{-- <div class="nch-hero__mono" aria-hidden="true">NW</div> --}}
         <div class="container">
-            <div class="nch-hero__inner">
-                {{-- <span class="nch-eyebrow nch-eyebrow--ghost"><i class="fa fa-shield"></i> Non-fault accident specialists</span> --}}
-                <h1>Same-day replacement vehicles, <span class="accent">sorted.</span></h1>
-                <p class="nch-hero__lead">If the accident wasn't your fault, you're legally entitled to a like-for-like
-                    replacement at no cost to you. We manage the whole claim and recover every penny from the at-fault
-                    insurer.</p>
-                <div class="nch-hero__actions">
-                    <a class="btn btn-red" href="{{route("contact")}}">Start your claim <i class="fa fa-long-arrow-right"></i></a>
-                    <a class="btn btn-ghost-light" href="tel:08000000000"><i class="fa fa-phone"></i> 0800 000 0000</a>
+            <div class="nch-hero__grid">
+                <div class="nch-hero__inner">
+                    <h1>Same-day replacement vehicles, <span class="accent">sorted.</span></h1>
+                    <p class="nch-hero__lead">If the accident wasn't your fault, you're legally entitled to a like-for-like
+                        replacement at no cost to you. We manage the whole claim and recover every penny from the at-fault
+                        insurer.</p>
+                    <div class="nch-hero__stats">
+                        <div class="nch-hero__stat">
+                            <span class="ic"><i class="fa fa-car"></i></span>
+                            <div><div class="n">300+</div><div class="l">Vehicle fleet</div></div>
+                        </div>
+                        <div class="nch-hero__stat">
+                            <span class="ic"><i class="fa fa-clock-o"></i></span>
+                            <div><div class="n">4 hrs</div><div class="l">Avg. delivery</div></div>
+                        </div>
+                        <div class="nch-hero__stat">
+                            <span class="ic"><i class="fa fa-headphones"></i></span>
+                            <div><div class="n">24/7</div><div class="l">365 days a year</div></div>
+                        </div>
+                        {{-- <div class="nch-hero__stat">
+                            <span class="ic"><i class="fa fa-gbp"></i></span>
+                            <div><div class="n">&pound;0</div><div class="l">Upfront cost</div></div>
+                        </div> --}}
+                    </div>
                 </div>
-                <div class="nch-hero__stats">
-                    <div class="nch-hero__stat">
-                        <span class="ic"><i class="fa fa-car"></i></span>
-                        <div><div class="n">300+</div><div class="l">Vehicle fleet</div></div>
+                <div class="nch-hero__visual">
+                    <div class="nch-hero__media">
+                        <img src="{{asset("assets/images/cars/lexus-es-300h.jpg")}}" alt="Premium like-for-like replacement vehicle">
                     </div>
-                    <div class="nch-hero__stat">
-                        <span class="ic"><i class="fa fa-clock-o"></i></span>
-                        <div><div class="n">4 hrs</div><div class="l">Avg. delivery</div></div>
+                    <div class="nch-hero__rating">
+                        <div class="stars">
+                            <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
+                        </div>
+                        <div class="rt">
+                            <strong>Rated excellent</strong>
+                            <span>by drivers across the North West</span>
+                        </div>
                     </div>
-                    <div class="nch-hero__stat">
-                        <span class="ic"><i class="fa fa-headphones"></i></span>
-                        <div><div class="n">24/7</div><div class="l">365 days a year</div></div>
-                    </div>
-                    <div class="nch-hero__stat">
-                        <span class="ic"><i class="fa fa-gbp"></i></span>
-                        <div><div class="n">&pound;0</div><div class="l">Upfront cost</div></div>
+                    <div class="nch-hero__pill">
+                        <span class="ic"><i class="fa fa-check"></i></span>
+                        <span><strong>&pound;0 upfront</strong> &middot; we bill the insurer</span>
                     </div>
                 </div>
             </div>
@@ -77,11 +89,10 @@
     </section>
 
     <!-- Services / catalog -->
-    <section class="nch-section bg-white">
+    {{-- <section class="nch-section bg-white">
         <div class="container">
             <div class="nch-sec-head">
                 <div class="nch-sec-head-l">
-                    {{-- <span class="nch-eyebrow"><i class="fa fa-th-large"></i> What we do</span> --}}
                     <h2>Our services</h2>
                     <p>From the moment of impact to the moment you're back on the road, we manage every step of your
                         non-fault claim.</p>
@@ -89,7 +100,6 @@
                 <a class="nch-sec-link" href="{{route("services")}}">View all services <i class="fa fa-long-arrow-right"></i></a>
             </div>
             <div class="nch-card-grid">
-                <!-- card -->
                 <article class="nch-pcard">
                     <div class="nch-pcard__media">
                         <span class="nch-badge nch-badge--red">No upfront cost</span>
@@ -108,7 +118,6 @@
                         </div>
                     </div>
                 </article>
-                <!-- card -->
                 <article class="nch-pcard">
                     <div class="nch-pcard__media">
                         <span class="nch-badge nch-badge--dark">Fully managed</span>
@@ -128,7 +137,6 @@
                         </div>
                     </div>
                 </article>
-                <!-- card -->
                 <article class="nch-pcard">
                     <div class="nch-pcard__media">
                         <span class="nch-badge nch-badge--red">24/7</span>
@@ -147,7 +155,6 @@
                         </div>
                     </div>
                 </article>
-                <!-- card -->
                 <article class="nch-pcard">
                     <div class="nch-pcard__media">
                         <span class="nch-badge nch-badge--dark">Genuine parts</span>
@@ -166,7 +173,6 @@
                         </div>
                     </div>
                 </article>
-                <!-- card -->
                 <article class="nch-pcard">
                     <div class="nch-pcard__media">
                         <span class="nch-badge nch-badge--red">Same-day plated</span>
@@ -186,7 +192,6 @@
                         </div>
                     </div>
                 </article>
-                <!-- card -->
                 <article class="nch-pcard">
                     <div class="nch-pcard__media">
                         <span class="nch-badge nch-badge--dark">Like-for-like</span>
@@ -207,16 +212,15 @@
                 </article>
             </div>
         </div>
-    </section>
+    </section> --}}
 
     <!-- Offer banner -->
-    <section class="nch-section--tight bg-cream">
+    {{-- <section class="nch-section--tight bg-cream">
         <div class="container">
             <div class="nch-offer">
                 <div class="nch-offer__bg"></div>
                 <div class="nch-offer__overlay"></div>
                 <div class="nch-offer__inner">
-                    {{-- <span class="nch-eyebrow nch-eyebrow--ghost"><i class="fa fa-star"></i> Accident not your fault?</span> --}}
                     <h2>You pay <span>nothing.</span> We recover every penny.</h2>
                     <p>Recovery, storage, replacement hire, repairs and your full claim &mdash; all handled under one roof,
                         at no cost to you.</p>
@@ -227,14 +231,13 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section> --}}
 
     <!-- How it works -->
     <section class="nch-section bg-cream">
         <div class="container">
             <div class="nch-sec-head">
                 <div class="nch-sec-head-l">
-                    {{-- <span class="nch-eyebrow"><i class="fa fa-list-ol"></i> The process</span> --}}
                     <h2>How it works</h2>
                     <p>Four simple steps from your first call to getting your settlement &mdash; we do the heavy lifting.</p>
                 </div>
@@ -322,7 +325,7 @@
     </section>
 
     <!-- CTA band -->
-    <section class="nch-section--tight bg-cream">
+    {{-- <section class="nch-section--tight bg-cream">
         <div class="container">
             <div class="nch-ctaband">
                 <div class="nch-ctaband__inner">
@@ -336,6 +339,6 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section> --}}
 
 @endsection

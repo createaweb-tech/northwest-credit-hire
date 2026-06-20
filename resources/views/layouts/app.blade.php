@@ -53,9 +53,9 @@
                 </a>
                 <div class="nch-nav-links" id="nch-menu">
                     <a class="{{ Route::is('home') ? 'active' : '' }}" href="{{route("home")}}">Home</a>
-                    <a class="{{ Route::is('services') ? 'active' : '' }}" href="{{route("services")}}">Services</a>
                     <a class="{{ Route::is('about') ? 'active' : '' }}" href="{{route("about")}}">About</a>
-                    <a class="{{ Route::is('faqs') ? 'active' : '' }}" href="{{route("faqs")}}">FAQ</a>
+                    <a class="{{ Route::is('services') ? 'active' : '' }}" href="{{route("services")}}">Services</a>
+                    {{-- <a class="{{ Route::is('faqs') ? 'active' : '' }}" href="{{route("faqs")}}">FAQ</a> --}}
                     <a class="{{ Route::is('contact') ? 'active' : '' }}" href="{{route("contact")}}">Contact</a>
                 </div>
                 <div class="nch-nav-right">
@@ -92,8 +92,8 @@
                     <h4>Navigate</h4>
                     <ul>
                         <li><a href="{{route("home")}}">Home</a></li>
-                        <li><a href="{{route("services")}}">Our Services</a></li>
                         <li><a href="{{route("about")}}">About Us</a></li>
+                        <li><a href="{{route("services")}}">Our Services</a></li>
                         <li><a href="{{route("faqs")}}">FAQ</a></li>
                         <li><a href="{{route("contact")}}">Contact Us</a></li>
                     </ul>
