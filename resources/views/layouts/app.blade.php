@@ -19,12 +19,11 @@
     <!-- Site Main Style Sheet Css -->
     <link href="{{asset("assets/stylesheets/style.css")}}" rel="stylesheet">
     <!-- Northwest Credit Hire custom styles -->
-    <link href="{{asset("assets/stylesheets/nch-custom.css")}}?v=4.2" rel="stylesheet">
+    <link href="{{asset("assets/stylesheets/nch-custom.css")}}?v=4.5" rel="stylesheet">
     <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com/">
-    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap"
-        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Zilla+Slab:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
 
     @yield("style")
 
@@ -37,7 +36,7 @@
         <div class="preloader-wapper">
             <div>
                 <div class="spinner-loader">
-                    <img src="{{asset("assets/images/loader.svg")}}" alt="loader">
+                    <img src="{{asset(" assets/images/loader.svg")}}" alt="loader">
                 </div>
             </div>
         </div>
@@ -52,11 +51,11 @@
                     <img src="{{asset("assets/images/logo-light.png")}}" alt="Northwest Credit Hire">
                 </a>
                 <div class="nch-nav-links" id="nch-menu">
-                    <a class="{{ Route::is('home') ? 'active' : '' }}" href="{{route("home")}}">Home</a>
-                    <a class="{{ Route::is('about') ? 'active' : '' }}" href="{{route("about")}}">About</a>
-                    <a class="{{ Route::is('services') ? 'active' : '' }}" href="{{route("services")}}">Services</a>
-                    {{-- <a class="{{ Route::is('faqs') ? 'active' : '' }}" href="{{route("faqs")}}">FAQ</a> --}}
-                    <a class="{{ Route::is('contact') ? 'active' : '' }}" href="{{route("contact")}}">Contact</a>
+                    <a class="text-uppercase {{ Route::is('home') ? 'active' : '' }}" href="{{route("home")}}">Home</a>
+                    <a class="text-uppercase {{ Route::is('about') ? 'active' : '' }}" href="{{route("about")}}">About</a>
+                    <a class="text-uppercase {{ Route::is('services') ? 'active' : '' }}" href="{{route("services")}}">Services</a>
+                    {{-- <a class="text-uppercase {{ Route::is('faqs') ? 'active' : '' }}" href="{{route(" faqs")}}">FAQ</a> --}}
+                    <a class="text-uppercase {{ Route::is('contact') ? 'active' : '' }}" href="{{route("contact")}}">Contact</a>
                 </div>
                 <div class="nch-nav-right">
                     <a class="nch-nav-phone" href="tel:08000000000"><i class="fa fa-phone"></i> 0800 000 0000</a>
