@@ -24,7 +24,7 @@
                 <aside class="nch-svc-aside">
                     <span class="nch-eyebrow"><i class="fa fa-th-large"></i> What we do</span>
                     <h2>From the impact to back on the road</h2>
-                    <p>Northwest Credit Hire manages the entire process after a non-fault accident &mdash; recovery,
+                    <p>Northwest Credit Hire manages the entire process after a non-fault accident  recovery,
                         replacement, repairs and your full claim, all handled under one roof.</p>
                     <div class="nch-svc-note">
                         <i class="fa fa-shield"></i>
@@ -39,10 +39,10 @@
                         <div class="nch-svc__body">
                             <div class="nch-svc__head">
                                 <i class="fa fa-car"></i>
-                                <h3>Credit Hire &mdash; Replacement Vehicles</h3>
+                                <h3>Credit Hire  Replacement Vehicles</h3>
                             </div>
                             <p>If you've been involved in a non-fault accident and your vehicle is off the road, you're
-                                legally entitled to a like-for-like replacement at no cost to you &mdash; cars, vans,
+                                legally entitled to a like-for-like replacement at no cost to you  cars, vans,
                                 executive vehicles and taxi-plated cars, so your life and work continue uninterrupted.</p>
                             <p>All taxi replacement vehicles are under two years old, fully insured and licensed with the
                                 relevant local authority. <strong>Available 24 hours a day, 365 days a year.</strong></p>
@@ -56,7 +56,7 @@
                                 <i class="fa fa-clipboard"></i>
                                 <h3>Accident Management</h3>
                             </div>
-                            <p>We take complete ownership of your claim from start to finish &mdash; liaising directly with
+                            <p>We take complete ownership of your claim from start to finish  liaising directly with
                                 insurers, solicitors, garages and third parties on your behalf, without the burden of
                                 paperwork or endless phone calls.</p>
                             <ul class="nch-checks">
@@ -75,9 +75,9 @@
                                 <i class="fa fa-truck"></i>
                                 <h3>24/7 Vehicle Recovery</h3>
                             </div>
-                            <p>Accidents happen at any hour &mdash; and so does our recovery service. Available around the
+                            <p>Accidents happen at any hour  and so does our recovery service. Available around the
                                 clock, we collect or deliver your vehicle to or from any destination across the UK.</p>
-                            <p>Your damaged vehicle is then transported to a secure, fully insured storage facility &mdash;
+                            <p>Your damaged vehicle is then transported to a secure, fully insured storage facility 
                                 one less thing to worry about at a stressful time.</p>
                         </div>
                     </article>
@@ -91,7 +91,7 @@
                             </div>
                             <p>Your vehicle is repaired at a quality-approved garage using manufacturer-approved parts. We
                                 work only with reputable, thoroughly vetted repair centres to return it to pre-accident
-                                condition &mdash; no shortcuts, no compromises.</p>
+                                condition  no shortcuts, no compromises.</p>
                             <p>All repair costs are recovered from the at-fault insurer. <strong>There is no excess for you to
                                     pay.</strong></p>
                         </div>
@@ -121,7 +121,7 @@
                             </div>
                             <p>If your van or commercial vehicle is off the road after a non-fault accident, we provide a
                                 like-for-like replacement to keep your business running.</p>
-                            <p>For tradespeople, delivery drivers and operators, a van isn't just a vehicle &mdash; it's your
+                            <p>For tradespeople, delivery drivers and operators, a van isn't just a vehicle  it's your
                                 livelihood. We understand that, and we act accordingly.</p>
                         </div>
                     </article>
@@ -148,10 +148,10 @@
                     <span class="nch-fleet-row__count">5 models</span>
                 </div>
                 <div class="nch-fleet-row__content">
-                    {{-- <span class="nch-eyebrow"><i class="fa fa-leaf"></i> Fleet 01 &mdash; Eco &amp; efficient</span> --}}
+                    {{-- <span class="nch-eyebrow"><i class="fa fa-leaf"></i> Fleet 01  Eco &amp; efficient</span> --}}
                     <h3>Hybrid Taxis</h3>
                     <p class="nch-fleet-row__desc">Efficient, low-emission hybrids that keep running costs down without
-                        compromising on comfort &mdash; ideal for everyday private hire work and longer shifts.</p>
+                        compromising on comfort  ideal for everyday private hire work and longer shifts.</p>
                     <ul class="nch-checks">
                         <li><i class="fa fa-check"></i> Low fuel costs &amp; lower emissions</li>
                         <li><i class="fa fa-check"></i> Under two years old, fully insured</li>
@@ -170,10 +170,10 @@
                     <span class="nch-fleet-row__count">5 models</span>
                 </div>
                 <div class="nch-fleet-row__content">
-                    {{-- <span class="nch-eyebrow"><i class="fa fa-star"></i> Fleet 02 &mdash; Executive</span> --}}
+                    {{-- <span class="nch-eyebrow"><i class="fa fa-star"></i> Fleet 02  Executive</span> --}}
                     <h3>Prestige Taxis</h3>
                     <p class="nch-fleet-row__desc">Executive saloons for premium, corporate and airport journeys where
-                        presentation matters &mdash; refined, spacious and immaculately maintained.</p>
+                        presentation matters  refined, spacious and immaculately maintained.</p>
                     <ul class="nch-checks">
                         <li><i class="fa fa-check"></i> Premium, executive interiors</li>
                         <li><i class="fa fa-check"></i> Ideal for corporate &amp; airport runs</li>
@@ -192,10 +192,10 @@
                     <span class="nch-fleet-row__count">Group travel</span>
                 </div>
                 <div class="nch-fleet-row__content">
-                    {{-- <span class="nch-eyebrow"><i class="fa fa-users"></i> Fleet 03 &mdash; Group &amp; access</span> --}}
+                    {{-- <span class="nch-eyebrow"><i class="fa fa-users"></i> Fleet 03  Group &amp; access</span> --}}
                     <h3>9-Seaters</h3>
                     <p class="nch-fleet-row__desc">Spacious people-carriers for larger groups, families and accessible
-                        transport &mdash; plenty of room for passengers and luggage in comfort.</p>
+                        transport  plenty of room for passengers and luggage in comfort.</p>
                     <ul class="nch-checks">
                         <li><i class="fa fa-check"></i> Seats up to nine passengers</li>
                         <li><i class="fa fa-check"></i> Wheelchair-accessible options available</li>
@@ -234,7 +234,7 @@
             <div class="nch-ctaband">
                 <div class="nch-ctaband__inner">
                     <h2>Not sure what you're entitled to?</h2>
-                    <p>Call our team today and we'll talk you through exactly where you stand &mdash; no jargon, no pressure.</p>
+                    <p>Call our team today and we'll talk you through exactly where you stand  no jargon, no pressure.</p>
                     <div class="nch-ctaband__actions">
                         <a class="btn btn-light" href="{{route("contact")}}">Contact us <i class="fa fa-long-arrow-right"></i></a>
                         <a class="nch-ctaband__phone" href="tel:08000000000"><i class="fa fa-phone"></i> 0800 000 0000</a>

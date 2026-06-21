@@ -39,7 +39,7 @@
                             <summary>Am I entitled to a replacement vehicle?</summary>
                             <div class="faq-body">If the accident wasn't your fault, yes. You have a legal right to a
                                 like-for-like replacement vehicle while yours is being repaired or assessed. Many drivers
-                                don't realise this &mdash; insurers often don't volunteer the information.</div>
+                                don't realise this  insurers often don't volunteer the information.</div>
                         </details>
                         <details>
                             <summary>Do I have to go through my own insurer?</summary>
@@ -66,7 +66,7 @@
                         <details>
                             <summary>What if my vehicle is written off?</summary>
                             <div class="faq-body">We'll support you through the settlement process to make sure you receive a
-                                fair valuation &mdash; and not just whatever the insurer initially offers.</div>
+                                fair valuation  and not just whatever the insurer initially offers.</div>
                         </details>
                         <details>
                             <summary>I'm a taxi driver. Can you help me?</summary>
@@ -90,7 +90,7 @@
             <div class="nch-ctaband">
                 <div class="nch-ctaband__inner">
                     <h2>Still have a question?</h2>
-                    <p>Call us now. No jargon, no pressure &mdash; just straight answers.</p>
+                    <p>Call us now. No jargon, no pressure  just straight answers.</p>
                     <div class="nch-ctaband__actions">
                         <a class="btn btn-light" href="{{route("contact")}}">Contact us <i class="fa fa-long-arrow-right"></i></a>
                         <a class="nch-ctaband__phone" href="tel:08000000000"><i class="fa fa-phone"></i> 0800 000 0000</a>

@@ -7,10 +7,8 @@
         <div class="container">
             <div class="nch-hero__grid">
                 <div class="nch-hero__inner">
-                    <h1>Same-day replacement vehicles, <span class="accent">sorted.</span></h1>
-                    <p class="nch-hero__lead">If the accident wasn't your fault, you're legally entitled to a like-for-like
-                        replacement at no cost to you. We manage the whole claim and recover every penny from the at-fault
-                        insurer.</p>
+                    <h1>Know your rights, Get back on the road, Same day replacement, <span class="accent">sorted.</span></h1>
+                    <p class="nch-hero__lead">Under UK law, if you weren't at fault, you're entitled to a like for like replacement vehicle at no cost to you. We arrange this the same day, run your claim, and recover every penny directly from the at fault insurer, so there's nothing for you</p>
                     <div class="nch-hero__stats">
                         <div class="nch-hero__stat">
                             <span class="ic"><i class="fa fa-car"></i></span>
@@ -59,7 +57,7 @@
                 <div class="nch-sec-head-l">
                     {{-- <span class="nch-eyebrow"><i class="fa fa-check-circle"></i> Why choose us</span> --}}
                     <h2>Everything handled, all under one roof</h2>
-                    <p>You deal with one local team &mdash; not a call centre. We level the playing field with the at-fault
+                    <p>You deal with one local team  not a call centre. We level the playing field with the at-fault
                         insurer and keep you moving from day one.</p>
                 </div>
             </div>
@@ -107,7 +105,7 @@
                     </div>
                     <div class="nch-pcard__body">
                         <h3>Credit Hire</h3>
-                        <p>Same-day like-for-like replacement vehicles &mdash; cars, executive, vans and plated taxis.</p>
+                        <p>Same-day like-for-like replacement vehicles  cars, executive, vans and plated taxis.</p>
                         <div class="nch-pcard__meta">
                             <span><i class="fa fa-car"></i> Cars &amp; executive</span>
                             <span><i class="fa fa-taxi"></i> Plated taxis</span>
@@ -125,7 +123,7 @@
                     </div>
                     <div class="nch-pcard__body">
                         <h3>Accident Management</h3>
-                        <p>We take complete ownership of your claim &mdash; insurers, solicitors and garages, all handled
+                        <p>We take complete ownership of your claim  insurers, solicitors and garages, all handled
                             for you.</p>
                         <div class="nch-pcard__meta">
                             <span><i class="fa fa-folder-open-o"></i> Documentation</span>
@@ -222,7 +220,7 @@
                 <div class="nch-offer__overlay"></div>
                 <div class="nch-offer__inner">
                     <h2>You pay <span>nothing.</span> We recover every penny.</h2>
-                    <p>Recovery, storage, replacement hire, repairs and your full claim &mdash; all handled under one roof,
+                    <p>Recovery, storage, replacement hire, repairs and your full claim  all handled under one roof,
                         at no cost to you.</p>
                     <div class="nch-offer__actions">
                         <a class="btn btn-red" href="{{route("contact")}}">Start your claim <i class="fa fa-long-arrow-right"></i></a>
@@ -238,34 +236,34 @@
         <div class="container">
             <div class="nch-sec-head">
                 <div class="nch-sec-head-l">
-                    <h2>How it works</h2>
-                    <p>Four simple steps from your first call to getting your settlement &mdash; we do the heavy lifting.</p>
+                    <h2>What to do in a collision</h2>
+                    <p>Four simple steps to follow if you're in a car accident that wasn't your fault  then leave the rest to us.</p>
                 </div>
             </div>
             <div class="nch-steps">
                 <div class="nch-step">
                     <div class="nch-step__n">Step 01</div>
-                    <span class="nch-step__ic"><i class="fa fa-phone"></i></span>
-                    <h3>Get in touch</h3>
-                    <p>Call us 24/7 or send a message. Tell us briefly what happened &mdash; that's all we need to start.</p>
+                    <span class="nch-step__ic"><i class="fa fa-ambulance"></i></span>
+                    <h3>Safety first</h3>
+                    <p>Check for injuries and call 999 immediately if anyone is hurt. If it's safe to do so, move your vehicle out of harm's way.</p>
                 </div>
                 <div class="nch-step">
                     <div class="nch-step__n">Step 02</div>
-                    <span class="nch-step__ic"><i class="fa fa-car"></i></span>
-                    <h3>Get your vehicle</h3>
-                    <p>We deliver a like-for-like replacement, usually the same day, and recover your damaged vehicle.</p>
+                    <span class="nch-step__ic"><i class="fa fa-pencil-square-o"></i></span>
+                    <h3>Gather the details</h3>
+                    <p>Take names, addresses, phone numbers, insurance details and vehicle make/model for everyone involved, plus any witnesses.</p>
                 </div>
                 <div class="nch-step">
                     <div class="nch-step__n">Step 03</div>
-                    <span class="nch-step__ic"><i class="fa fa-wrench"></i></span>
-                    <h3>We manage repairs</h3>
-                    <p>Approved garages, genuine parts and full liaison with insurers and solicitors on your behalf.</p>
+                    <span class="nch-step__ic"><i class="fa fa-camera"></i></span>
+                    <h3>Take pictures</h3>
+                    <p>Photograph the accident scene, the damage to all vehicles and any injuries. The more evidence, the stronger your claim.</p>
                 </div>
                 <div class="nch-step">
                     <div class="nch-step__n">Step 04</div>
-                    <span class="nch-step__ic"><i class="fa fa-check-circle"></i></span>
-                    <h3>Claim resolved</h3>
-                    <p>We pursue everything you're owed and recover all costs from the at-fault insurer. You pay nothing.</p>
+                    <span class="nch-step__ic"><i class="fa fa-phone"></i></span>
+                    <h3>Call Northwest Credit Hire</h3>
+                    <p>We'll notify your insurance company, recover your car and get a like-for-like replacement to you, often right there on the scene.</p>
                 </div>
             </div>
         </div>
@@ -310,7 +308,7 @@
                 </div>
                 <div class="nch-testi">
                     <div class="nch-testi__stars"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></div>
-                    <p class="nch-testi__quote">Clear communication from start to finish. No jargon, no pressure &mdash; just
+                    <p class="nch-testi__quote">Clear communication from start to finish. No jargon, no pressure  just
                         straight answers and a fair settlement. They recovered far more than the insurer first offered me.</p>
                     <div class="nch-testi__person">
                         <img src="{{asset("assets/images/clients/testimonial-2.jpg")}}" alt="Sarah W.">

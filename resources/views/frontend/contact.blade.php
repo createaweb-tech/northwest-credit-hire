@@ -25,7 +25,7 @@
                 <div class="nch-sec-head-l">
                     {{-- <span class="nch-eyebrow"><i class="fa fa-comments-o"></i> Start your claim</span> --}}
                     <h2>Talk to a real person, right now</h2>
-                    <p>We're available 24 hours a day, 7 days a week, 365 days a year. Send a message or call &mdash;
+                    <p>We're available 24 hours a day, 7 days a week, 365 days a year. Send a message or call 
                         whatever's easiest. No automated queue, no script.</p>
                 </div>
             </div>
@@ -90,7 +90,7 @@
                         <div class="contact-info">
                             <span class="ci-ic"><i class="fa fa-phone"></i></span>
                             <div>
-                                <h6>Phone &mdash; 24/7</h6>
+                                <h6>Phone  24/7</h6>
                                 <p><a href="tel:08000000000">0800 000 0000</a></p>
                             </div>
                         </div>

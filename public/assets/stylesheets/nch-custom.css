@@ -60,7 +60,7 @@ html {
 }
 
 body {
-    font-family: var(--font);
+    font-family: var(--font) !important;
     background: var(--cream);
     color: var(--text);
     font-size: 16.5px;
@@ -99,6 +99,13 @@ h1, h2, h3, h4, h5, h6 {
     line-height: 1.12;
     letter-spacing: -.02em;
     margin: 0;
+}
+
+/* Force the site font on every text element across the whole site, overriding the
+   CarShine template's Roboto / Source Sans Pro / Rajdhani. FontAwesome icons
+   (.fa / .fa-*) are excluded so glyphs keep rendering. */
+body *:not(.fa):not([class*="fa-"]) {
+    font-family: var(--font) !important;
 }
 
 p {
@@ -2430,7 +2437,7 @@ section {
 
     .nch-hero__visual {
         width: 100%;
-        max-width: 460px;
+        max-width: 570px;
         justify-self: center;
     }
 
@@ -2465,15 +2472,16 @@ section {
     }
 
     .nch-hero h1 {
-        font-size: clamp(27px, 7.6vw, 36px);
-        line-height: 1.1;
-        margin-bottom: 15px;
+        font-size: clamp(26px, 7.2vw, 34px);
+        line-height: 1.22;
+        letter-spacing: -.02em;
+        margin-bottom: 16px;
     }
 
     .nch-hero__lead {
         font-size: 15.5px;
-        line-height: 1.6;
-        margin-bottom: 22px;
+        line-height: 1.65;
+        margin-bottom: 24px;
     }
 
     .nch-hero__actions {
@@ -2487,21 +2495,22 @@ section {
         width: 100%;
     }
 
+    /* all three stats on one row — icon beside the text */
     .nch-hero__stats {
         display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 18px 16px;
-        padding-top: 20px;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 16px 10px;
+        padding-top: 22px;
     }
 
     .nch-hero__stat {
-        gap: 11px;
+        gap: 10px;
         min-width: 0;
     }
 
     .nch-hero__stat .ic {
-        width: 38px;
-        height: 38px;
+        width: 40px;
+        height: 40px;
         font-size: 15px;
     }
 
@@ -2514,7 +2523,6 @@ section {
     }
 
     .nch-hero__visual {
-        max-width: 430px;
         margin-top: 6px;
     }
 
@@ -2794,17 +2802,38 @@ section {
     }
 
     .nch-hero h1 {
-        font-size: 27px;
+        font-size: 25px;
+        line-height: 1.24;
     }
 
+    /* very small phones: keep icon beside the text, just smaller so all three fit on one row */
     .nch-hero__stats {
-        gap: 13px 16px;
+        gap: 10px 6px;
+    }
+
+    .nch-hero__stat {
+        flex-direction: row;
+        align-items: center;
+        gap: 7px;
+    }
+
+    .nch-hero__stat .ic {
+        width: 30px;
+        height: 30px;
+        font-size: 12px;
+    }
+
+    .nch-hero__stat .n {
+        font-size: 14.5px;
+    }
+
+    .nch-hero__stat .l {
+        font-size: 9.5px;
+        line-height: 1.25;
     }
 
     /* compact hero photo on small phones */
-    .nch-hero__visual {
-        max-width: 300px;
-    }
+   
 
     .nch-hero__media {
         padding: 7px;
@@ -2869,6 +2898,33 @@ section {
     .nch-tgrid,
     .nch-fleet-grid {
         gap: 16px;
+    }
+}
+
+/* ---- Tiny phones (≤360) — keep the hero stats on one tidy row ---- */
+@media (max-width: 360px) {
+    .nch-hero__stats {
+        gap: 9px 5px;
+    }
+
+    .nch-hero__stat {
+        gap: 6px;
+    }
+
+    .nch-hero__stat .ic {
+        width: 26px;
+        height: 26px;
+        font-size: 11px;
+    }
+
+    .nch-hero__stat .n {
+        font-size: 13px;
+    }
+
+    .nch-hero__stat .l {
+        font-size: 8.5px;
+        line-height: 1.2;
+        white-space: nowrap;
     }
 }
 

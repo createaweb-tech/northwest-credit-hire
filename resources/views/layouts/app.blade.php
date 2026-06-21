@@ -79,7 +79,7 @@
                     <a href="{{route("home")}}"><img src="{{asset("assets/images/logo-dark.png")}}"
                             alt="Northwest Credit Hire"></a>
                     <p>Credit hire and accident management specialists. We take complete ownership of your non-fault
-                        claim &mdash; all under one roof, at no cost to you.</p>
+                        claim  all under one roof, at no cost to you.</p>
                     <div class="nch-foot-social">
                         <a href="#" aria-label="Facebook"><i class="fa fa-facebook"></i></a>
                         <a href="#" aria-label="Twitter"><i class="fa fa-twitter"></i></a>
@@ -101,7 +101,7 @@
                     <h4>Get In Touch</h4>
                     <ul class="nch-foot-contact">
                         <li><i class="fa fa-map-marker"></i> <span>Greater Manchester, United Kingdom</span></li>
-                        <li><i class="fa fa-phone"></i> <a href="tel:08000000000">0800 000 0000 &mdash; 24/7</a></li>
+                        <li><i class="fa fa-phone"></i> <a href="tel:08000000000">0800 000 0000  24/7</a></li>
                         <li><i class="fa fa-envelope-o"></i> <a
                                 href="mailto:info@northwestcredithire.co.uk">info@northwestcredithire.co.uk</a></li>
                     </ul>

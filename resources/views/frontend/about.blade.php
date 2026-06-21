@@ -29,7 +29,7 @@
                         hire and accident management services, trusted by non-fault accident victims and the insurance
                         industry alike.</p>
                     <p>Headquartered in Greater Manchester, we operate one of the North West's largest fleets of over 300
-                        private hire and hackney carriage vehicles &mdash; ensuring rapid, reliable replacements when you
+                        private hire and hackney carriage vehicles  ensuring rapid, reliable replacements when you
                         need them most.</p>
                     <p>From the moment of your accident, we take complete ownership of the process: vehicle recovery, secure
                         storage, like-for-like replacement hire, approved repairs, insurance liaison, and end-to-end claims
@@ -64,22 +64,22 @@
                     <p>Northwest Credit Hire was founded on a simple premise: drivers across the North West deserve a service
                         that actually shows up when it matters. Operating from two strategic sites across the UK, we've built
                         our reputation around speed and consistency. Our average vehicle delivery time is four hours from
-                        first notification &mdash; a standard we set ourselves and work hard to maintain every day.</p>
+                        first notification  a standard we set ourselves and work hard to maintain every day.</p>
                     <p>All of our vehicles are fully licensed with local authorities throughout the country, so wherever you
                         are, you're covered. We are not a call centre. There's no automated queue, no script, no passing you
-                        between departments &mdash; just a local team who have grown almost entirely through trust and repeat
+                        between departments  just a local team who have grown almost entirely through trust and repeat
                         referrals.</p>
                 </div>
                 <div class="nch-prose">
                     <span class="nch-eyebrow"><i class="fa fa-flag-o"></i> Our mission</span>
                     <h2>No driver should face it alone</h2>
                     <p>We believe no driver should face the aftermath of an accident alone. From the moment of impact to the
-                        moment you're back on the road, we handle every step of the claims process &mdash; so you don't have
+                        moment you're back on the road, we handle every step of the claims process  so you don't have
                         to.</p>
                     <ul class="nch-checks">
-                        <li><i class="fa fa-check"></i> Fast response &mdash; same-day vehicles available</li>
+                        <li><i class="fa fa-check"></i> Fast response  same-day vehicles available</li>
                         <li><i class="fa fa-check"></i> No upfront costs for non-fault claimants</li>
-                        <li><i class="fa fa-check"></i> Fully managed &mdash; we deal with insurers so you don't have to</li>
+                        <li><i class="fa fa-check"></i> Fully managed  we deal with insurers so you don't have to</li>
                         <li><i class="fa fa-check"></i> Transparent, honest communication throughout</li>
                         <li><i class="fa fa-check"></i> Specialist support for taxi and private hire drivers</li>
                     </ul>
@@ -95,7 +95,7 @@
                 <div class="nch-sec-head-l">
                     <span class="nch-eyebrow"><i class="fa fa-balance-scale"></i> Why choose us</span>
                     <h2>Know your rights. Claim what you're owed.</h2>
-                    <p>Many insurers offer a quick settlement that falls short of what you're genuinely owed &mdash; relying
+                    <p>Many insurers offer a quick settlement that falls short of what you're genuinely owed  relying
                         on the fact that most people don't know any better. <strong style="color:var(--ink);">We do.</strong></p>
                 </div>
             </div>
@@ -104,7 +104,7 @@
                     <span class="nch-feature__ic"><i class="fa fa-balance-scale"></i></span>
                     <h3>We level the playing field</h3>
                     <p>Insurers have teams working to minimise payouts. We identify every entitlement you're legally due
-                        &mdash; replacement vehicle, personal injury, repairs or loss of earnings &mdash; and pursue your
+                         replacement vehicle, personal injury, repairs or loss of earnings  and pursue your
                         claim with diligence. No shortcuts. No underselling.</p>
                 </div>
                 <div class="nch-feature">
