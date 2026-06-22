@@ -548,9 +548,9 @@ section {
    --------------------------------------------------------------------- */
 .nch-hero {
     position: relative;
-    background: rgba(0,0,0,0.015);
-        /* radial-gradient(115% 125% at 88% 6%, #fcf8f2 0%, #f4eee4 50%, #ece4d6 100%); */
-    color: var(--ink);
+    background:
+        radial-gradient(120% 130% at 82% 0%, #2a2521 0%, #16120f 52%, #0d0b0a 100%);
+    color: #fff;
     overflow: hidden;
     padding: 150px 0 100px;
 }
@@ -559,11 +559,11 @@ section {
 /* .nch-hero::before {
     content: "";
     position: absolute;
-    top: -170px;
-    left: -130px;
-    width: 540px;
-    height: 540px;
-    background: radial-gradient(circle, rgba(182, 19, 20, .09), rgba(182, 19, 20, 0) 70%);
+    top: -160px;
+    right: -120px;
+    width: 560px;
+    height: 560px;
+    background: radial-gradient(circle, rgba(255, 40, 40, .16), rgba(255, 40, 40, 0) 70%);
     border-radius: 50%;
     z-index: 0;
     pointer-events: none;
@@ -587,7 +587,7 @@ section {
 }
 
 .nch-hero h1 {
-    color: var(--ink);
+    color: #fff;
     font-size: clamp(38px, 5.2vw, 62px);
     font-weight: 800;
     line-height: 1.05;
@@ -600,7 +600,7 @@ section {
 }
 
 .nch-hero__lead {
-    color: var(--muted);
+    color: rgba(255, 255, 255, .78);
     font-size: 19px;
     line-height: 1.65;
     max-width: 540px;
@@ -619,7 +619,7 @@ section {
     flex-wrap: wrap;
     gap: 30px 34px;
     padding-top: 30px;
-    border-top: 1px solid var(--line);
+    border-top: 1px solid rgba(255, 255, 255, .14);
 }
 
 .nch-hero__stat {
@@ -632,13 +632,12 @@ section {
     width: 44px;
     height: 44px;
     border-radius: 50%;
-    background: #fff;
-    border: 1px solid var(--line);
-    box-shadow: 0 6px 16px rgba(20, 18, 16, .07);
+    background: rgba(255, 255, 255, .08);
+    border: 1px solid rgba(255, 255, 255, .16);
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    color: var(--red);
+    color: #ff3b3b;
     font-size: 17px;
     flex-shrink: 0;
 }
@@ -646,13 +645,13 @@ section {
 .nch-hero__stat .n {
     font-size: 22px;
     font-weight: 800;
-    color: var(--ink);
+    color: #fff;
     line-height: 1;
 }
 
 .nch-hero__stat .l {
     font-size: 13.5px;
-    color: var(--muted);
+    color: rgba(255, 255, 255, .62);
     line-height: 1.3;
 }
 
