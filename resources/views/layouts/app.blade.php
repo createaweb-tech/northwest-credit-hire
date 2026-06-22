@@ -19,7 +19,7 @@
     <!-- Site Main Style Sheet Css -->
     <link href="{{asset("assets/stylesheets/style.css")}}" rel="stylesheet">
     <!-- Northwest Credit Hire custom styles -->
-    <link href="{{asset("assets/stylesheets/nch-custom.css")}}?v=4.61" rel="stylesheet">
+    <link href="{{asset("assets/stylesheets/nch-custom.css")}}?v=4.8" rel="stylesheet">
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -58,7 +58,7 @@
                     <a class="text-uppercase {{ Route::is('contact') ? 'active' : '' }}" href="{{route("contact")}}">Contact</a>
                 </div>
                 <div class="nch-nav-right">
-                    <a class="nch-nav-phone" href="tel:08000000000"><i class="fa fa-phone"></i> 0800 000 0000</a>
+                    <a class="nch-nav-phone" href="tel:07824973768"><i class="fa fa-phone"></i> 07824 973768</a>
                     <a class="btn btn-red btn-sm" href="{{route("contact")}}">Start a claim</a>
                     <button class="nch-burger" id="nch-burger" type="button" aria-label="Toggle menu">
                         <i class="fa fa-bars"></i>
@@ -100,8 +100,8 @@
                 <div class="nch-foot-col">
                     <h4>Get In Touch</h4>
                     <ul class="nch-foot-contact">
-                        <li><i class="fa fa-map-marker"></i> <span>Greater Manchester, United Kingdom</span></li>
-                        <li><i class="fa fa-phone"></i> <a href="tel:08000000000">0800 000 0000  24/7</a></li>
+                        <li><i class="fa fa-map-marker"></i> <span>Unit A2, Highfield Industrial Estate, W End St, Oldham OL9 6AJ, United Kingdom</span></li>
+                        <li><i class="fa fa-phone"></i> <a href="tel:07824973768">07824 973768  24/7</a></li>
                         <li><i class="fa fa-envelope-o"></i> <a
                                 href="mailto:info@northwestcredithire.co.uk">info@northwestcredithire.co.uk</a></li>
                     </ul>
@@ -118,7 +118,7 @@
                 <div class="row align-items-center">
                     <div class="col-lg-6 text-center text-lg-left">
                         <div class="copyright-text">
-                            <p>Northwest Credit Hire &copy; {{date("Y")}}. All rights reserved.</p>
+                            <p>Northwest Credit Hire Ltd &copy; {{date("Y")}}. All rights reserved.</p>
                         </div>
                     </div>
                     <div class="col-lg-6 d-none d-lg-block">

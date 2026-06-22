@@ -131,7 +131,7 @@
     </section>
 
     <!-- Fleet -->
-    <section class="nch-section bg-white">
+    <section class="nch-section bg-dark">
         <div class="container">
             <div class="nch-sec-head">
                 <div class="nch-sec-head-l">
@@ -188,7 +188,7 @@
             <!-- 9-Seaters -->
             <div class="nch-fleet-row">
                 <div class="nch-fleet-row__media">
-                    <img src="{{asset("assets/images/section-bg.jpg")}}" alt="9-seater group vehicle">
+                    <img src="{{asset("assets/images/cars/mercedes-vito.jpg")}}" alt="Mercedes Vito 9-seater group vehicle">
                     <span class="nch-fleet-row__count">Group travel</span>
                 </div>
                 <div class="nch-fleet-row__content">
@@ -223,6 +223,18 @@
                         <img src="{{asset("assets/images/cars/cupra-formentor.jpg")}}" alt="Cupra Formentor replacement vehicle">
                         <figcaption>Cupra Formentor</figcaption>
                     </figure>
+                    <figure class="nch-fleet-gallery__item">
+                        <img src="{{asset("assets/images/cars/audi-a6.jpg")}}" alt="Audi A6 replacement vehicle">
+                        <figcaption>Audi A6</figcaption>
+                    </figure>
+                    <figure class="nch-fleet-gallery__item">
+                        <img src="{{asset("assets/images/cars/audi-a4.jpg")}}" alt="Audi A4 replacement vehicle">
+                        <figcaption>Audi A4</figcaption>
+                    </figure>
+                    <figure class="nch-fleet-gallery__item">
+                        <img src="{{asset("assets/images/cars/mercedes-g-class.jpg")}}" alt="Mercedes G-Class replacement vehicle">
+                        <figcaption>Mercedes G-Class</figcaption>
+                    </figure>
                 </div>
             </div>
         </div>
@@ -237,7 +249,7 @@
                     <p>Call our team today and we'll talk you through exactly where you stand  no jargon, no pressure.</p>
                     <div class="nch-ctaband__actions">
                         <a class="btn btn-light" href="{{route("contact")}}">Contact us <i class="fa fa-long-arrow-right"></i></a>
-                        <a class="nch-ctaband__phone" href="tel:08000000000"><i class="fa fa-phone"></i> 0800 000 0000</a>
+                        <a class="nch-ctaband__phone" href="tel:07824973768"><i class="fa fa-phone"></i> 07824 973768</a>
                     </div>
                 </div>
             </div>

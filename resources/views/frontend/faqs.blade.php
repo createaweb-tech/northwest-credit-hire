@@ -26,7 +26,7 @@
                     <h2>Questions, answered</h2>
                     <p>Got questions about credit hire, accident claims, or what you're entitled to? We've answered the most
                         common ones here. Can't find what you're looking for? We're available 24/7.</p>
-                    <a href="tel:08000000000" class="btn btn-red mt-24"><i class="fa fa-phone"></i> Call us 24/7</a>
+                    <a href="tel:07824973768" class="btn btn-red mt-24"><i class="fa fa-phone"></i> Call us 24/7</a>
                 </div>
                 <div class="nch-faq">
                         <details open>
@@ -93,7 +93,7 @@
                     <p>Call us now. No jargon, no pressure  just straight answers.</p>
                     <div class="nch-ctaband__actions">
                         <a class="btn btn-light" href="{{route("contact")}}">Contact us <i class="fa fa-long-arrow-right"></i></a>
-                        <a class="nch-ctaband__phone" href="tel:08000000000"><i class="fa fa-phone"></i> 0800 000 0000</a>
+                        <a class="nch-ctaband__phone" href="tel:07824973768"><i class="fa fa-phone"></i> 07824 973768</a>
                     </div>
                 </div>
             </div>

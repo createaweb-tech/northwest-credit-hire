@@ -11,7 +11,7 @@
             <h1>Contact Us</h1>
             {{-- <nav aria-label="breadcrumb">
                 <ol class="breadcrumb">
-                    <li class="breadcrumb-item"><a href="{{route("home")}}">Home</a></li>
+                    <li class="breadcrumb-item"><a href="{{route(" home")}}">Home</a></li>
                     <li class="breadcrumb-item active" aria-current="page">Contact</li>
                 </ol>
             </nav> --}}
@@ -25,7 +25,7 @@
                 <div class="nch-sec-head-l">
                     {{-- <span class="nch-eyebrow"><i class="fa fa-comments-o"></i> Start your claim</span> --}}
                     <h2>Talk to a real person, right now</h2>
-                    <p>We're available 24 hours a day, 7 days a week, 365 days a year. Send a message or call 
+                    <p>We're available 24 hours a day, 7 days a week, 365 days a year. Send a message or call
                         whatever's easiest. No automated queue, no script.</p>
                 </div>
             </div>
@@ -72,7 +72,8 @@
                                         </div>
                                     </div>
                                     <div class="col-md-12">
-                                        <button type="submit" class="btn btn-red" data-text="Send Message">Send message <i class="fa fa-long-arrow-right"></i></button>
+                                        <button type="submit" class="btn btn-red" data-text="Send Message">Send message <i
+                                                class="fa fa-long-arrow-right"></i></button>
                                     </div>
                                     <div class="messages">
                                         <div class="alert alert alert-success alert-dismissable alert-dismissable hidden"
@@ -87,11 +88,16 @@
                 </div>
                 <div class="col-lg-4 col-md-12 mb-4">
                     <div class="contact-widget">
+                        {{-- <img class="contact-widget__img"
+                            src="{{asset("assets/images/cars/mercedes-e-class.jpg")}}"
+                            alt="Northwest Credit Hire replacement vehicle"> --}}
+                        <h3 class="contact-widget__title">Northwest Credit Hire Ltd</h3>
+                        <p class="contact-widget__sub">Credit hire &amp; accident management specialists</p>
                         <div class="contact-info">
                             <span class="ci-ic"><i class="fa fa-phone"></i></span>
                             <div>
-                                <h6>Phone  24/7</h6>
-                                <p><a href="tel:08000000000">0800 000 0000</a></p>
+                                <h6>Phone 24/7</h6>
+                                <p><a href="tel:07824973768">07824 973768</a></p>
                             </div>
                         </div>
                         <div class="contact-info">
@@ -105,7 +111,7 @@
                             <span class="ci-ic"><i class="fa fa-map-marker"></i></span>
                             <div>
                                 <h6>Address</h6>
-                                <p>Greater Manchester, United Kingdom</p>
+                                <p>Unit A2, Highfield Industrial Estate, W End St, Oldham OL9 6AJ, United Kingdom</p>
                             </div>
                         </div>
                         <div class="contact-info">
@@ -123,9 +129,11 @@
 
     <!-- Map -->
     <div id="map">
-        <iframe src="https://www.google.com/maps?q=Greater+Manchester,+UK&amp;output=embed" frameborder="0"
-            style="border:0; width: 100%; height: 440px; margin-bottom: -10px;" allowfullscreen loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade" title="Northwest Credit Hire location"></iframe>
+
+        <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2170.178780831207!2d-2.125107123705445!3d53.5428514600028!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x487bb7912052326b%3A0x4e6982b72fbc2c5f!2sNorthwest%20Credit%20Hire%20Ltd!5e1!3m2!1sen!2s!4v1782120599298!5m2!1sen!2s"
+            style="border:0; width: 100%; height: 440px;" allowfullscreen="" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"></iframe>
     </div>
 
 @endsection

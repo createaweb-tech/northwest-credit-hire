@@ -1148,6 +1148,117 @@ section {
     margin: 0;
 }
 
+/* Dark section variant (e.g. "What to do in a collision") */
+.bg-dark {
+    background: #070707 !important;
+    color: #fff;
+}
+
+.bg-dark .nch-sec-head h2,
+.bg-dark .nch-h2 {
+    color: #fff;
+}
+
+.bg-dark .nch-sec-head p {
+    color: rgba(255, 255, 255, .66);
+}
+
+.bg-dark .nch-step {
+    background: rgba(255, 255, 255, .04);
+    border-color: rgba(255, 255, 255, .1);
+}
+
+.bg-dark .nch-step:hover {
+    background: rgba(255, 255, 255, .06);
+    border-color: rgba(255, 255, 255, .18);
+}
+
+.bg-dark .nch-step__n {
+    color: #ff3b3b;
+}
+
+.bg-dark .nch-step__n::after {
+    background: rgba(255, 255, 255, .12);
+}
+
+.bg-dark .nch-step__ic {
+    background: rgba(255, 255, 255, .08);
+    color: #fff;
+}
+
+.bg-dark .nch-step h3 {
+    color: #fff;
+}
+
+.bg-dark .nch-step p {
+    color: rgba(255, 255, 255, .62);
+}
+
+/* dark: generic prose / lead / eyebrow */
+.bg-dark .nch-prose h2,
+.bg-dark h3 {
+    color: #fff;
+}
+
+.bg-dark .nch-prose p,
+.bg-dark .nch-lead {
+    color: rgba(255, 255, 255, .74);
+}
+
+.bg-dark .nch-eyebrow {
+    background: rgba(255, 255, 255, .08);
+    color: #fff;
+}
+
+/* dark: stat card (About) */
+.bg-dark .nch-statcard {
+    background: rgba(255, 255, 255, .03);
+    border-color: rgba(255, 255, 255, .12);
+}
+
+.bg-dark .nch-statcard > div {
+    border-color: rgba(255, 255, 255, .12);
+}
+
+.bg-dark .nch-statcard .n {
+    color: #fff;
+}
+
+.bg-dark .nch-statcard .l {
+    color: rgba(255, 255, 255, .6);
+}
+
+/* dark: fleet showroom (Services) */
+.bg-dark .nch-fleet-row h3 {
+    color: #fff;
+}
+
+.bg-dark .nch-fleet-row__desc {
+    color: rgba(255, 255, 255, .66);
+}
+
+.bg-dark .nch-fleet-row + .nch-fleet-row {
+    border-color: rgba(255, 255, 255, .1);
+}
+
+.bg-dark .nch-checks li {
+    color: rgba(255, 255, 255, .8);
+}
+
+.bg-dark .nch-tags span {
+    background: rgba(255, 255, 255, .06);
+    border-color: rgba(255, 255, 255, .14);
+    color: rgba(255, 255, 255, .82);
+}
+
+.bg-dark .nch-fleet-more {
+    border-color: rgba(255, 255, 255, .1);
+}
+
+.bg-dark .nch-fleet-more__label {
+    color: rgba(255, 255, 255, .5);
+}
+
 @media (max-width: 992px) {
     .nch-steps {
         grid-template-columns: repeat(2, 1fr);
@@ -2286,6 +2397,27 @@ section {
     display: flex;
     flex-direction: column;
     gap: 0;
+}
+
+.contact-widget__img {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    border-radius: var(--r-lg);
+    margin-bottom: 22px;
+}
+
+.contact-widget__title {
+    color: #fff;
+    font-size: 19px;
+    font-weight: 800;
+    margin: 0 0 4px;
+}
+
+.contact-widget__sub {
+    color: rgba(255, 255, 255, .55);
+    font-size: 13.5px;
+    margin: 0 0 18px;
 }
 
 .contact-widget .contact-info {

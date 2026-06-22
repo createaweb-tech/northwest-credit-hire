@@ -43,7 +43,7 @@
     </section>
 
     <!-- Stats -->
-    <section class="nch-section--tight bg-cream" style="padding-top:0;">
+    <section class="nch-section bg-dark">
         <div class="container">
             <div class="nch-statcard">
                 <div><div class="n">300<span>+</span></div><div class="l">Vehicles in our fleet</div></div>
@@ -88,8 +88,48 @@
         </div>
     </section>
 
+    <!-- Our fleet -->
+    {{-- <section class="nch-section bg-cream">
+        <div class="container">
+            <div class="nch-sec-head">
+                <div class="nch-sec-head-l">
+                    <span class="nch-eyebrow"><i class="fa fa-car"></i> Our fleet</span>
+                    <h2>One of the North West's largest fleets</h2>
+                    <p>From hybrid taxis and executive saloons to people carriers and prestige SUVs &mdash; over 300
+                        vehicles, kept under two years old, fully insured and ready for same-day dispatch.</p>
+                </div>
+            </div>
+            <div class="nch-fleet-gallery">
+                <figure class="nch-fleet-gallery__item">
+                    <img src="{{asset("assets/images/cars/bmw-5-series.jpg")}}" alt="BMW 5 Series replacement vehicle">
+                    <figcaption>BMW 5 Series</figcaption>
+                </figure>
+                <figure class="nch-fleet-gallery__item">
+                    <img src="{{asset("assets/images/cars/mercedes-g-class.jpg")}}" alt="Mercedes G-Class replacement vehicle">
+                    <figcaption>Mercedes G-Class</figcaption>
+                </figure>
+                <figure class="nch-fleet-gallery__item">
+                    <img src="{{asset("assets/images/cars/audi-a6.jpg")}}" alt="Audi A6 replacement vehicle">
+                    <figcaption>Audi A6</figcaption>
+                </figure>
+                <figure class="nch-fleet-gallery__item">
+                    <img src="{{asset("assets/images/cars/mercedes-vito.jpg")}}" alt="Mercedes Vito 9-seater">
+                    <figcaption>Mercedes Vito</figcaption>
+                </figure>
+                <figure class="nch-fleet-gallery__item">
+                    <img src="{{asset("assets/images/cars/lexus-es-300h.jpg")}}" alt="Lexus ES 300h replacement vehicle">
+                    <figcaption>Lexus ES 300h</figcaption>
+                </figure>
+                <figure class="nch-fleet-gallery__item">
+                    <img src="{{asset("assets/images/cars/toyota-corolla.jpg")}}" alt="Toyota Corolla hybrid taxi">
+                    <figcaption>Toyota Corolla</figcaption>
+                </figure>
+            </div>
+        </div>
+    </section> --}}
+
     <!-- Why choose us -->
-    <section class="nch-section bg-cream">
+    <section class="nch-section bg-white">
         <div class="container">
             <div class="nch-sec-head">
                 <div class="nch-sec-head-l">
@@ -124,7 +164,7 @@
     </section>
 
     <!-- CTA band -->
-    {{-- <section class="nch-section--tight bg-cream" style="padding-top:0;">
+    <section class="nch-section--tight bg-white">
         <div class="container">
             <div class="nch-ctaband">
                 <div class="nch-ctaband__inner">
@@ -132,10 +172,10 @@
                     <p>Speak to our team today and find out exactly what you're entitled to.</p>
                     <div class="nch-ctaband__actions">
                         <a class="btn btn-light" href="{{route("contact")}}">Contact us <i class="fa fa-long-arrow-right"></i></a>
-                        <a class="nch-ctaband__phone" href="tel:08000000000"><i class="fa fa-phone"></i> 0800 000 0000</a>
+                        <a class="nch-ctaband__phone" href="tel:07824973768"><i class="fa fa-phone"></i> 07824 973768</a>
                     </div>
                 </div>
             </div>
         </div>
-    </section> --}}
+    </section>
 @endsection
