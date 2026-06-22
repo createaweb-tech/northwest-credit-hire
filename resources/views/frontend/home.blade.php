@@ -168,7 +168,7 @@
                 </figure>
                 <figure class="nch-showcard">
                     <span class="nch-badge nch-badge--dark nch-showcard__badge">9-seater</span>
-                    <img src="{{asset("assets/images/cars/mercedes-vito.jpg")}}" alt="Mercedes Vito 9-seater">
+                    <img src="{{asset("assets/images/cars/9-seater.png")}}" alt="Mercedes Vito 9-seater">
                     <figcaption class="nch-showcard__label">Mercedes Vito</figcaption>
                 </figure>
             </div>
