@@ -2232,7 +2232,7 @@ section {
 
     .nch-fleet-gallery {
         grid-template-columns: repeat(2, 1fr);
-        gap: 20px;
+        gap: 30px;
     }
 }
 
