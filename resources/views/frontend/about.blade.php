@@ -36,7 +36,7 @@
                         management. All under one roof, at no cost to you if the other party was at fault.</p>
                 </div>
                 <div class="nch-split__media">
-                    <img src="{{asset("assets/images/cars/mercedes-e-class.jpg")}}" alt="Mercedes E-Class replacement vehicle from our fleet">
+                    <img src="{{asset("assets/images/cars/mercedes-e-class.jpg")}}?v=1" alt="Mercedes E-Class replacement vehicle from our fleet">
                 </div>
             </div>
         </div>

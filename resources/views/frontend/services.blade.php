@@ -144,7 +144,7 @@
             <!-- Hybrid Taxis -->
             <div class="nch-fleet-row">
                 <div class="nch-fleet-row__media">
-                    <img src="{{asset("assets/images/cars/toyota-corolla.jpg")}}" alt="Toyota Corolla hybrid taxi">
+                    <img src="{{asset("assets/images/cars/toyota-corolla.jpg")}}?v=1" alt="Toyota Corolla hybrid taxi">
                     <span class="nch-fleet-row__count">5 models</span>
                 </div>
                 <div class="nch-fleet-row__content">
@@ -166,7 +166,7 @@
             <!-- Prestige Taxis -->
             <div class="nch-fleet-row nch-fleet-row--flip">
                 <div class="nch-fleet-row__media">
-                    <img src="{{asset("assets/images/cars/bmw-5-series.jpg")}}" alt="BMW 5 Series executive saloon">
+                    <img src="{{asset("assets/images/cars/bmw-5-series.jpg")}}?v=1" alt="BMW 5 Series executive saloon">
                     <span class="nch-fleet-row__count">5 models</span>
                 </div>
                 <div class="nch-fleet-row__content">
@@ -188,7 +188,7 @@
             <!-- 9-Seaters -->
             <div class="nch-fleet-row">
                 <div class="nch-fleet-row__media">
-                    <img src="{{asset("assets/images/cars/mercedes-vito.jpg")}}" alt="Mercedes Vito 9-seater group vehicle">
+                    <img src="{{asset("assets/images/cars/mercedes-vito.jpg")}}?v=1" alt="Mercedes Vito 9-seater group vehicle">
                     <span class="nch-fleet-row__count">Group travel</span>
                 </div>
                 <div class="nch-fleet-row__content">
@@ -212,7 +212,7 @@
                 <p class="nch-fleet-more__label">More from our fleet</p>
                 <div class="nch-fleet-gallery">
                     <figure class="nch-fleet-gallery__item">
-                        <img src="{{asset("assets/images/cars/lexus-es-300h.jpg")}}" alt="Lexus ES 300h replacement vehicle">
+                        <img src="{{asset("assets/images/cars/lexus-es-300h.jpg")}}?v=1" alt="Lexus ES 300h replacement vehicle">
                         <figcaption>Lexus ES 300h</figcaption>
                     </figure>
                     <figure class="nch-fleet-gallery__item">
@@ -220,19 +220,19 @@
                         <figcaption>Mercedes E-Class</figcaption>
                     </figure>
                     <figure class="nch-fleet-gallery__item">
-                        <img src="{{asset("assets/images/cars/cupra-formentor.jpg")}}" alt="Cupra Formentor replacement vehicle">
+                        <img src="{{asset("assets/images/cars/cupra-formentor.jpg")}}?v=1" alt="Cupra Formentor replacement vehicle">
                         <figcaption>Cupra Formentor</figcaption>
                     </figure>
                     <figure class="nch-fleet-gallery__item">
-                        <img src="{{asset("assets/images/cars/audi-a6.jpg")}}" alt="Audi A6 replacement vehicle">
+                        <img src="{{asset("assets/images/cars/audi-a6.jpg")}}?v=1" alt="Audi A6 replacement vehicle">
                         <figcaption>Audi A6</figcaption>
                     </figure>
                     <figure class="nch-fleet-gallery__item">
-                        <img src="{{asset("assets/images/cars/audi-a4.jpg")}}" alt="Audi A4 replacement vehicle">
+                        <img src="{{asset("assets/images/cars/audi-a4.jpg")}}?v=1" alt="Audi A4 replacement vehicle">
                         <figcaption>Audi A4</figcaption>
                     </figure>
                     <figure class="nch-fleet-gallery__item">
-                        <img src="{{asset("assets/images/cars/mercedes-g-class.jpg")}}" alt="Mercedes G-Class replacement vehicle">
+                        <img src="{{asset("assets/images/cars/mercedes-g-class.jpg")}}?v=1" alt="Mercedes G-Class replacement vehicle">
                         <figcaption>Mercedes G-Class</figcaption>
                     </figure>
                 </div>
