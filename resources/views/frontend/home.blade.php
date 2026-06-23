@@ -158,7 +158,7 @@
                 </figure>
                 <figure class="nch-showcard">
                     <span class="nch-badge nch-badge--dark nch-showcard__badge">Same-day plated</span>
-                    <img src="{{asset("assets/images/cars/cupra-formentor.jpg")}}?v=1" alt="Cupra Formentor replacement vehicle">
+                    <img src="{{asset("assets/images/cars/cupra-formentor-1.jpg")}}?v=1" alt="Cupra Formentor replacement vehicle">
                     <figcaption class="nch-showcard__label">Cupra Formentor</figcaption>
                 </figure>
                 <figure class="nch-showcard">

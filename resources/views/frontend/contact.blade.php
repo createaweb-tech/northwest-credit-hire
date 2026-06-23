@@ -33,53 +33,68 @@
                 <div class="col-lg-8 col-md-12 mb-4">
                     <div class="form-container-box">
                         <form class="contact-form form" id="ajax-contact" method="post"
-                            action="assets/phpscripts/contact.php">
+                            action="{{ route('contact.submit') }}">
+                            @csrf
                             <div class="controls">
+                                @if (session('success'))
+                                    <div class="alert alert-success alert-dismissable" role="alert">
+                                        <button type="button" class="close" data-dismiss="alert"
+                                            aria-hidden="true">&times;</button>
+                                        {{ session('success') }}
+                                    </div>
+                                @endif
+                                @if ($errors->any())
+                                    <div class="alert alert-danger alert-dismissable" role="alert">
+                                        <button type="button" class="close" data-dismiss="alert"
+                                            aria-hidden="true">&times;</button>
+                                        Please check the form &mdash; some details need fixing.
+                                    </div>
+                                @endif
                                 <div class="row">
                                     <div class="col-md-6">
                                         <div class="form-group">
                                             <input type="text" class="form-control" id="name" name="name"
-                                                placeholder="Name*" required="required" data-error="name is required.">
-                                            <div class="help-block with-errors"></div>
+                                                value="{{ old('name') }}" placeholder="Name*" required="required"
+                                                data-error="name is required.">
+                                            <div class="help-block with-errors">{{ $errors->first('name') }}</div>
                                         </div>
                                     </div>
                                     <div class="col-md-6">
                                         <div class="form-group">
                                             <input type="email" class="form-control" id="email" name="email"
-                                                placeholder="Email*" required="required"
+                                                value="{{ old('email') }}" placeholder="Email*" required="required"
                                                 data-error="valid email is required.">
-                                            <div class="help-block with-errors"></div>
+                                            <div class="help-block with-errors">{{ $errors->first('email') }}</div>
                                         </div>
                                     </div>
                                     <div class="col-md-6">
                                         <div class="form-group">
-                                            <input type="tel" class="form-control" id="phone" name="phone"
-                                                placeholder="Phone Number*" required="required">
+                                            <input type="number" class="form-control" id="phone" name="phone"
+                                                value="{{ old('phone') }}" placeholder="Phone Number*" required="required"
+                                                data-error="Phone number is required.">
+                                            <div class="help-block with-errors">{{ $errors->first('phone') }}</div>
                                         </div>
                                     </div>
                                     <div class="col-md-6">
                                         <div class="form-group">
-                                            <input type="text" class="form-control" name="subject"
-                                                placeholder="Subject (e.g. non-fault accident)" required="required">
+                                            <input type="text" class="form-control" id="subject" name="subject"
+                                                value="{{ old('subject') }}"
+                                                placeholder="Subject (e.g. non-fault accident)" required="required"
+                                                data-error="Please add a subject.">
+                                            <div class="help-block with-errors">{{ $errors->first('subject') }}</div>
                                         </div>
                                     </div>
                                     <div class="col-12">
                                         <div class="form-group">
                                             <textarea class="form-control" id="message" name="message" rows="6"
                                                 placeholder="Tell us briefly what happened*" required="required"
-                                                data-error="Please, leave us a message."></textarea>
-                                            <div class="help-block with-errors"></div>
+                                                data-error="Please, leave us a message.">{{ old('message') }}</textarea>
+                                            <div class="help-block with-errors">{{ $errors->first('message') }}</div>
                                         </div>
                                     </div>
                                     <div class="col-md-12">
                                         <button type="submit" class="btn btn-red" data-text="Send Message">Send message <i
                                                 class="fa fa-long-arrow-right"></i></button>
-                                    </div>
-                                    <div class="messages">
-                                        <div class="alert alert alert-success alert-dismissable alert-dismissable hidden"
-                                            id="msgSubmit"><button type="button" class="close" data-dismiss="alert"
-                                                aria-hidden="true">&times;</button> Thank You! Your message has been sent.
-                                        </div>
                                     </div>
                                 </div>
                             </div>

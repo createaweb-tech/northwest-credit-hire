@@ -93,7 +93,12 @@ img {
     height: auto;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
     font-family: var(--font);
     color: var(--ink);
     font-weight: 800;
@@ -209,6 +214,10 @@ section {
     max-width: 640px;
 }
 
+.nch-sec-head .nch-sec-head-l h2 {
+    white-space: nowrap;
+}
+
 .nch-sec-head h2,
 .nch-h2 {
     font-size: clamp(28px, 3.6vw, 42px);
@@ -246,6 +255,12 @@ section {
 
 .nch-sec-link:hover i {
     transform: translateX(4px);
+}
+
+@media (max-width: 991px) {
+    .nch-sec-head .nch-sec-head-l h2 {
+        white-space: wrap;
+    }
 }
 
 @media (max-width: 640px) {
@@ -518,6 +533,7 @@ section {
 }
 
 @media (max-width: 992px) {
+
     .nch-nav-links,
     .nch-nav-phone {
         display: none;
@@ -600,7 +616,7 @@ section {
 
 .nch-hero h1 {
     color: #fff;
-    font-size: clamp(38px, 5.2vw, 62px);
+    font-size: clamp(38px, 5.2vw, 60px);
     font-weight: 800;
     line-height: 1.05;
     letter-spacing: -.03em;
@@ -1228,7 +1244,7 @@ section {
     border-color: rgba(255, 255, 255, .12);
 }
 
-.bg-dark .nch-statcard > div {
+.bg-dark .nch-statcard>div {
     border-color: rgba(255, 255, 255, .12);
 }
 
@@ -1249,7 +1265,7 @@ section {
     color: rgba(255, 255, 255, .66);
 }
 
-.bg-dark .nch-fleet-row + .nch-fleet-row {
+.bg-dark .nch-fleet-row+.nch-fleet-row {
     border-color: rgba(255, 255, 255, .1);
 }
 
@@ -1744,7 +1760,7 @@ section {
     color: var(--red);
 }
 
-.single-page .breadcrumb-item + .breadcrumb-item::before {
+.single-page .breadcrumb-item+.breadcrumb-item::before {
     color: rgba(255, 255, 255, .4);
     content: "/";
 }
@@ -1827,6 +1843,7 @@ section {
 }
 
 @media (max-width: 860px) {
+
     .nch-split,
     .nch-split--media-r {
         grid-template-columns: 1fr;
@@ -1872,13 +1889,13 @@ section {
     overflow: hidden;
 }
 
-.nch-statcard > div {
+.nch-statcard>div {
     padding: 34px 28px;
     border-right: 1px solid var(--line);
     text-align: center;
 }
 
-.nch-statcard > div:last-child {
+.nch-statcard>div:last-child {
     border-right: 0;
 }
 
@@ -1906,12 +1923,12 @@ section {
         grid-template-columns: 1fr 1fr;
     }
 
-    .nch-statcard > div:nth-child(2) {
+    .nch-statcard>div:nth-child(2) {
         border-right: 0;
     }
 
-    .nch-statcard > div:nth-child(1),
-    .nch-statcard > div:nth-child(2) {
+    .nch-statcard>div:nth-child(1),
+    .nch-statcard>div:nth-child(2) {
         border-bottom: 1px solid var(--line);
     }
 }
@@ -2090,7 +2107,7 @@ section {
     align-items: center;
 }
 
-.nch-fleet-row + .nch-fleet-row {
+.nch-fleet-row+.nch-fleet-row {
     margin-top: 54px;
     padding-top: 54px;
     border-top: 1px solid var(--line);
@@ -2163,7 +2180,7 @@ section {
         order: 0;
     }
 
-    .nch-fleet-row + .nch-fleet-row {
+    .nch-fleet-row+.nch-fleet-row {
         margin-top: 38px;
         padding-top: 38px;
     }
@@ -2725,6 +2742,73 @@ section {
     margin-bottom: 18px;
 }
 
+/* --- Validation states --------------------------------------------- */
+.contact-area .form .help-block.with-errors {
+    margin: 7px 2px 0;
+    font-size: 13px;
+    font-weight: 600;
+    line-height: 1.4;
+    color: var(--red);
+    min-height: 0;
+}
+
+.contact-area .form .help-block.with-errors:empty {
+    display: none;
+}
+
+.contact-area .form .help-block.with-errors ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.contact-area .form .has-error input,
+.contact-area .form .has-error textarea,
+.contact-area .form .has-error select {
+    border-color: var(--red);
+    background: var(--red-soft);
+}
+
+.contact-area .form .has-success input,
+.contact-area .form .has-success textarea {
+    border-color: #2e7d32;
+}
+
+/* Page-level alert banners (success / error) */
+.contact-area .alert {
+    border-radius: var(--r-md);
+    border: 1px solid transparent;
+    padding: 14px 44px 14px 18px;
+    font-size: 14.5px;
+    font-weight: 600;
+    margin-bottom: 22px;
+    position: relative;
+}
+
+.contact-area .alert .close {
+    position: absolute;
+    top: 10px;
+    right: 14px;
+    background: none;
+    border: 0;
+    font-size: 20px;
+    line-height: 1;
+    opacity: .55;
+    cursor: pointer;
+}
+
+.contact-area .alert-success {
+    background: #edf7ed;
+    border-color: #cfe8cf;
+    color: #1e5b22;
+}
+
+.contact-area .alert-danger {
+    background: var(--red-soft);
+    border-color: #f3c9c8;
+    color: var(--red-dark);
+}
+
 .contact-widget {
     background: var(--ink);
     border-radius: var(--r-xl);
@@ -2804,7 +2888,7 @@ section {
     overflow-wrap: break-word;
 }
 
-.contact-widget .contact-info > div {
+.contact-widget .contact-info>div {
     min-width: 0;
 }
 
@@ -2820,14 +2904,6 @@ section {
     line-height: 0;
 }
 
-#map iframe {
-    filter: grayscale(1) contrast(1.04);
-    transition: filter .4s ease;
-}
-
-#map iframe:hover {
-    filter: grayscale(0);
-}
 
 /* ---------------------------------------------------------------------
    Back-to-top + preloader
@@ -2852,10 +2928,21 @@ section {
     text-align: center;
 }
 
-.mt-0 { margin-top: 0; }
-.mt-24 { margin-top: 24px; }
-.mt-32 { margin-top: 32px; }
-.mb-0 { margin-bottom: 0; }
+.mt-0 {
+    margin-top: 0;
+}
+
+.mt-24 {
+    margin-top: 24px;
+}
+
+.mt-32 {
+    margin-top: 32px;
+}
+
+.mb-0 {
+    margin-bottom: 0;
+}
 
 /* =====================================================================
    RESPONSIVE REFINEMENTS — tighten type, sizes & spacing on small screens
@@ -2869,6 +2956,7 @@ section {
 
 /* ---- Tablet & below (nav has collapsed to a burger at 992px) ---- */
 @media (max-width: 991px) {
+
     /* push the call-to-action cluster to the right so the pill isn't left-clustered */
     .nch-nav-right {
         margin-left: auto;
@@ -2919,6 +3007,7 @@ section {
 
 /* ---- Phones (≤767) ---- */
 @media (max-width: 767px) {
+
     .container,
     .nch-wrap {
         padding-left: 18px;
@@ -3161,7 +3250,7 @@ section {
     }
 
     /* stat card */
-    .nch-statcard > div {
+    .nch-statcard>div {
         padding: 22px 14px;
     }
 
@@ -3220,6 +3309,7 @@ section {
 
 /* ---- Small phones (≤479) ---- */
 @media (max-width: 479px) {
+
     .container,
     .nch-wrap {
         padding-left: 15px;
@@ -3300,7 +3390,7 @@ section {
     }
 
     /* compact hero photo on small phones */
-   
+
 
     .nch-hero__media {
         padding: 7px;
@@ -3394,4 +3484,3 @@ section {
         white-space: nowrap;
     }
 }
-
