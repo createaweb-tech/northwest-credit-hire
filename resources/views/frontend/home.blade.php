@@ -200,10 +200,10 @@
                     </div>
                     <div class="nch-pcard__body">
                         <h3>Credit Hire</h3>
-                        <p>Same-day like-for-like replacement vehicles cars, executive, vans and plated taxis.</p>
+                        <p>Same-day like-for-like replacement vehicles cars, executive, vans and plated Taxi.</p>
                         <div class="nch-pcard__meta">
                             <span><i class="fa fa-car"></i> Cars &amp; executive</span>
-                            <span><i class="fa fa-taxi"></i> Plated taxis</span>
+                            <span><i class="fa fa-taxi"></i> Plated Taxi</span>
                         </div>
                         <div class="nch-pcard__foot">
                             <span class="nch-pcard__price">From day one</span>

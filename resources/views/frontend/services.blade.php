@@ -141,7 +141,7 @@
                         insured and ready for same-day dispatch.</p>
                 </div>
             </div>
-            <!-- Hybrid Taxis -->
+            <!-- Hybrid Taxi -->
             <div class="nch-fleet-row">
                 <div class="nch-fleet-row__media">
                     <img src="{{asset("assets/images/cars/toyota-corolla.jpg")}}?v=1" alt="Toyota Corolla hybrid taxi">
@@ -149,7 +149,7 @@
                 </div>
                 <div class="nch-fleet-row__content">
                     {{-- <span class="nch-eyebrow"><i class="fa fa-leaf"></i> Fleet 01  Eco &amp; efficient</span> --}}
-                    <h3>Hybrid Taxis</h3>
+                    <h3>Hybrid Taxi</h3>
                     <p class="nch-fleet-row__desc">Efficient, low-emission hybrids that keep running costs down without
                         compromising on comfort  ideal for everyday private hire work and longer shifts.</p>
                     <ul class="nch-checks">
@@ -163,7 +163,7 @@
                 </div>
             </div>
 
-            <!-- Prestige Taxis -->
+            <!-- Prestige Taxi -->
             <div class="nch-fleet-row nch-fleet-row--flip">
                 <div class="nch-fleet-row__media">
                     <img src="{{asset("assets/images/cars/bmw-5-series.jpg")}}?v=1" alt="BMW 5 Series executive saloon">
@@ -171,7 +171,7 @@
                 </div>
                 <div class="nch-fleet-row__content">
                     {{-- <span class="nch-eyebrow"><i class="fa fa-star"></i> Fleet 02  Executive</span> --}}
-                    <h3>Prestige Taxis</h3>
+                    <h3>Prestige Taxi</h3>
                     <p class="nch-fleet-row__desc">Executive saloons for premium, corporate and airport journeys where
                         presentation matters  refined, spacious and immaculately maintained.</p>
                     <ul class="nch-checks">
@@ -193,7 +193,7 @@
                 </div>
                 <div class="nch-fleet-row__content">
                     {{-- <span class="nch-eyebrow"><i class="fa fa-users"></i> Fleet 03  Group &amp; access</span> --}}
-                    <h3>9-Seaters</h3>
+                    <h3>Mini bus 7-9 seater</h3>
                     <p class="nch-fleet-row__desc">Spacious people-carriers for larger groups, families and accessible
                         transport  plenty of room for passengers and luggage in comfort.</p>
                     <ul class="nch-checks">

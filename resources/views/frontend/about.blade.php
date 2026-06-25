@@ -95,7 +95,7 @@
                 <div class="nch-sec-head-l">
                     <span class="nch-eyebrow"><i class="fa fa-car"></i> Our fleet</span>
                     <h2>One of the North West's largest fleets</h2>
-                    <p>From hybrid taxis and executive saloons to people carriers and prestige SUVs &mdash; over 300
+                    <p>From hybrid Taxi and executive saloons to people carriers and prestige SUVs &mdash; over 300
                         vehicles, kept under two years old, fully insured and ready for same-day dispatch.</p>
                 </div>
             </div>
