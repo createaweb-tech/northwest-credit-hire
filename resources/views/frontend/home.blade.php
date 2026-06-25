@@ -7,7 +7,7 @@
         <div class="container">
             <div class="nch-hero__grid">
                 <div class="nch-hero__inner">
-                    <h1>Know your rights, Get back on the road, Same day replacement, <span class="accent">sorted.</span>
+                    <h1>Know your rights, Get back on the road, Same day replacement, <span class="accent">sorted</span>
                     </h1>
                     <p class="nch-hero__lead">Under UK law, if you weren't at fault, you're entitled to a like for like
                         replacement vehicle at no cost to you. We arrange this the same day, run your claim, and recover
@@ -154,17 +154,17 @@
                 <figure class="nch-showcard">
                     <span class="nch-badge nch-badge--dark nch-showcard__badge">Same-day plated</span>
                     <img src="{{asset("assets/images/cars/toyota-corolla.jpg")}}?v=1" alt="Toyota Corolla hybrid replacement">
-                    <figcaption class="nch-showcard__label">Toyota Corolla</figcaption>
+                    <figcaption class="nch-showcard__label">Standard Taxies</figcaption>
                 </figure>
                 <figure class="nch-showcard">
                     <span class="nch-badge nch-badge--dark nch-showcard__badge">Same-day plated</span>
                     <img src="{{asset("assets/images/cars/cupra-formentor-1.jpg")}}?v=1" alt="Cupra Formentor replacement vehicle">
-                    <figcaption class="nch-showcard__label">Cupra Formentor</figcaption>
+                    <figcaption class="nch-showcard__label">Standard Hire </figcaption>
                 </figure>
                 <figure class="nch-showcard">
                     <span class="nch-badge nch-badge--dark nch-showcard__badge">Same-day plated</span>
                     <img src="{{asset("assets/images/cars/audi-a4.jpg")}}?v=1" alt="Audi A4 replacement vehicle">
-                    <figcaption class="nch-showcard__label">Audi A4</figcaption>
+                    <figcaption class="nch-showcard__label">Executive Taxies</figcaption>
                 </figure>
                 <figure class="nch-showcard">
                     <span class="nch-badge nch-badge--dark nch-showcard__badge">9-seater</span>
