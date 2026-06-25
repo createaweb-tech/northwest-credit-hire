@@ -152,22 +152,22 @@
             </div>
             <div class="nch-showcase-grid">
                 <figure class="nch-showcard">
-                    <span class="nch-badge nch-badge--dark nch-showcard__badge">Same-day plated</span>
+                    {{-- <span class="nch-badge nch-badge--dark nch-showcard__badge">Same-day plated</span> --}}
                     <img src="{{asset("assets/images/cars/toyota-corolla.jpg")}}?v=1" alt="Toyota Corolla hybrid replacement">
                     <figcaption class="nch-showcard__label">Standard Taxies</figcaption>
                 </figure>
                 <figure class="nch-showcard">
-                    <span class="nch-badge nch-badge--dark nch-showcard__badge">Same-day plated</span>
+                    {{-- <span class="nch-badge nch-badge--dark nch-showcard__badge">Same-day plated</span> --}}
                     <img src="{{asset("assets/images/cars/cupra-formentor-1.jpg")}}?v=1" alt="Cupra Formentor replacement vehicle">
                     <figcaption class="nch-showcard__label">Standard Hire </figcaption>
                 </figure>
                 <figure class="nch-showcard">
-                    <span class="nch-badge nch-badge--dark nch-showcard__badge">Same-day plated</span>
+                    {{-- <span class="nch-badge nch-badge--dark nch-showcard__badge">Same-day plated</span> --}}
                     <img src="{{asset("assets/images/cars/audi-a4.jpg")}}?v=1" alt="Audi A4 replacement vehicle">
                     <figcaption class="nch-showcard__label">Executive Taxies</figcaption>
                 </figure>
                 <figure class="nch-showcard">
-                    <span class="nch-badge nch-badge--dark nch-showcard__badge">9-seater</span>
+                    {{-- <span class="nch-badge nch-badge--dark nch-showcard__badge">9-seater</span> --}}
                     <img src="{{asset("assets/images/cars/9-seater.png")}}?v=1" alt="Mercedes Vito 9-seater">
                     <figcaption class="nch-showcard__label">Mercedes Vito</figcaption>
                 </figure>
