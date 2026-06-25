@@ -154,7 +154,7 @@
                 <figure class="nch-showcard">
                     {{-- <span class="nch-badge nch-badge--dark nch-showcard__badge">Same-day plated</span> --}}
                     <img src="{{asset("assets/images/cars/toyota-corolla.jpg")}}?v=1" alt="Toyota Corolla hybrid replacement">
-                    <figcaption class="nch-showcard__label">Standard Taxies</figcaption>
+                    <figcaption class="nch-showcard__label">Standard Taxi</figcaption>
                 </figure>
                 <figure class="nch-showcard">
                     {{-- <span class="nch-badge nch-badge--dark nch-showcard__badge">Same-day plated</span> --}}
@@ -164,7 +164,7 @@
                 <figure class="nch-showcard">
                     {{-- <span class="nch-badge nch-badge--dark nch-showcard__badge">Same-day plated</span> --}}
                     <img src="{{asset("assets/images/cars/audi-a4.jpg")}}?v=1" alt="Audi A4 replacement vehicle">
-                    <figcaption class="nch-showcard__label">Executive Taxies</figcaption>
+                    <figcaption class="nch-showcard__label">Executive Taxi</figcaption>
                 </figure>
                 <figure class="nch-showcard">
                     {{-- <span class="nch-badge nch-badge--dark nch-showcard__badge">9-seater</span> --}}
