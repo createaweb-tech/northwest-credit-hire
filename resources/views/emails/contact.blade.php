@@ -154,7 +154,7 @@
                             <p style="margin:0; font-size:12px; line-height:1.7; color:#9a948c;">
                                 Unit A2, Highfield Industrial Estate, W End St, Oldham OL9 6AJ<br>
                                 <a href="tel:07824973768" style="color:#fbeceb; text-decoration:none;">07824 973768</a> &nbsp;·&nbsp;
-                                <a href="mailto:info@northwestcredithire.co.uk" style="color:#fbeceb; text-decoration:none;">info@northwestcredithire.co.uk</a><br>
+                                <a href="mailto:info@northwestcredithire.com" style="color:#fbeceb; text-decoration:none;">info@northwestcredithire.com</a><br>
                                 Open 24/7, 365 days a year
                             </p>
                         </td>

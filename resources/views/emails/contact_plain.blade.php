@@ -25,7 +25,7 @@ Northwest Credit Hire Ltd
 Credit Hire & Accident Management Specialists
 Unit A2, Highfield Industrial Estate, W End St, Oldham OL9 6AJ
 Phone (24/7): 07824 973768
-Email: info@northwestcredithire.co.uk
+Email: info@northwestcredithire.com
 Open 24/7, 365 days a year
 
 This message was generated automatically from the website contact form.

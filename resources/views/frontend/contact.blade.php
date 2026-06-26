@@ -119,7 +119,7 @@
                             <span class="ci-ic"><i class="fa fa-envelope-o"></i></span>
                             <div>
                                 <h6>Email</h6>
-                                <p><a href="mailto:info@northwestcredithire.co.uk">info@northwestcredithire.co.uk</a></p>
+                                <p><a href="mailto:info@northwestcredithire.com">info@northwestcredithire.com</a></p>
                             </div>
                         </div>
                         <div class="contact-info">
