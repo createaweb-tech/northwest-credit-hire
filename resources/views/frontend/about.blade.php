@@ -180,6 +180,36 @@
         </div>
     </section>
 
+    <!-- Let us fight -->
+    <section class="nch-section bg-cream">
+        <div class="container">
+            <div class="nch-sec-head">
+                <div class="nch-sec-head-l">
+                    <span class="nch-eyebrow"><i class="fa fa-life-ring"></i> How can we help you?</span>
+                    <h2>Let us fight for the settlement you deserve</h2>
+                    <p>Had a non-fault accident? Dealing with your own insurer or the other driver's insurer (TPI) yourself can leave you out of pocket.</p>
+                </div>
+            </div>
+            <div class="nch-feature-grid nch-feature-grid--3">
+                <div class="nch-feature">
+                    <span class="nch-feature__ic"><i class="fa fa-user-o"></i></span>
+                    <h3>Your own insurer</h3>
+                    <p>May record the claim against your policy, affecting your no-claims bonus, and often pushes the cheapest repair or hire option, not the best one for you.</p>
+                </div>
+                <div class="nch-feature">
+                    <span class="nch-feature__ic"><i class="fa fa-building-o"></i></span>
+                    <h3>The third-party insurer</h3>
+                    <p>Works for the other driver, not you. Their goal is to settle for as little as possible, often with a quick, low offer before the full cost of your claim is even known</p>
+                </div>
+                <div class="nch-feature ">
+                    <span class="nch-feature__ic"><i class="fa fa-handshake-o"></i></span>
+                    <h3>We work for you</h3>
+                    <p>A like-for-like replacement vehicle, proper repairs, and a fair settlement negotiated by experts, at no cost to you, since it wasn't your fault</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- CTA band -->
     <section class="nch-section--tight bg-white">
         <div class="container">

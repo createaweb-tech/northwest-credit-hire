@@ -7,11 +7,9 @@
         <div class="container">
             <div class="nch-hero__grid">
                 <div class="nch-hero__inner">
-                    <h1>Know your rights, Get back on the road, Same day replacement, <span class="accent">sorted</span>
-                    </h1>
-                    <p class="nch-hero__lead">Under UK law, if you weren't at fault, you're entitled to a like for like
-                        replacement vehicle at no cost to you. We arrange this the same day, run your claim, and recover
-                        every penny directly from the at fault insurer, so there's nothing for you to pay</p>
+                    <h1>Welcome to <span class="accent">Northwest Credit Hire</span></h1>
+                    <p class="nch-hero__lead">We take care of everything after a non-fault accident.</p>
+                    <p class="nch-hero__lead">From start to finish, we manage your claim, provide a like-for-like replacement vehicle, arrange accredited repairs, and negotiate a fair settlement  recovering all costs from the at-fault driver's insurer, so there's no cost to you.</p>
                     <div class="nch-hero__stats">
                         <div class="nch-hero__stat">
                             <span class="ic"><i class="fa fa-car"></i></span>
@@ -34,33 +32,17 @@
                                 <div class="l">365 days a year</div>
                             </div>
                         </div>
-                        {{-- <div class="nch-hero__stat">
-                            <span class="ic"><i class="fa fa-gbp"></i></span>
-                            <div>
-                                <div class="n">&pound;0</div>
-                                <div class="l">Upfront cost</div>
-                            </div>
-                        </div> --}}
+
                     </div>
                 </div>
                 <div class="nch-hero__visual">
                     <div class="nch-hero__media">
                         <img src="{{asset("assets/images/cars/lexus-es-300h.jpg")}}"
                             alt="Premium like-for-like replacement vehicle">
-                    </div>
-                    <div class="nch-hero__rating">
-                        <div class="stars">
-                            <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i
-                                class="fa fa-star"></i><i class="fa fa-star"></i>
+                        <div class="nch-hero__tag">
+                            <span class="ic"><i class="fa fa-check"></i></span>
+                            <span><strong>&pound;0 upfront</strong> &mdash; we bill the at-fault insurer</span>
                         </div>
-                        <div class="rt">
-                            <strong>Rated excellent</strong>
-                            <span>by drivers across the North West</span>
-                        </div>
-                    </div>
-                    <div class="nch-hero__pill">
-                        <span class="ic"><i class="fa fa-check"></i></span>
-                        <span><strong>&pound;0 upfront</strong> &middot; we bill the insurer</span>
                     </div>
                 </div>
             </div>
@@ -74,8 +56,8 @@
                 <div class="nch-sec-head-l">
                     {{-- <span class="nch-eyebrow"><i class="fa fa-check-circle"></i> Why choose us</span> --}}
                     <h2>Everything handled, all under one roof</h2>
-                    <p>You deal with one local team not a call centre. We level the playing field with the at-fault
-                        insurer and keep you moving from day one.</p>
+                    {{-- <p>You deal with one local team not a call centre. We deal with all aspects of your claim ensuring you get what you're entitled to and a smooth sailing claims process.</p> --}}
+                    <p>We deal with all aspects of your claim ensuring you get what you're entitled to and a smooth sailing claims process.</p>
                 </div>
             </div>
             <div class="nch-feature-grid">
@@ -87,7 +69,7 @@
                 <div class="nch-feature">
                     <span class="nch-feature__ic"><i class="fa fa-gbp"></i></span>
                     <h3>No upfront cost</h3>
-                    <p>Nothing to pay for non-fault claimants. We recover every penny directly from the at-fault insurer.
+                    <p>For non-fault claimants. We recover every penny directly from the at-fault insurer.
                     </p>
                 </div>
                 <div class="nch-feature">
@@ -106,38 +88,6 @@
         </div>
     </section>
 
-    <!-- Our fleet -->
-    {{-- <section class="nch-section bg-dark dark-bg">
-        <div class="container">
-            <div class="nch-sec-head">
-                <div class="nch-sec-head-l">
-                    <span class="nch-eyebrow"><i class="fa fa-car"></i> Our fleet</span>
-                    <h2>300+ vehicles, ready to go</h2>
-                    <p>A 300+ strong fleet of private hire and hackney carriage vehicles, kept under two years old, fully
-                        insured and ready for same-day dispatch.</p>
-                </div>
-            </div>
-            <div class="nch-showcase-grid">
-                <figure class="nch-showcard">
-                    <img src="{{asset(" assets/images/cars/bmw-5-series.jpg")}}" alt="BMW 5 Series replacement vehicle">
-                    <figcaption class="nch-showcard__label">BMW 5 Series</figcaption>
-                </figure>
-                <figure class="nch-showcard">
-                    <img src="{{asset(" assets/images/cars/audi-a6.jpg")}}" alt="Audi A6 replacement vehicle">
-                    <figcaption class="nch-showcard__label">Audi A6</figcaption>
-                </figure>
-                <figure class="nch-showcard">
-                    <img src="{{asset(" assets/images/cars/mercedes-e-class.jpg")}}"
-                        alt="Mercedes E-Class replacement vehicle">
-                    <figcaption class="nch-showcard__label">Mercedes E-Class</figcaption>
-                </figure>
-                <figure class="nch-showcard">
-                    <img src="{{asset(" assets/images/cars/lexus-es-300h.jpg")}}" alt="Lexus ES 300h replacement vehicle">
-                    <figcaption class="nch-showcard__label">Lexus ES 300h</figcaption>
-                </figure>
-            </div>
-        </div>
-    </section> --}}
 
     <!-- Like-for-like (red band) -->
     <section class="nch-section bg-dark nch-redband">
@@ -148,7 +98,7 @@
                     --}}
                     <h2>A replacement for every driver</h2>
                     <p>If you've been involved in a non-fault accident and your vehicle is off the road, you're legally
-                        entitled to a like-for-like replacement at no cost to you — cars, vans, executive vehicles and
+                        entitled to a like-for-like replacement at no upfront cost from you — cars, vans, executive vehicles and
                         taxi-plated cars, so your life and work continue uninterrupted.</p>
                 </div>
             </div>
@@ -183,141 +133,6 @@
         </div>
     </section>
 
-    <!-- Our services -->
-    {{-- <section class="nch-section bg-dark dark-bg">
-        <div class="container">
-            <div class="nch-sec-head">
-                <div class="nch-sec-head-l">
-                    <span class="nch-eyebrow"><i class="fa fa-th-large"></i> Our services</span>
-                    <h2>Our services</h2>
-                    <p>From the moment of impact to the moment you're back on the road, we manage every step of your
-                        non-fault claim.</p>
-                </div>
-                <a class="nch-sec-link" href="{{route(" services")}}">View all services <i
-                        class="fa fa-long-arrow-right"></i></a>
-            </div>
-            <div class="nch-card-grid">
-                <article class="nch-pcard">
-                    <div class="nch-pcard__media">
-                        <span class="nch-badge nch-badge--red">No upfront cost</span>
-                        <img src="{{asset(" assets/images/photos/gallery-2.jpg")}}" alt="Like-for-like replacement vehicle">
-                    </div>
-                    <div class="nch-pcard__body">
-                        <h3>Credit Hire</h3>
-                        <p>Same-day like-for-like replacement vehicles cars, executive, vans and plated Taxi.</p>
-                        <div class="nch-pcard__meta">
-                            <span><i class="fa fa-car"></i> Cars &amp; executive</span>
-                            <span><i class="fa fa-taxi"></i> Plated Taxi</span>
-                        </div>
-                        <div class="nch-pcard__foot">
-                            <span class="nch-pcard__price">From day one</span>
-                            <a class="nch-pcard__link" href="{{route(" services")}}">Learn more <i
-                                    class="fa fa-long-arrow-right"></i></a>
-                        </div>
-                    </div>
-                </article>
-                <article class="nch-pcard">
-                    <div class="nch-pcard__media">
-                        <span class="nch-badge nch-badge--dark">Fully managed</span>
-                        <img src="{{asset(" assets/images/news/blog-2.jpg")}}" alt="Accident management specialist">
-                    </div>
-                    <div class="nch-pcard__body">
-                        <h3>Accident Management</h3>
-                        <p>We take complete ownership of your claim insurers, solicitors and garages, all handled
-                            for you.</p>
-                        <div class="nch-pcard__meta">
-                            <span><i class="fa fa-folder-open-o"></i> Documentation</span>
-                            <span><i class="fa fa-refresh"></i> Claim updates</span>
-                        </div>
-                        <div class="nch-pcard__foot">
-                            <span class="nch-pcard__price">End to end</span>
-                            <a class="nch-pcard__link" href="{{route(" services")}}">Learn more <i
-                                    class="fa fa-long-arrow-right"></i></a>
-                        </div>
-                    </div>
-                </article>
-                <article class="nch-pcard">
-                    <div class="nch-pcard__media">
-                        <span class="nch-badge nch-badge--red">24/7</span>
-                        <img src="{{asset(" assets/images/photos/gallery-3.jpg")}}" alt="24/7 vehicle recovery">
-                    </div>
-                    <div class="nch-pcard__body">
-                        <h3>24/7 Vehicle Recovery</h3>
-                        <p>Around-the-clock collection and delivery anywhere in the UK, with secure, fully insured storage.
-                        </p>
-                        <div class="nch-pcard__meta">
-                            <span><i class="fa fa-truck"></i> UK-wide</span>
-                            <span><i class="fa fa-lock"></i> Secure storage</span>
-                        </div>
-                        <div class="nch-pcard__foot">
-                            <span class="nch-pcard__price">Any hour</span>
-                            <a class="nch-pcard__link" href="{{route(" services")}}">Learn more <i
-                                    class="fa fa-long-arrow-right"></i></a>
-                        </div>
-                    </div>
-                </article>
-                <article class="nch-pcard">
-                    <div class="nch-pcard__media">
-                        <span class="nch-badge nch-badge--dark">Genuine parts</span>
-                        <img src="{{asset(" assets/images/photos/gallery-5.jpg")}}" alt="Approved vehicle repairs">
-                    </div>
-                    <div class="nch-pcard__body">
-                        <h3>Approved Repairs</h3>
-                        <p>Repairs at vetted, quality-approved garages using manufacturer-approved parts. No excess to pay.
-                        </p>
-                        <div class="nch-pcard__meta">
-                            <span><i class="fa fa-wrench"></i> Vetted garages</span>
-                            <span><i class="fa fa-check"></i> No excess</span>
-                        </div>
-                        <div class="nch-pcard__foot">
-                            <span class="nch-pcard__price">Pre-accident condition</span>
-                            <a class="nch-pcard__link" href="{{route(" services")}}">Learn more <i
-                                    class="fa fa-long-arrow-right"></i></a>
-                        </div>
-                    </div>
-                </article>
-                <article class="nch-pcard">
-                    <div class="nch-pcard__media">
-                        <span class="nch-badge nch-badge--red">Same-day plated</span>
-                        <img src="{{asset(" assets/images/photos/gallery-4.jpg")}}" alt="Taxi and private hire replacement">
-                    </div>
-                    <div class="nch-pcard__body">
-                        <h3>Taxi &amp; Private Hire</h3>
-                        <p>Same-day plated replacements from a 300+ fleet, licensed across a wide range of council
-                            authorities.</p>
-                        <div class="nch-pcard__meta">
-                            <span><i class="fa fa-taxi"></i> Plated &amp; insured</span>
-                            <span><i class="fa fa-id-card-o"></i> Multi-council</span>
-                        </div>
-                        <div class="nch-pcard__foot">
-                            <span class="nch-pcard__price">Keep earning</span>
-                            <a class="nch-pcard__link" href="{{route(" services")}}">Learn more <i
-                                    class="fa fa-long-arrow-right"></i></a>
-                        </div>
-                    </div>
-                </article>
-                <article class="nch-pcard">
-                    <div class="nch-pcard__media">
-                        <span class="nch-badge nch-badge--dark">Like-for-like</span>
-                        <img src="{{asset(" assets/images/news/blog-1.jpg")}}" alt="Van and commercial vehicle hire">
-                    </div>
-                    <div class="nch-pcard__body">
-                        <h3>Van &amp; Commercial</h3>
-                        <p>Like-for-like van and commercial replacements to keep tradespeople and businesses moving.</p>
-                        <div class="nch-pcard__meta">
-                            <span><i class="fa fa-cube"></i> Vans &amp; LCV</span>
-                            <span><i class="fa fa-briefcase"></i> Business-ready</span>
-                        </div>
-                        <div class="nch-pcard__foot">
-                            <span class="nch-pcard__price">No downtime</span>
-                            <a class="nch-pcard__link" href="{{route(" services")}}">Learn more <i
-                                    class="fa fa-long-arrow-right"></i></a>
-                        </div>
-                    </div>
-                </article>
-            </div>
-        </div>
-    </section> --}}
 
     <!-- Our mission -->
     <section class="nch-section bg-dark dark-bg">
@@ -326,14 +141,24 @@
                 <div class="nch-quote__media">
                     <img src="{{asset("assets/images/cars/mercedes-g-class.jpg")}}?v=1"
                         alt="Northwest Credit Hire fleet vehicle">
+                    {{-- <span class="nch-quote__caption"><span class="ic"><i class="fa fa-car"></i></span> Part of our 300+
+                        fleet</span> --}}
                 </div>
                 <div class="nch-quote__body">
+                    <span class="nch-quote__mark" aria-hidden="true">&ldquo;</span>
                     <span class="nch-eyebrow"><i class="fa fa-quote-left"></i> Our mission</span>
                     <blockquote>
-                        No driver should face the aftermath of an accident alone. <br><br>
-                        From the moment of impact to the moment you're back on the road, we handle every step of the claims process so you don't have to.
+                        <p class="nch-quote__text">No driver should face the aftermath of an accident alone.</p>
+                        <p class="nch-quote__text">From the moment of impact to the moment you're back on the road, we
+                            handle every step of the claims process so you don't have to.</p>
                     </blockquote>
-                    <div class="nch-quote__by">Northwest Credit Hire Ltd <span>&middot; Greater Manchester</span></div>
+                    <div class="nch-quote__by">
+                        <span class="bar" aria-hidden="true"></span>
+                        <span class="nch-quote__cite">
+                            <strong>Northwest Credit Hire Ltd</strong>
+                            <span>Greater Manchester</span>
+                        </span>
+                    </div>
                     <div class="nch-quote__stats">
                         <div class="nch-quote__stat">
                             <div class="n">300+</div>
@@ -432,26 +257,6 @@
         </div>
     </section>
 
-    <!-- Offer banner -->
-    {{-- <section class="nch-section--tight bg-cream">
-        <div class="container">
-            <div class="nch-offer">
-                <div class="nch-offer__bg"></div>
-                <div class="nch-offer__overlay"></div>
-                <div class="nch-offer__inner">
-                    <h2>You pay <span>nothing.</span> We recover every penny.</h2>
-                    <p>Recovery, storage, replacement hire, repairs and your full claim all handled under one roof, at no
-                        cost to you.</p>
-                    <div class="nch-offer__actions">
-                        <a class="btn btn-red" href="{{route(" contact")}}">Start your claim <i
-                                class="fa fa-long-arrow-right"></i></a>
-                        <a class="nch-offer__phone" href="tel:07824973768"><i class="fa fa-phone"></i> 07824 973768</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section> --}}
-
     <!-- Testimonials -->
     <section class="nch-section bg-dark dark-bg">
         <div class="container">
@@ -523,22 +328,5 @@
         </div>
     </section>
 
-    <!-- CTA band -->
-    {{-- <section class="nch-section--tight bg-cream">
-        <div class="container">
-            <div class="nch-ctaband">
-                <div class="nch-ctaband__inner">
-                    <h2>Had a non-fault accident?</h2>
-                    <p>Speak to our team today and find out exactly what you're entitled to. Available 24 hours a day, 365
-                        days a year.</p>
-                    <div class="nch-ctaband__actions">
-                        <a class="btn btn-light" href="{{route(" contact")}}">Start your claim <i
-                                class="fa fa-long-arrow-right"></i></a>
-                        <a class="nch-ctaband__phone" href="tel:07824973768"><i class="fa fa-phone"></i> 07824 973768</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section> --}}
 
 @endsection
