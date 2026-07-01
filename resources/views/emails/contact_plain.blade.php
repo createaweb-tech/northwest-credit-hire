@@ -4,7 +4,7 @@
 NORTHWEST CREDIT HIRE — NEW WEBSITE ENQUIRY
 ============================================
 
-Submitted via the contact form on northwestcredithire.co.uk
+Submitted via the contact form on northwestcredithire.com
 {{ $submittedAt }}
 
 --------------------------------------------

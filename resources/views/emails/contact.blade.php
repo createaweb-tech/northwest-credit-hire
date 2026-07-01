@@ -7,7 +7,7 @@
 --}}
 @php
     $submittedAt = $submittedAt ?? now()->format('D, d M Y · H:i');
-    $siteUrl     = $siteUrl ?? 'https://northwestcredithire.co.uk';
+    $siteUrl     = $siteUrl ?? 'https://www.northwestcredithire.com/';
 @endphp
 <!DOCTYPE html>
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
@@ -68,7 +68,7 @@
                             </h1>
                             <p style="margin:0; font-size:14px; line-height:1.6; color:#6d6862;">
                                 Submitted via the contact form on
-                                <a href="{{ $siteUrl }}" style="color:#b61314; text-decoration:none; font-weight:600;">northwestcredithire.co.uk</a>
+                                <a href="{{ $siteUrl }}" style="color:#b61314; text-decoration:none; font-weight:600;">northwestcredithire.com</a>
                                 on {{ $submittedAt }}.
                             </p>
                         </td>
