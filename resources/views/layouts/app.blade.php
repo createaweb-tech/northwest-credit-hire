@@ -80,12 +80,12 @@
                             alt="Northwest Credit Hire"></a>
                     <p>Credit hire and accident management specialists. We take complete ownership of your non-fault
                         claim  all under one roof, at no cost to you.</p>
-                    <div class="nch-foot-social">
+                    {{-- <div class="nch-foot-social">
                         <a href="#" aria-label="Facebook"><i class="fa fa-facebook"></i></a>
                         <a href="#" aria-label="Twitter"><i class="fa fa-twitter"></i></a>
                         <a href="#" aria-label="Instagram"><i class="fa fa-instagram"></i></a>
                         <a href="#" aria-label="LinkedIn"><i class="fa fa-linkedin"></i></a>
-                    </div>
+                    </div> --}}
                 </div>
                 <div class="nch-foot-col">
                     <h4>Navigate</h4>

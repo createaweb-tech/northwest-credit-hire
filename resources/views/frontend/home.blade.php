@@ -8,8 +8,7 @@
             <div class="nch-hero__grid">
                 <div class="nch-hero__inner">
                     <h1>Welcome to <span class="accent">Northwest Credit Hire</span></h1>
-                    <p class="nch-hero__lead">We take care of everything after a non-fault accident.</p>
-                    <p class="nch-hero__lead">From start to finish, we manage your claim, provide a like-for-like replacement vehicle, arrange accredited repairs, and negotiate a fair settlement  recovering all costs from the at-fault driver's insurer, so there's no cost to you.</p>
+                    <p class="nch-hero__lead">We take care of everything after a non-fault accident. From start to finish, we manage your claim, provide a like-for-like replacement vehicle, arrange accredited repairs, and negotiate a fair settlement  recovering all costs from the at-fault driver's insurer, so there's no cost to you.</p>
                     <div class="nch-hero__stats">
                         <div class="nch-hero__stat">
                             <span class="ic"><i class="fa fa-car"></i></span>
@@ -69,8 +68,7 @@
                 <div class="nch-feature">
                     <span class="nch-feature__ic"><i class="fa fa-gbp"></i></span>
                     <h3>No upfront cost</h3>
-                    <p>For non-fault claimants. We recover every penny directly from the at-fault insurer.
-                    </p>
+                    <p>We claim all costs for the recovery, storage, replacement vehicle, and repairs directly from the third-party insurer.</p>
                 </div>
                 <div class="nch-feature">
                     <span class="nch-feature__ic"><i class="fa fa-handshake-o"></i></span>
@@ -122,8 +120,8 @@
                 </figure>
                 <figure class="nch-showcard">
                     {{-- <span class="nch-badge nch-badge--dark nch-showcard__badge">9-seater</span> --}}
-                    <img src="{{asset("assets/images/cars/9-seater.png")}}?v=1" alt="Mercedes Vito 9-seater">
-                    <figcaption class="nch-showcard__label">Mercedes Vito</figcaption>
+                    <img src="{{asset("assets/images/cars/9-seater.png")}}?v=1" alt="Mini  bus 6-9 seater taxi">
+                    <figcaption class="nch-showcard__label">Mini  bus 6-9 seater taxi</figcaption>
                 </figure>
             </div>
             <div class="nch-redband__cta">
