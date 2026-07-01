@@ -616,7 +616,7 @@ section {
 
 .nch-hero h1 {
     color: #fff;
-    font-size: clamp(38px, 5.2vw, 50px);
+    font-size: clamp(38px, 5.2vw, 55px);
     font-weight: 800;
     line-height: 1.05;
     letter-spacing: -.03em;
