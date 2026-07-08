@@ -28,7 +28,7 @@
                         replacement, repairs and your full claim, all handled under one roof.</p>
                     <div class="nch-svc-note">
                         <i class="fa fa-shield"></i>
-                        <span>You pay nothing. We recover every cost directly from the at-fault party's insurer.</span>
+                        <span>We recover every cost directly from the at-fault party's insurer.</span>
                     </div>
                     <a class="btn btn-red" href="{{route("contact")}}">Start your claim <i class="fa fa-long-arrow-right"></i></a>
                 </aside>
