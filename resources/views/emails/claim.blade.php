@@ -1,14 +1,5 @@
-{{--
-    Northwest Credit Hire — Claim document upload notification (HTML)
-    Brand: red #B61314 on warm cream. Table-based, inline styles for email-client safety.
-    Expected variables:
-      $claim (App\Models\Claim)
-      $filePaths (array)
-      $submittedAt (optional, string)  ·  $siteUrl (optional, string)
---}}
 @php
     $submittedAt = $submittedAt ?? now()->format('D, d M Y · g:i A');
-    $siteUrl     = $siteUrl ?? 'https://www.northwestcredithire.com/';
     $documentTypesList = collect(
         $claim->document_type
             ? preg_split('/\s*,\s*/', $claim->document_type)
@@ -22,210 +13,68 @@
     $documentTypesList = $documentTypesList->filter()->values();
 @endphp
 <!DOCTYPE html>
-<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<html lang="en">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="color-scheme" content="light only">
-    <meta name="supported-color-schemes" content="light only">
     <title>New claim submission — #{{ $claim->reference_number }}</title>
-    <!--[if mso]>
-    <style type="text/css">
-        body, table, td, p, a { font-family: Arial, Helvetica, sans-serif !important; }
-    </style>
-    <![endif]-->
 </head>
-<body style="margin:0; padding:0; width:100%; background-color:#efe9df; -webkit-text-size-adjust:100%; -ms-text-size-adjust:100%;">
+<body style="margin:0; padding:0; background-color:#f4f4f4; font-family:Arial, Helvetica, sans-serif; color:#333333;">
 
-    <!-- Preheader (hidden) -->
-    <div style="display:none; max-height:0; overflow:hidden; mso-hide:all; font-size:1px; line-height:1px; color:#efe9df;">
-        New claim documents from {{ $claim->name }} — #{{ $claim->reference_number }}
-    </div>
+    <div style="max-width:600px; margin:0 auto; padding:24px 16px;">
 
-    <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="background-color:#efe9df;">
-        <tr>
-            <td align="center" style="padding:28px 16px;">
+        <h2 style="margin:0 0 4px 0; font-size:20px; color:#b61314;">New Claim Submission</h2>
+        <p style="margin:0 0 20px 0; font-size:13px; color:#777777;">
+            Reference #{{ $claim->reference_number }} · {{ $submittedAt }}
+        </p>
 
-                <table role="presentation" width="600" cellpadding="0" cellspacing="0" border="0" style="width:600px; max-width:600px; background-color:#ffffff; border-radius:18px; overflow:hidden; box-shadow:0 18px 44px -26px rgba(28,26,24,.34);">
-
-                    <!-- Header band -->
-                    <tr>
-                        <td style="background-color:#b61314; background-image:linear-gradient(135deg,#b61314 0%,#8d0f10 100%); padding:30px 36px;">
-                            <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0">
-                                <tr>
-                                    <td align="left" style="font-family:'Segoe UI',Arial,Helvetica,sans-serif;">
-                                        <div style="font-size:20px; font-weight:800; letter-spacing:.3px; color:#ffffff; line-height:1.2;">
-                                            NORTHWEST CREDIT HIRE
-                                        </div>
-                                        <div style="font-size:12px; font-weight:600; color:#fbeceb; letter-spacing:1.5px; text-transform:uppercase; margin-top:4px;">
-                                            Credit Hire &amp; Accident Management
-                                        </div>
-                                    </td>
-                                    <td align="right" valign="top" style="font-family:'Segoe UI',Arial,Helvetica,sans-serif;">
-                                        <span style="display:inline-block; background-color:rgba(255,255,255,.15); color:#ffffff; font-size:11px; font-weight:700; letter-spacing:1px; text-transform:uppercase; padding:7px 12px; border-radius:999px;">
-                                            New Claim
-                                        </span>
-                                    </td>
-                                </tr>
-                            </table>
-                        </td>
-                    </tr>
-
-                    <!-- Intro -->
-                    <tr>
-                        <td style="padding:34px 36px 8px 36px; font-family:'Segoe UI',Arial,Helvetica,sans-serif;">
-                            <h1 style="margin:0 0 6px 0; font-size:22px; line-height:1.25; color:#1c1a18; font-weight:800;">
-                                You&rsquo;ve got new claim documents
-                            </h1>
-                            <p style="margin:0; font-size:14px; line-height:1.6; color:#6d6862;">
-                                Submitted via the claim upload form on
-                                <a href="{{ $siteUrl }}/claim" style="color:#b61314; text-decoration:none; font-weight:600;">northwestcredithire.com/claim</a>
-                                on {{ $submittedAt }}.
-                            </p>
-                        </td>
-                    </tr>
-
-                    <!-- Details card -->
-                    <tr>
-                        <td style="padding:22px 36px 8px 36px;">
-                            <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="background-color:#faf7f1; border:1px solid #e7e1d6; border-radius:14px;">
-
-                                <tr>
-                                    <td style="padding:18px 22px 6px 22px; font-family:'Segoe UI',Arial,Helvetica,sans-serif;">
-                                        <div style="font-size:11px; font-weight:700; letter-spacing:1.2px; text-transform:uppercase; color:#9a948c;">Reference</div>
-                                        <div style="font-size:16px; font-weight:700; color:#1c1a18; margin-top:3px;">#{{ $claim->reference_number }}</div>
-                                    </td>
-                                </tr>
-                                <tr><td style="padding:0 22px;"><div style="border-top:1px solid #ece6db; height:1px; line-height:1px;">&nbsp;</div></td></tr>
-
-                                <tr>
-                                    <td style="padding:10px 22px 6px 22px; font-family:'Segoe UI',Arial,Helvetica,sans-serif;">
-                                        <div style="font-size:11px; font-weight:700; letter-spacing:1.2px; text-transform:uppercase; color:#9a948c;">Name</div>
-                                        <div style="font-size:16px; font-weight:700; color:#1c1a18; margin-top:3px;">{{ $claim->name }}</div>
-                                    </td>
-                                </tr>
-                                <tr><td style="padding:0 22px;"><div style="border-top:1px solid #ece6db; height:1px; line-height:1px;">&nbsp;</div></td></tr>
-
-                                <tr>
-                                    <td style="padding:10px 22px 6px 22px; font-family:'Segoe UI',Arial,Helvetica,sans-serif;">
-                                        <div style="font-size:11px; font-weight:700; letter-spacing:1.2px; text-transform:uppercase; color:#9a948c;">Email</div>
-                                        <div style="font-size:16px; font-weight:600; margin-top:3px;">
-                                            <a href="mailto:{{ $claim->email }}" style="color:#b61314; text-decoration:none;">{{ $claim->email }}</a>
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr><td style="padding:0 22px;"><div style="border-top:1px solid #ece6db; height:1px; line-height:1px;">&nbsp;</div></td></tr>
-
-                                <tr>
-                                    <td style="padding:10px 22px 6px 22px; font-family:'Segoe UI',Arial,Helvetica,sans-serif;">
-                                        <div style="font-size:11px; font-weight:700; letter-spacing:1.2px; text-transform:uppercase; color:#9a948c;">Phone</div>
-                                        <div style="font-size:16px; font-weight:600; margin-top:3px;">
-                                            <a href="tel:{{ preg_replace('/[^0-9+]/', '', $claim->phone) }}" style="color:#b61314; text-decoration:none;">{{ $claim->phone }}</a>
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr><td style="padding:0 22px;"><div style="border-top:1px solid #ece6db; height:1px; line-height:1px;">&nbsp;</div></td></tr>
-
-                                <tr>
-                                    <td style="padding:10px 22px 6px 22px; font-family:'Segoe UI',Arial,Helvetica,sans-serif;">
-                                        <div style="font-size:11px; font-weight:700; letter-spacing:1.2px; text-transform:uppercase; color:#9a948c;">Vehicle registration</div>
-                                        <div style="font-size:16px; font-weight:600; color:#1c1a18; margin-top:3px;">{{ $claim->car_reg_no }}</div>
-                                    </td>
-                                </tr>
-                                <tr><td style="padding:0 22px;"><div style="border-top:1px solid #ece6db; height:1px; line-height:1px;">&nbsp;</div></td></tr>
-
-                                <tr>
-                                    <td style="padding:10px 22px 18px 22px; font-family:'Segoe UI',Arial,Helvetica,sans-serif;">
-                                        <div style="font-size:11px; font-weight:700; letter-spacing:1.2px; text-transform:uppercase; color:#9a948c;">Document types</div>
-                                        @if ($documentTypesList->isNotEmpty())
-                                            <table role="presentation" cellpadding="0" cellspacing="0" border="0" style="margin-top:3px;">
-                                                @foreach ($documentTypesList as $type)
-                                                <tr>
-                                                    <td style="padding:0 6px 6px 0; font-family:'Segoe UI',Arial,Helvetica,sans-serif; font-size:16px; font-weight:600; color:#b61314; vertical-align:top; line-height:1.5;">&bull;</td>
-                                                    <td style="padding:0 0 6px 0; font-family:'Segoe UI',Arial,Helvetica,sans-serif; font-size:16px; font-weight:600; color:#1c1a18; vertical-align:top; line-height:1.5;">{{ $type }}</td>
-                                                </tr>
-                                                @endforeach
-                                            </table>
-                                        @else
-                                            <div style="font-size:16px; font-weight:600; color:#1c1a18; margin-top:3px;">&mdash;</div>
-                                        @endif
-                                    </td>
-                                </tr>
-                            </table>
-                        </td>
-                    </tr>
-
-                    @if ($claim->notes)
-                    <!-- Notes -->
-                    <tr>
-                        <td style="padding:14px 36px 4px 36px; font-family:'Segoe UI',Arial,Helvetica,sans-serif;">
-                            <div style="font-size:11px; font-weight:700; letter-spacing:1.2px; text-transform:uppercase; color:#9a948c; margin-bottom:8px;">Notes</div>
-                            <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="background-color:#ffffff; border-left:4px solid #b61314; border-top:1px solid #e7e1d6; border-right:1px solid #e7e1d6; border-bottom:1px solid #e7e1d6; border-radius:0 10px 10px 0;">
-                                <tr>
-                                    <td style="padding:16px 20px; font-size:15px; line-height:1.7; color:#211f1d;">
-                                        {!! nl2br(e($claim->notes)) !!}
-                                    </td>
-                                </tr>
-                            </table>
-                        </td>
-                    </tr>
+        <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="border-collapse:collapse; font-size:14px;">
+            <tr>
+                <td style="padding:8px 0; width:170px; color:#777777; vertical-align:top;">Name</td>
+                <td style="padding:8px 0; color:#111111; font-weight:bold;">{{ $claim->name }}</td>
+            </tr>
+            <tr>
+                <td style="padding:8px 0; color:#777777; vertical-align:top;">Email</td>
+                <td style="padding:8px 0;"><a href="mailto:{{ $claim->email }}" style="color:#b61314;">{{ $claim->email }}</a></td>
+            </tr>
+            <tr>
+                <td style="padding:8px 0; color:#777777; vertical-align:top;">Phone</td>
+                <td style="padding:8px 0;"><a href="tel:{{ preg_replace('/[^0-9+]/', '', $claim->phone) }}" style="color:#b61314;">{{ $claim->phone }}</a></td>
+            </tr>
+            <tr>
+                <td style="padding:8px 0; color:#777777; vertical-align:top;">Vehicle registration</td>
+                <td style="padding:8px 0; color:#111111; font-weight:bold;">{{ $claim->car_reg_no }}</td>
+            </tr>
+            <tr>
+                <td style="padding:8px 0; color:#777777; vertical-align:top;">Document types</td>
+                <td style="padding:8px 0; color:#111111;">
+                    @if ($documentTypesList->isNotEmpty())
+                        {{ $documentTypesList->implode(', ') }}
+                    @else
+                        &mdash;
                     @endif
+                </td>
+            </tr>
+            @if ($claim->notes)
+            <tr>
+                <td style="padding:8px 0; color:#777777; vertical-align:top;">Notes</td>
+                <td style="padding:8px 0; color:#111111;">{!! nl2br(e($claim->notes)) !!}</td>
+            </tr>
+            @endif
+        </table>
 
-                    <!-- Attached files -->
-                    <tr>
-                        <td style="padding:14px 36px 4px 36px; font-family:'Segoe UI',Arial,Helvetica,sans-serif;">
-                            <div style="font-size:11px; font-weight:700; letter-spacing:1.2px; text-transform:uppercase; color:#9a948c; margin-bottom:8px;">Attached files ({{ count($filePaths) }})</div>
-                            <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="background-color:#ffffff; border-left:4px solid #b61314; border-top:1px solid #e7e1d6; border-right:1px solid #e7e1d6; border-bottom:1px solid #e7e1d6; border-radius:0 10px 10px 0;">
-                                <tr>
-                                    <td style="padding:16px 20px; font-size:15px; line-height:1.7; color:#211f1d;">
-                                        @foreach ($filePaths as $path)
-                                            {{ basename($path) }}@if (! $loop->last)<br>@endif
-                                        @endforeach
-                                    </td>
-                                </tr>
-                            </table>
-                        </td>
-                    </tr>
+        <h3 style="margin:24px 0 8px 0; font-size:15px; color:#111111;">Attached files ({{ count($filePaths) }})</h3>
+        <ol style="margin:0; padding-left:20px; font-size:14px; color:#111111; line-height:1.8;">
+            @foreach ($filePaths as $path)
+                <li>{{ basename($path) }}</li>
+            @endforeach
+        </ol>
 
-                    <!-- CTA -->
-                    <tr>
-                        <td align="left" style="padding:24px 36px 30px 36px;">
-                            <table role="presentation" cellpadding="0" cellspacing="0" border="0">
-                                <tr>
-                                    <td style="border-radius:999px; background-color:#b61314;">
-                                        <a href="mailto:{{ $claim->email }}?subject=RE: Claim %23{{ rawurlencode($claim->reference_number) }}"
-                                           style="display:inline-block; padding:13px 26px; font-family:'Segoe UI',Arial,Helvetica,sans-serif; font-size:14px; font-weight:700; color:#ffffff; text-decoration:none; border-radius:999px;">
-                                            Reply to {{ $claim->name }} &rarr;
-                                        </a>
-                                    </td>
-                                </tr>
-                            </table>
-                        </td>
-                    </tr>
+        <p style="margin:28px 0 0 0; font-size:12px; color:#999999; border-top:1px solid #dddddd; padding-top:16px;">
+            This message was generated automatically from the website claim upload form on northwestcredithire.com.
+        </p>
 
-                    <!-- Footer -->
-                    <tr>
-                        <td style="background-color:#1c1a18; padding:24px 36px; font-family:'Segoe UI',Arial,Helvetica,sans-serif;">
-                            <p style="margin:0 0 6px 0; font-size:14px; font-weight:700; color:#ffffff;">Northwest Credit Hire Ltd</p>
-                            <p style="margin:0; font-size:12px; line-height:1.7; color:#9a948c;">
-                                Unit A2, Highfield Industrial Estate, W End St, Oldham OL9 6AJ<br>
-                                <a href="tel:07824973768" style="color:#fbeceb; text-decoration:none;">07824 973768</a> &nbsp;·&nbsp;
-                                <a href="mailto:info@northwestcredithire.com" style="color:#fbeceb; text-decoration:none;">info@northwestcredithire.com</a><br>
-                                Open 24/7, 365 days a year
-                            </p>
-                        </td>
-                    </tr>
-
-                </table>
-
-                <p style="margin:18px 0 0 0; font-family:'Segoe UI',Arial,Helvetica,sans-serif; font-size:11px; color:#9a948c;">
-                    This message was generated automatically from the website claim upload form.
-                </p>
-
-            </td>
-        </tr>
-    </table>
+    </div>
 
 </body>
 </html>
