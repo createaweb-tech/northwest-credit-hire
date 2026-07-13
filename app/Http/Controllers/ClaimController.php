@@ -35,7 +35,7 @@ class ClaimController extends Controller
             'document_types' => 'required|array|min:1',
             'document_types.*' => 'string',
             'files' => 'required|array',
-            'files.*' => 'file|mimes:jpeg,png,jpg,pdf|max:2048',
+            'files.*' => 'file|mimes:jpeg,png,jpg,pdf|max:20480',
         ]);
 
         $documentTypes = array_values(array_filter(
