@@ -59,7 +59,7 @@
                 </div>
                 <div class="nch-nav-right">
                     <a class="nch-nav-phone" href="tel:07824973768"><i class="fa fa-phone"></i> 07824 973768</a>
-                    <a class="btn btn-red btn-sm" href="{{route("contact")}}">Start a claim</a>
+                    <a class="btn btn-red btn-sm" href="{{route("claim")}}">Claim Portal</a>
                     <button class="nch-burger" id="nch-burger" type="button" aria-label="Toggle menu">
                         <i class="fa fa-bars"></i>
                     </button>

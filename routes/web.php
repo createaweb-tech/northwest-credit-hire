@@ -1,7 +1,17 @@
 <?php
 
+use App\Http\Controllers\ClaimController;
 use App\Http\Controllers\ContactController;
 use Illuminate\Support\Facades\Route;
+
+Route::get('/clear-cache', function () {
+    Artisan::call('cache:clear');
+    Artisan::call('config:clear');
+    Artisan::call('route:clear');
+    Artisan::call('view:clear');
+    Artisan::call('optimize:clear');
+    return "Cache cleared successfully";
+})->name('clear-cache');
 
 Route::get('/', function () {
     return view('frontend.home');
@@ -24,3 +34,6 @@ Route::get('/contact', function () {
 })->name('contact');
 
 Route::post('/contact', [ContactController::class, 'send'])->name('contact.submit');
+
+Route::get('/claim', [ClaimController::class, 'index'])->name('claim');
+Route::post('/save-claim', [ClaimController::class, 'saveClaim'])->name('saveClaim');
