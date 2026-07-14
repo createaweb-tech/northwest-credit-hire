@@ -19,7 +19,7 @@
     <!-- Site Main Style Sheet Css -->
     <link href="{{asset("assets/stylesheets/style.css")}}" rel="stylesheet">
     <!-- Northwest Credit Hire custom styles -->
-    <link href="{{asset("assets/stylesheets/nch-custom.css")}}?v=5.35" rel="stylesheet">
+    <link href="{{asset("assets/stylesheets/nch-custom.css")}}?v=5.42" rel="stylesheet">
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -58,9 +58,14 @@
                     <a class="text-uppercase {{ Route::is('contact') ? 'active' : '' }}" href="{{route("contact")}}">Contact</a>
                 </div>
                 <div class="nch-nav-right">
+
+                    <a class="nch-nav-call" href="tel:07824973768" aria-label="Call 07824 973768"><i class="fa fa-phone"></i></a>
                     <a class="nch-nav-phone" href="tel:07824973768"><i class="fa fa-phone"></i> 07824 973768</a>
                     <a class="nch-nav-contact text-uppercase d-lg-none {{ Route::is('contact') ? 'active' : '' }}" href="{{route("contact")}}">Contact</a>
-                    <a class="btn btn-red btn-sm" href="{{route("claim")}}">Claim Portal</a>
+                    <a class="btn btn-red btn-sm nch-claim-btn" href="{{route("claim")}}">
+                        <span class="nch-btn-label-full">Claim Portal</span>
+                        <span class="nch-btn-label-short">Claim Portal</span>
+                    </a>
                     <button class="nch-burger" id="nch-burger" type="button" aria-label="Toggle menu">
                         <i class="fa fa-bars"></i>
                     </button>

@@ -9,6 +9,8 @@
         <div class="container text-center">
             {{-- <span class="nch-eyebrow nch-eyebrow--ghost"><i class="fa fa-paper-plane-o"></i> Get in touch</span> --}}
             <h1>Contact Us</h1>
+            <p><a href="tel:07824973768" class="text-white d-lg-none" style="font-weight: bolder; font-size: 18px;">07824 973768</a></p>
+
             {{-- <nav aria-label="breadcrumb">
                 <ol class="breadcrumb">
                     <li class="breadcrumb-item"><a href="{{route(" home")}}">Home</a></li>
