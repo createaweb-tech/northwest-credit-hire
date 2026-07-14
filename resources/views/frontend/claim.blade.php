@@ -216,6 +216,20 @@
         const otherDocTypeContainer = document.getElementById('otherDocTypeContainer');
         const otherDocTypeInput = document.getElementById('otherDocTypeInput');
 
+        // Persistent list of chosen files so each new selection ADDS to the
+        // previous ones instead of replacing them (a file input otherwise
+        // overwrites its .files with only the latest selection).
+        let selectedFiles = [];
+
+        // Push our accumulated list back onto the input so it submits with the form.
+        function syncInputFiles() {
+            const dt = new DataTransfer();
+            selectedFiles.forEach(function (file) {
+                dt.items.add(file);
+            });
+            fileInput.files = dt.files;
+        }
+
         function showClaimAlert(type, message) {
             claimAlert.innerHTML =
                 '<div class="alert alert-' + type + ' alert-dismissable" role="alert">' +
@@ -256,6 +270,8 @@
 
         function resetClaimForm() {
             claimForm.reset();
+            selectedFiles = [];
+            syncInputFiles();
             fileListContainer.innerHTML = '';
             uploadText.innerHTML = 'Drag files here, or click to browse';
             otherDocTypeContainer.style.display = 'none';
@@ -359,23 +375,32 @@
 
         fileInput.addEventListener('change', function (e) {
             let hasInvalidFiles = false;
-            const dt = new DataTransfer();
-            
+
+            // Append the newly picked files to what we already have.
             Array.from(fileInput.files).forEach(file => {
                 const ext = file.name.split('.').pop().toLowerCase();
-                if (allowedExtensions.includes(ext)) {
-                    dt.items.add(file);
-                } else {
+
+                if (!allowedExtensions.includes(ext)) {
                     hasInvalidFiles = true;
+                    return;
+                }
+
+                // Skip files that are already in the list (same name/size/date).
+                const alreadyAdded = selectedFiles.some(function (f) {
+                    return f.name === file.name && f.size === file.size && f.lastModified === file.lastModified;
+                });
+
+                if (!alreadyAdded) {
+                    selectedFiles.push(file);
                 }
             });
 
-            fileInput.files = dt.files;
-            
+            syncInputFiles();
+
             if (hasInvalidFiles) {
                 alert("Only JPG, PNG, and PDF files are allowed. Invalid files were removed.");
             }
-            
+
             updateFileList();
         });
 
@@ -426,16 +451,8 @@
         }
 
         function removeFile(indexToRemove) {
-            const dt = new DataTransfer();
-            const files = fileInput.files;
-
-            for (let i = 0; i < files.length; i++) {
-                if (i !== indexToRemove) {
-                    dt.items.add(files[i]);
-                }
-            }
-
-            fileInput.files = dt.files;
+            selectedFiles.splice(indexToRemove, 1);
+            syncInputFiles();
             updateFileList(); // Re-render list
         }
 
