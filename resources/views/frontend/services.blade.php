@@ -41,11 +41,8 @@
                                 <i class="fa fa-car"></i>
                                 <h3>Credit Hire  Replacement Vehicles</h3>
                             </div>
-                            <p>If you've been involved in a non-fault accident and your vehicle is off the road, you're
-                                legally entitled to a like-for-like replacement at no cost to you  cars, vans,
-                                executive vehicles and taxi-plated cars, so your life and work continue uninterrupted.</p>
-                            <p>All taxi replacement vehicles are under two years old, fully insured and licensed with the
-                                relevant local authority. <strong>Available 24 hours a day, 365 days a year.</strong></p>
+                            <p>If you've been involved in a non-fault accident and your vehicle is off the road, you're legally entitled to a like-for-like replacement at no cost to you. This includes cars, vans, executive vehicles and taxi-plated cars, so your life and work continue uninterrupted.</p>
+                            <p>All taxi replacement vehicles are under two years old, fully insured and licensed with the relevant local authority. <strong>Available 24 hours a day, 365 days a year</strong> .</p>
                         </div>
                     </article>
 
