@@ -6,7 +6,9 @@
    This stylesheet is loaded LAST and fully overrides the CarShine
    template (style.css) for the front-end pages.
    ===================================================================== */
-
+*{
+    /* border: 1px solid; */
+}
 :root {
     --red: #b61314;
     --red-dark: #8d0f10;
@@ -58,6 +60,10 @@
 
 html {
     scroll-behavior: smooth;
+    /* Clip any sub-pixel overflow from the fixed header / off-screen form
+       controls so mobile never gets a stray horizontal scrollbar. body's
+       overflow-x doesn't clip position:fixed elements — html's does. */
+    overflow-x: hidden;
 }
 
 body {
